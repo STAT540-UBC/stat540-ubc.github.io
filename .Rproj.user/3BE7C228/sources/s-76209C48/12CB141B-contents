@@ -1,0 +1,51 @@
+name: "stat540-ubc.github.io"
+title: ""
+theme: theme.css
+favicon: images/favicon.ico
+description: |
+  STAT 540
+output_dir: "."
+include: ["*.pdf"]
+exclude: ["*.csv"]
+navbar:
+  logo:
+    image: images/stat540-logo-s.png
+    href: stat540-ubc.github.io/
+  right:
+    - text: "HOME"
+      href: index.html
+    - text: "SYLLABUS"
+      href: syllabus.html
+    - text: "LECTURES"
+      href: lectures.html
+    - text: "SEMINARS"
+      href: seminars.html
+    - text: "ASSIGNMENTS"
+      menu: 
+        - text: Assignments
+          href: assignments.html
+        - text: Timeline Visualization
+          href: timeline.html
+        - text: More
+          menu:
+          - text: Group Project Rubrics 
+            href: group_project_rubrics.html
+          - text: General Tips
+            href: assignment_tips.html
+          - text: Paper review guidelines
+            href: PRguideline.html
+    - text: "PEOPLE"
+      menu:
+        - text: "Keegan Korthauer (Instructor)"
+          href: about_keegan.html
+        - text: "Yongjin Park (Instructor)"
+          href: about_yongjin.html
+        - text: "Asfar Lathif (TA)"
+          href: about_asfar.html
+        - text: "Marco Tello (TA)"
+          href: about_marco.html
+    - text: "FAQ"
+      href: faq.html
+    - icon: fab fa-github
+      href: https://github.com
+output: distill::distill_article

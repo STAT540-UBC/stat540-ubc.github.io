@@ -1,0 +1,224 @@
+---
+title: "Course work"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+---
+
+<big>
+
+## Summary
+
+You will have three individual assignments, six seminar submissions, and one group project: 
+- One intro assignment (5%)
+- Six in-seminar submissions (10% total; 2% each after dropping the lowest score)
+- One paper review (5%) 
+- One analysis assignment (30%)
+- Final group project (50%) which contains multiple parts. 
+
+<font color="red">**Deadlines are all by 11:59 pm (Pacific time) on the due date, and late assignments are penalize 10% per day/partial day.**</font> If you anticipate having trouble meeting a deadline, or need to request an extension please reach out via email.
+
+For detailed instructions on how to submit your work, see the [submission instructions section on this page](https://stat540-ubc.github.io/subpages/assignments.html#how-to-turn-in-your-work) and for more tips on mechanics, see the [assignment tips page](assignment_tips.html). <font color="red">For full credit, the following needs be done before the deadline:</font>
+
+1. Commit & push the necessary files (for coding assignments **both** the Rmd and Markdown output are required) 
+2. Open an issue in your private repo the the appropriate commit tagged (with commit link pointing to the folder containing submitted files - see [instructions](https://stat540-ubc.github.io/subpages/assignments.html#how-to-turn-in-your-work)), and tag current TAs with `@STAT540-UBC/current_tas`
+
+## Timeline Overview
+
+```{r, echo=FALSE, warning=FALSE}
+suppressPackageStartupMessages(library(tidyverse))
+assn <- read.csv("course-admin/assn_2022.csv")
+assn <- assn %>% 
+  select(content,start, Category) %>%
+  rename(Assignment = content, `Due Date` = start) %>%
+  mutate(`Due Date` = as.Date(`Due Date`, "%Y-%m-%d")) %>%
+  arrange(`Due Date`) %>% 
+  mutate(`Due Date` = format(`Due Date`, "%a %d %B %Y"))
+knitr::kable(assn)
+```
+
+Current date is indicated by the vertical red bar. Click the zoom buttons to zoom in on a date. Click and drag horizontally to slide date range and vertically to view all items. Reload the page to reset the view to include all due dates.
+
+
+```{r,echo=FALSE, warning=FALSE, eval = TRUE}
+suppressPackageStartupMessages(library(timevis))
+
+assignment_data <- read.csv("course-admin/assn_2022.csv",as.is = T,sep = ",")
+assignment_data$start <- paste0(assignment_data$start, " 23:59:00")
+timevis(assignment_data, options= list(verticalScroll=TRUE, zoomable = FALSE),
+        height=375)
+```
+
+# Assignment details
+
+## Intro assignment (5%)
+
+This assignment is designed to give you an introduction to your future assignments. Once you have completed it, you will have set-up for the class and have a better understanding of how to set up your repository, pushing files to GitHub, writing markdown, and using R to do simple analyses. Grade point values are listed in the assignment.
+
+Go to [the intro assignment](https://github.com/STAT540-UBC/STAT540-UBC.github.io/blob/master/homework/intro_assignment/intro_assignment.md) and start now! 
+
+--------------
+
+## Seminar completion (10%)
+
+You will submit short "deliverables" for six seminars: 1, 2 (split into two parts - Seminar 2a and 2b together count as one deliverable), 3, 4, 5, and 7. These deliverables give practical experience applying the knowledge that will be helpful on the homework assignment, final project, and (hopefully) your future research. Each of these six Seminar session deliverables is weighted equally, but the lowest score will be dropped (so that the 5 deliverables with highest score will each count for 2% of the final grade). Seminar deliverables are due on the Monday following the TA-led session for that seminar. See the [Seminars page](seminars.html) for the submission materials.
+
+## Paper critique (5%)
+
+Each student should review and critique this paper:
+
+* [Comparative Transcriptome Profiling of Human Foreskin Fibroblasts Infected with the Sylvio and Y Strains of *Trypanosoma cruzi*](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159197) by Houston-Ludlam et al (2016)
+
+Aim for a length of 500-700 words in your summary/report. The summary should include: 
+
+1. A brief review of the goal, findings and conclusion of the paper. (1 pt)
+2. A list (or mentioning) of the related datasets/databases and data types used in the study. In the case of datasets, provide some details of the data matrix and meta data. (0.5 pt)
+3. A brief review of the analytical steps in the paper with more details on some selected parts which are relevant to the course materials. *You don't need to understand all of the analysis, but should be able to identify the key analysis/method used to answer the question the paper is intended to answer* (1.5 pt)
+4. Some comments and critiques about the analytical steps, alternative suggestions or improvements. (2 pt)
+
+We have provided [**this guideline**](http://stat540-ubc.github.io/homework/paper\_critique/PRguideline.html) for this task. Here's [another helpful resource](https://github.com/jtleek/readingpapers) on how to read a research paper.
+
+**Delivery:** You should put your paper review files in your individual course repository in .md format (notice that you don't need to write it in .Rmd since you are not going to have any R code in it). You could edit .md files directly from github and therefore can write your full report there, but can also write it in your RStudio and then push it to your repository.
+
+--------------
+
+## Analysis assignment (30%)
+
+This assignment will assess your understanding of the seminar and lecture materials. Start early because this assignment will take time to fully work through. Use the issues in the Discussion repo and the seminar time to ask questions. You will find most of the analysis workflow of the assignment in the seminar materials. 
+
+The questions and links to the dataset are avalable [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/blob/master/homework/analysis_assignment/stat540_analysis_assignment.md).
+
+The grade point values for each question are listed right in the assignment.
+
+--------------
+
+## Final group project (50%)
+
+### General principles
+
+Identify a biological question of interest and a relevant dataset. Develop and apply a statistical approach that allows you to use the dataset to answer the question.
+
+We assume the biological question and data fall in the general area of high-throughput, large-scale biological investigations *targetted by the course*. Beyond that, it is wide open: methylation, SNPs, miRNAs, CNVs, RNA-Seq, CHiP-Seq, gene networks, ... it's fair game. Avoid a dataset that doesn't have any/much quantitative data, i.e. contains only sequence or discrete data.
+
+Note that definitive answers are not necessarily expected. Rather, aim to provide a critical appraisal of the data, the analytical approach, and the results. You will have to handle the competing pressures to "get it right" and "get it done". Shortcomings of the data, misfits between the data or the biological question and the statistical model, etc. are inevitable. Your goal is to identify such issues and discuss them critically, without becoming paralyzed. Demonstrate understanding of the statistical concepts and methods that are the foundation of your analytical approach.
+
+We assume the analytical and computing task will have a substantial statistical component, probably enacted via R. So beware of a major analytical or computational undertaking that is, nonetheless, not statistical (example: constructing a database). Creating useful data visualizations can be absolutely vital and is arguably statistical, but your analysis should go beyond merely creating pretty pictures (but please do include some!). Key concepts, at least some of which should come up in your analysis:
+
+ * the (hypothesized, probably artificial) data-generating model
+
+ * background variation, variance, signal to noise ratio, estimates and their associated standard error
+
+ * relationship between biological factors and experimental factors, apparent relative importance in terms of "explaining" observed data
+
+ * attention to large-scale inference, e.g. control of family-wise error rate or false discovery rate
+ 
+ 
+### Data considerations 
+
+#### Appropriate use of data
+
+If your project involves using unpublished data, ensure your plans are known to the data providers (e.g., your supervisors), and think about implications for publishing - are you are bringing the project team in as collaborators in effect? Are you planning to publish the results of your project, and if so who will be the co-authors? It is best to deal with these questions at the outset of the project.
+
+#### Privacy of project data
+
+The projects are not made public (other than an oral presentation of your work in front of your classmates, which **will be recorded** and made available only to the teaching team and registered students in the course). The project report materials are loaded into GitHub, the secure site we use to manage the course. The course staff and instructors are the only people who have access to the project GitHub repo other than the other members of the project group. The data used can be uploaded to the project, but this can limited or omitted if there are special concerns about privacy etc. - it's primarily the code and write-up about the results that needs to be provided for evaluation.
+
+You can read Github's [security](https://help.github.com/articles/github-security/) and [privacy](https://help.github.com/articles/github-privacy-statement/) policies.
+
+### Group makeup
+
+Groups will be formed by the instructional team following the results of an in class survey, and posted in the Discussion repo. Groups will have a target size of 4 members. Groups will be formed with priority for diversity in terms of backgrounds. In practice, this probably means the team members come from a mix of programs/departments. We will try to honour requests for working with specific team mates, and you may come talk to us immediately after receiving group assignments if you'd like to make a change.
+
+### Deliverables
+
+Details and grading rubrics for each component of the final group project can be found on the [**Group project rubrics page**](group_project_rubrics.html).
+
+* [Project groups & Initial Proposal (0%)](group_project_rubrics.html#project-groups-initial-proposal-0-pts)
+* [Proposal (5%)](group_project_rubrics.html#proposal-5-pts)
+* [Progress report (8%)](group_project_rubrics.html#progress-report-8-pts)
+* [GitHub repository (10%)](group_project_rubrics.html#github-repository-10-pts)
+* [Oral presentation (20%)](group_project_rubrics.html#oral-presentation-20-pts) - A Detailed rubric can be found [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/raw/master/homework/ProjectPresentationRubric.pdf)
+* [Individual report (7%)](group_project_rubrics.html#individual-report-7-pts)
+
+
+--------------
+    
+# Course work files & organization
+
+You need to have Git installed on your compute. You can use command line Git or a Git client (such as GitHub Desktop), or even RStudio itself to push, pull, etc. to/from GitHub. 
+  
+### Set-up your private GitHub repo for course work
+
+![Example of a personal repository directory structure](images/Individual_hw_repo.png)
+
+  * Please use the repository within the organization assigned to you to submit all your course work (i.e., the repo `zz_lastname-firstname_STAT540_2022`). Do not use branches or any other repositories.
+  * All your work should be nicely organized in your repository. Your repository needs to include a clear top-level `README.md` that contains links to your work. This is the presentation of your repository and it helps others to find your work and contributions! 
+  * Make directories for each assignment type (e.g. `Intro_Assignment`, `Paper_critique`, `Analysis_Assignment`, `Seminars`, `Project`)
+    - We truly mean a [directory or "folder"](http://en.wikipedia.org/wiki/Directory_(computing)) -- NOT a [Git branch](http://git-scm.com/book/en/Git-Branching) or anything fancy like that! On your local computer, go to the directory where this Git repository lives. Make the new directories here.
+    - These directories may have sub-directories (especially useful for the `Seminars` directory)
+  * It is also nice to include a `README.md` inside each of the assignment and seminar directories. 
+    - GitHub automatically renders all Markdown files into (pseudo-)HTML when you visit them in a browser. Whenever a *directory* in a repo is visited, if it contains a Markdown file called `README.md`, it will automatically be rendered, effectively serving as a landing or home page.
+  * You will also have a team repository for your group project; more information on organizing this repo (with similar principles) can be found on the [Group Project Rubrics Page](https://stat540-ubc.github.io/subpages/group_project_rubrics.html#github-repository-10-pts)
+
+
+### Main file types
+
+#### R Markdown (source file)
+
+  * **Write your homework in R Markdown.** The file extension should be `.Rmd`.
+  * Recommendation: Create a skeleton of your report by starting with the Markdown or R Markdown file that creates the assignment itself! You can take some things away (unnecessary detail) and add others (R chunks) to morph this into your homework solution.
+    - You'll have these files if you are using Git(Hub) to keep a current copy of the whole course repository. Or, from the links above, click on "Raw" to get raw Markdown and save to a local file.
+    
+#### Markdown (output file)
+
+  * **Compile your homework to Markdown (file extension should be `.md`).**
+    - In the YAML header, specify `output: github_document`   
+    - RStudio's "Knit" button will create the md file when the output is specified in this way. The github .md file is a file that can be rendered nicely on GitHub.   
+  * Note that, by default, any figures created are placed into a subdirectory titled `[filename]_files` where `[filename] is the basename (without extension) of your Rmd. The Markdown file links to these and, therefore, requires them to present your full report.
+  * __Never ever__ edit the output Markdown "by hand". Only edit the R Markdown source and then regenerate the downstream products from that.
+
+#### Optional HTML file
+
+  * In addition, you may generate an html output file by specifying `output: html_document`. If you do this, also specify `keep_md: true` to keep the markdown file which will be used for grading 
+  * Generating an html can also be done by opening the md file generated from the previous step and clicking 'preview' in RStudio.  
+    - Alternatively, use `knit2html()` from the `knitr` package in the R Console or in an R script.
+    - To run from the shell or in a Makefile, use something like `Rscript -e "knitr::knit2html('hw01_lastname-firstnmae.Rmd')"`
+  * __Never ever__ edit the output HTML "by hand". Only edit the R Markdown source and then regenerate the downstream products from that.
+  
+### General tips on what to commit and what not to commit:
+
+> This is rather specific to STAT 540 and may not necessarily reflect your workflow in the future and in other contexts.
+
+  * Commit the main R markdown (`.Rmd`) file that constitutes your solution. Commit early, commit often!
+  * Commit the output Markdown (`.md`) file and the figures stored in the `[filename]_files` subdirectory where `[filename] is the basename (without extension) of your Rmd`.
+  * The HTML (`.html`) file is not necessary to commit if you have specified `output: github_document` and commit your md file.
+  * Do not commit the input data to your repository.
+     - Locally, you should keep the file in some logical place within the homework assignment’s directory. But list the names of such data files in your top-level `.gitignore` file, so that Git ignores it. We do this so that TAs don’t end up with 50 copies of the input data when they mark your work.
+
+# How to "turn in" your work 
+
+When it's time to turn in your deliverable, follow these steps carefully:
+
+1. **Save, Commit, Push**: 
+    - Save all the files associated with your solution locally (<font color="red">**R Markdown and Markdown files are both required**</font> for coding assignments).
+    - Commit those files to your local Git repository.
+    - Push the current state of your local repo to your private repo on GitHub.
+2. **Link to the latest commit, open an issue, tag us**: 
+  i. Grab the link to the latest commit:
+      - Visit your private GitHub repository in a web browser
+      - Just above the file list, click on the link to the list of commits in your repo
+      - Click on the SHA tag of the relevant commit (7 letters/numbers)
+      - Click 'Browse files'
+      - Navigate to the folder containing the submitted files
+      - Copy the link in the address bar of your browser (this link points to the submitted files at the time of the relevant commit)
+  i. Open an issue:
+      - Click on "Issues", then on "New Issue"
+      - Paste the link from step (i). in the body of the issue
+      - Name the issue "Mark *the deliverable title* of *your repository name*", e.g. "Mark seminar 1 of zz_lastname-firstname_STAT540_2022W2"
+  i. Tag us:
+      - In the description of the issue, tag all TAs with the <font color="red">**`@STAT540-UBC/current_tas`**</font> tag
+      - Click "Submit new issue". You're done! Congratulations!
+
+> If you're concerned that something hasn't gone right with the submission, send the TAs an e-mail with your assignment attached. **Note**: this is *only* an emergency back-up plan. We will work with you until you eventually get it submitted via GitHub.
+

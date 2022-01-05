@@ -1,0 +1,30 @@
+"0","library(dplyr)
+"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(stringr)"
+"0","library(glue)"
+"2","
+Attaching package: ‘glue’
+
+"
+"2","The following object is masked from ‘package:dplyr’:
+
+    collapse
+
+"
+"0","library(here)"
+"2","here() starts at /Users/keegan.korthauer/Dropbox/Work/Teaching/STAT540/STAT540-website
+"

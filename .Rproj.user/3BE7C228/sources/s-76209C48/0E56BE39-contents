@@ -1,0 +1,94 @@
+---
+title: "Teaching Team"
+output:
+  html_document
+classoption:
+- twocolumn
+---
+
+
+# Instructors
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+::: {}
+### [Keegan Korthauer](https://kkorthauer.org/) (She/Her/Hers)
+![](images/Keegan_shot.jpg){width=60%}
+:::
+
+
+::: {}
+<br><br>
+<br>Assistant Professor of Statistics
+<br>Virtual office hours: Thurs 9-10am (Pacific time)
+<br><keegan@stat.ubc.ca>
+
+I am an Assistant Professor in the Department of Statistics at UBC and an Investigator at the BC Children's Hospital Research Institute. I grew up and studied in the United States before moving to Vancouver in 2019. My research is focused on developing and applying statistical and computational tools for the analysis of high-throughput sequencing data, with the ultimate goal of uncovering new molecular signals in cancer, child health, and development. My hobbies include board gaming and spending time outdoors with my family. Please feel free to address me as "Keegan" or "Dr. Korthauer". 
+:::
+
+::::
+
+&nbsp;
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+::: {}
+### [Yongjin Park](https://ypark.github.io/) (He/Him/His)
+![](images/yongjin.jpg){width=60%}
+:::
+
+
+::: {}
+<br><br>
+<br>Assistant Professor of Pathology and Statistics
+<br>Virtual office hours: Wed 1pm-2pm (Pacific time)
+<br><ypp@stat.ubc.ca>
+
+I am an Assistant Professor in the Department of Pathology and Statistics since Fall 2020. My research primarily focuses on developing scalable probabilistic inference methods to elucidate hidden causal mechanisms of human diseases, such as cancer and other common/complex disorders. Since I am a data-driven scientist, I become excited when hidden patterns emerge, and data finally start speaking back to me. I firmly believe in Don Knuth's famous quote, "best practice is inspired by theory," and "best theory is inspired by practice."
+:::
+
+::::
+
+
+# Teaching Assistants 
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+::: {}
+### Asfar Lathif (He/Him/His)
+![](images/asfar.jpeg){width=50%}
+:::
+
+
+::: {}
+<br><br>
+<br>PhD Student, Genome Sciences and Technology
+<br>Virtual office hours: Tues 10-11am (Pacific time) 
+<br><asfarlathifbt@gmail.com>
+
+I am PhD student in the Genome Science and Technology department at UBC. I did my undergraduate in Biotechnology in southern India before moving to UBC for my graduate studies at the de Boer lab. My area of interests include high dimensional biology and data science. My thesis project involves understanding how non coding variants in genome affect gene regulation in Cancers. In my free time I enjoy cooking and exploring Vancouver!
+:::
+
+::::
+
+&nbsp;
+
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+::: {}
+### Marco Tello (He/Him/His)
+![](images/marcoTello.jpg){width=50%}
+:::
+
+
+::: {}
+<br><br>
+<br>PhD Student, Bioinformatics
+<br>Virtual office hours: Thurs 11am-12pm (Pacific time)
+<br><Marco.TelloPalencia@bcchr.ca>
+
+I am a PhD student in Bioinformatics, and I work at BC Children's Hospital Research Institute. I finished the undergraduate program in Genomic Sciences from the Autonomous University of Mexico (UNAM) before joining the Korthauer Lab in 2020. I have always been interested in gene regulation dynamics; my current work is focused on unraveling the effects of DNA methylation in gene expression using publicly available data. In my free time, I like painting, swimming, and playing videogames/boardgames.
+:::
+
+::::
+

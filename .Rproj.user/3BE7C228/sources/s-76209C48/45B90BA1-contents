@@ -1,0 +1,92 @@
+---
+title: "Lectures"
+---
+
+
+```{r include = FALSE}
+library(dplyr)
+library(stringr)
+```
+
+```{r include = FALSE}
+# Import schedule
+rawdat <- read.csv(file.path("course-admin", "schedule_2022.csv"), stringsAsFactors = FALSE, colClasses = list(course = 'factor', dow = 'factor'))
+rawdat$course <- as.factor(rawdat$course)
+
+# Class meetings
+rawdat_cm <- rawdat[rawdat$course == "STAT540",]
+
+cdat <- rawdat_cm %>%
+  mutate(ugly_date = ISOdate(2022, match(month, month.name), day),
+         date = sprintf("%s %s %d",
+                        dow, months(ugly_date, abbreviate = TRUE),
+                        day),
+         notes = ifelse(grepl("^lect", lect) & raw_notes != "",
+                        sprintf("%s: %s", lect, raw_notes), raw_notes))
+cdat %>% head(3)
+
+## link to the class page of any class meetings where such exists
+cmdat <-
+  data.frame(pdf = list.files(path="lectures", pattern = '^lect.*pdf', full.names=TRUE),
+             stringsAsFactors = FALSE)
+cmdath <-
+  data.frame(html = list.files(path="lectures", pattern = '^lect.*html', full.names=TRUE),
+             stringsAsFactors = FALSE)
+cmdat <- cmdat %>% mutate(lect = str_extract(pdf, "lect[0-9]+"))
+cmdat$lect <- sapply(cmdat$lect, str_replace, pattern="lect0*([0-9]+)", replacement="lecture-\\1")
+cmdath <- cmdath %>% mutate(lect = str_extract(html, "lect[0-9]+"))
+cmdath$lect <- sapply(cmdath$lect, str_replace, pattern="lect0*([0-9]+)", replacement="lecture-\\1")
+if (nrow(cmdat) >0){
+  cdat <- cdat %>% left_join(cmdat, by="lect")
+}else{
+  cdat$pdf <- NA
+}
+if (nrow(cmdath) >0){
+  cdat <- cdat %>% left_join(cmdath, by="lect")
+}else{
+  cdat$html <- NA
+}
+pdf_exists <- Negate(is.na)(cdat$pdf)
+html_exists <- Negate(is.na)(cdat$html)
+
+# Insert placeholder link to notes 
+#cdat$notes[pdf_exists] <-
+ # str_replace(cdat$notes[which(pdf_exists)],
+#              "(lecture-[0-9]+)|(lecture-[1-9]+)", '<a href="LINK">\\1</a>')
+
+cdat$notes[pdf_exists] <-
+  str_replace(cdat$notes[which(pdf_exists)],
+              "(lecture-[0-9]+)|(lecture-[1-9]+)", '[\\1](LINK)')
+# Replace placeholder "LINK" which pdf file names
+if (sum(pdf_exists) > 0)
+  cdat$notes[pdf_exists] <- str_replace(cdat$notes[which(pdf_exists)], "LINK", cdat$pdf[which(pdf_exists)])
+
+# Append notes field with link to html if it exists
+if (sum(html_exists) > 0)
+  cdat$notes[html_exists] <- paste0(cdat$notes[which(html_exists)], " [[html](", cdat$html[which(html_exists)], ")]")
+
+dat_cm <- cdat %>% split(cdat$course)
+dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
+```
+
+
+
+### Class meetings and schedule 
+
+**Time** : Mon Wed 9:30 - 11am
+
+**Location**: 
+
+* *Before January 24*: as part of UBC's response to the COVID-19 omicron variant, lectures will be held online for the first two weeks (synchronously via Zoom; meeting links posted in Canvas)
+* *On January 24 and after*: it is expected that class will be held in person in [ESB 2012](https://ssc.adm.ubc.ca/classroomservices/function/viewlocation?userEvent=ShowLocation&buildingID=ESB&roomID=2012) after the first two weeks. In case of any changes to this plan, stay tuned to [UBC Broadcast communications](https://covid19.ubc.ca/) 
+
+**Supplemental Files**: Source files for lectures created using Rmarkdown can be found [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/tree/master/lectures/lectures_2021/source) 
+
+```{r results = 'asis', echo = FALSE}
+knitr::kable(dat_cm[["STAT540"]] %>% select(date, notes, instructor, mode) %>%
+  dplyr::rename(Date=date, Topic=notes, Instructor=instructor, Mode=mode),
+  "html", escape = FALSE) %>% 
+  kableExtra::column_spec(1, width = "6em") %>%
+  kableExtra::column_spec(4, width = "5em") %>%
+  kableExtra::kable_styling(full_width = TRUE)
+```
