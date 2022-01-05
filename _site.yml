@@ -45,5 +45,5 @@ navbar:
     - text: "FAQ"
       href: faq.html
     - icon: fab fa-github
-      href: https://github.com
+      href: https://github.com/STAT540-UBC/stat540-ubc.github.io
 output: distill::distill_article
