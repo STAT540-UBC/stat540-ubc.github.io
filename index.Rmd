@@ -14,7 +14,7 @@ site: distill::distill_website
 
 ## Quick links for current students:
 
-* [Announcements & Discussion forum](https://github.com/STAT540-UBC/Discussion/issues)
-* [Course organization on GitHub](https://github.com/STAT540-UBC)
+* [Announcements & Discussion forum](https://github.com/STAT540-UBC-2022/Discussion/issues)
+* [Course organization on GitHub](https://github.com/STAT540-UBC-2022)
 * [Canvas course page](https://canvas.ubc.ca/courses/82590)
 * [Additional resources](syllabus.html#prerequisites-and-resources)

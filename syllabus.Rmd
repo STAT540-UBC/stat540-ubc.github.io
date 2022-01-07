@@ -95,11 +95,11 @@ As we begin the term with web-oriented learning, it is vital that we have a dedi
 
 #### Announcements 
 
-Course announcements will be posted in the [course Github Discussion repository](https://github.com/STAT540-UBC/Discussion) (this will be changed to a private repo and you will be granted access after we collect your Github user IDs). You are responsible for checking it regularly (subscribe to email notifications for this repo to make this easier).
+Course announcements will be posted in the [course Github Discussion repository](https://github.com/STAT540-UBC-2022/Discussion) (this will be changed to a private repo and you will be granted access after we collect your Github user IDs). You are responsible for checking it regularly (subscribe to email notifications for this repo to make this easier).
 
 #### General questions
 
-Please also use the [course Github Discussion repository](https://github.com/STAT540-UBC/Discussion) for posting questions (e.g. topics discussed in class, questions about course organization, assignment clarifications, if you are stuck on an assignment and need help). This ensures the message can be seen by the entire teaching team, and that others in the class who might have the same question can learn from responses. You are also welcome to share your input on questions posted by others using comments. 
+Please also use the [course Github Discussion repository](https://github.com/STAT540-UBC-2022/Discussion) for posting questions (e.g. topics discussed in class, questions about course organization, assignment clarifications, if you are stuck on an assignment and need help). This ensures the message can be seen by the entire teaching team, and that others in the class who might have the same question can learn from responses. You are also welcome to share your input on questions posted by others using comments. 
 
 #### Private matters
 
