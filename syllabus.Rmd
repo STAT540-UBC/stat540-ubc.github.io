@@ -122,7 +122,8 @@ This interdisciplinary course requires a broad range of skills at the interface 
 ### Biology: 
 
 - No requirements, but you are expected to learn things like, e.g. the difference between DNA and RNA, and the difference between a gene and a genome.
-- See [Seminar-0c](https://github.com/STAT540-UBC/STAT540-UBC.github.io/raw/master/seminars/seminars_legacy/sm01e_biology-intro-2017.pdf) for some basic introductory material.
+- See [this video](https://www.youtube.com/watch?v=lSqUDu4zb5k) and this [slideset](resources/biology-intro-2017.pdf) for some basic introductory material. 
+- Go through the (optional, not for a grade) molecular biology quiz on Canvas
 - [This free online book "Concepts of Biology" by Fowler, Roush & Wise](https://openstax.org/books/concepts-biology/pages/1-introduction) is a great resource for biological concepts, in particular chapters 6 and 9
 - [This free online book "Biology" by Clark, Douglas & Choi](https://openstax.org/books/biology-2e/pages/1-introduction) goes more in-depth, see Chapters 14, 15, and 16 for material on genetics that is particularly relevant for this course.
 - No matter your prior experience, when you come across a new biological concept during the course or in your research, you might need to spend a bit of time 'learning as you go' - this is expected and something I still do regularly in my day-to-day research!
@@ -140,7 +141,7 @@ This interdisciplinary course requires a broad range of skills at the interface 
   - [Chapter 4: The tidyverse](https://rafalab.github.io/dsbook/tidyverse.html)
   - [Chapter 5: Importing data](https://rafalab.github.io/dsbook/importing-data.html)
   
-### Other computing tools:
+### Git/GitHub and R Markdown:
 
 - In this course we'll be using the version control software [Git](https://en.wikipedia.org/wiki/Git) and its web-based hosting and collaborative platform [GitHub](https://en.wikipedia.org/wiki/GitHub). 
 - [The online resource "Happy Git and GitHub for the useR" from Jenny Bryan](https://happygitwithr.com/) is a great reference for these tools as we learn them.
