@@ -35,7 +35,7 @@ assn <- assn %>%
   rename(Assignment = content, `Due Date` = start) %>%
   mutate(`Due Date` = as.Date(`Due Date`, "%Y-%m-%d")) %>%
   arrange(`Due Date`) %>% 
-  mutate(`Due Date` = format(`Due Date`, "%a %d %B %Y"))
+  mutate(`Due Date` = format(`Due Date`, "%a %b %d"))
 knitr::kable(assn)
 ```
 

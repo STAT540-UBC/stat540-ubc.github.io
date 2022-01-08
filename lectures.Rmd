@@ -83,10 +83,9 @@ dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
 **Supplemental Files**: Source files for lectures created using Rmarkdown can be found [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/tree/master/lectures/lectures_2021/source) 
 
 ```{r results = 'asis', echo = FALSE}
-knitr::kable(dat_cm[["STAT540"]] %>% select(date, notes, instructor, mode) %>%
-  dplyr::rename(Date=date, Topic=notes, Instructor=instructor, Mode=mode),
+knitr::kable(dat_cm[["STAT540"]] %>% select(date, notes, instructor) %>%
+  dplyr::rename(Date=date, Topic=notes, Instructor=instructor),
   "html", escape = FALSE) %>% 
   kableExtra::column_spec(1, width = "6em") %>%
-  kableExtra::column_spec(4, width = "5em") %>%
   kableExtra::kable_styling(full_width = TRUE)
 ```
