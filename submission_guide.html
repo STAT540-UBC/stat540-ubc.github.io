@@ -2461,48 +2461,53 @@ PEOPLE
 
 
 <div class="d-article">
-<h1 id="how-to-work-on-and-submit-assignments-through-github">How to work on and submit assignments through GitHub</h1>
-<h2 id="course-work-files-organization">Course work files &amp; organization</h2>
-<p>You need to have Git installed on your computer. You can use command line Git or a Git client (such as GitHub Desktop), or even RStudio itself to push, pull, etc. to/from GitHub.</p>
-<h3 id="set-up-your-private-github-repo-to-organize-all-your-individual-course-work">Set-up your private GitHub repo to organize all your individual course work</h3>
-<ul>
-<li>Please use the repository within the organization assigned to you to submit all your course work (i.e., the repo <code>zz_lastname-firstname_STAT540_2022</code>). Do not use branches or any other repositories.</li>
-<li>All your work should be nicely organized in your repository. Your repository needs to include a clear top-level <code>README.md</code> that contains links to your work. This is the presentation of your repository and it helps others to find your work and contributions!</li>
-<li>Make directories for each assignment type (e.g. <code>Intro_Assignment</code>, <code>Paper_critique</code>, <code>Analysis_Assignment</code>, <code>Seminars</code>, <code>Project</code>)
-<ul>
-<li>We simply mean a <a href="http://en.wikipedia.org/wiki/Directory_(computing)">directory or “folder”</a> – NOT a <a href="http://git-scm.com/book/en/Git-Branching">Git branch</a> or anything fancy like that! On your local computer, go to the directory where this Git repository lives. Make the new directories here. Example:</li>
-</ul></li>
-</ul>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="images/Individual_hw_repo.png" title="Example of personal repository structure" alt="Example of personal repository structure" width="300px" style="display: block; margin: auto;" /></p>
-</div>
-<pre><code>- These directories may have sub-directories (especially useful for the `Seminars` directory)</code></pre>
-<ul>
-<li>It is also recommended to include a <code>README.md</code> inside each of the assignment and seminar directories.
-<ul>
-<li>GitHub automatically renders all Markdown files into (pseudo-)HTML when you visit them in a browser. Whenever a <em>directory</em> in a repo is visited, if it contains a Markdown file called <code>README.md</code>, it will automatically be rendered, effectively serving as a landing or home page.</li>
-</ul></li>
-<li>You will also have a team repository for your group project; more information on organizing this repo (with similar principles) can be found on the <a href="group_project_rubrics.html#github-repository-10-pts">Group Project Rubrics Page</a></li>
-</ul>
-<h3 id="main-required-file-types">Main required file types</h3>
-<p>In general, these are the files you need to commit with your assignments. Note that you should not commit input data to your repository. Locally, you may keep the file in some logical place within the assignment’s directory. But list the names of such data files in your top-level <code>.gitignore</code> file, so that Git ignores it. Or better yet, include commands that download the data directly (if available and not too large). This is to reduce file sizes required when the TAs download your repositories for marking.</p>
+<h1 id="how-to-start-and-submit-assignments-through-github">How to start and submit assignments through GitHub</h1>
+<p>You need to have Git installed on your computer, and have a GitHub account. You can use command line Git or a Git client (such as GitHub Desktop), or even RStudio itself to push, pull, etc. to/from GitHub. See <a href="seminars.html">Seminar 1</a> for a setup guide and illustration of the workflow from accepting an assignment to submission using RStudio.</p>
+<h2 id="start-your-assignment">Start your assignment</h2>
+<ol type="1">
+<li><p><strong>Accept</strong>: Click on the assignment invitation link for the assignment in Canvas. Each individual assignment/deliverable will have its own link, whereas the group project will only have one link at the start of the project (all deliverables will use the same shared repo). After you accept the assignment, a GitHub repo will be automatically be generated for you.</p></li>
+<li><p><strong>Clone</strong> the repository to your local machine (see <a href="seminars.html">Seminar 1</a> for illustration of this workflow). Now you can begin working on your submission files locally. See <a href="#files-organization">below</a> for more detail on this repo and organizing files.</p></li>
+</ol>
+<h2 id="how-to-turn-in-your-work-save-commit-push">How to “turn in” your work: <strong>Save, Commit, Push</strong></h2>
+<p>Follow these steps carefully, and be sure they are complete before the deadline of each deliverable. <span style="color: red"><strong>Important Note: If you commit/push any changes after the deadline (even by one second), they will not be graded.</strong></span></p>
+<ol type="1">
+<li><p><strong>Save</strong> all the files associated with your solution locally (i.e. for coding assignments R Markdown, GitHub Markdown, and any associated output files - see <a href="#main-required-file-types">below</a> for more detail).</p></li>
+<li><p><strong>Commit</strong> those files to your local Git repository.</p></li>
+<li><p><strong>Push</strong> the current state of your local repo to your private repo on GitHub.</p></li>
+<li><p>Double check: view your repo on GitHub to verify that the most recent commits are visible.</p></li>
+</ol>
+<p>That’s it! There’s no extra or final ‘submit’ button. You can commit/push to update your assignment as often as you’d like before the deadline (<a href="#general-tips-for-working-on-the-assignments">frequent commits are actually encouraged</a>). A snapshot of your repo at the deadline will automatically be captured for grading.</p>
 <blockquote>
-<p>This is rather specific to STAT 540 and may not necessarily reflect your workflow in other contexts.</p>
+<p>If you’re concerned that something hasn’t gone right with the submission and the deadline is imminent, send the TAs an e-mail with your assignment attached. <strong>Note</strong>: this is <em>only</em> a last-minute emergency back-up plan. We will work with you until you get it submitted via GitHub.</p>
+</blockquote>
+<h1 id="files-organization">Files &amp; organization</h1>
+<h2 id="individual-assignments">Individual assignments</h2>
+<ul>
+<li>Use the repositories that are generated for you when you accept each assignment (e.g., the repo with the format <code>STAT540-UBC-2022/seminar-01-yourGitHubID</code> will contain your Seminar 1 deliverable). Do not use additional branches or any other repositories to submit your course work.</li>
+<li>All your work for each deliverable should be nicely organized in its repository.</li>
+<li>Your repositories should include a <code>README.md</code> file with a clear description. These are like each assignment’s landing page.</li>
+</ul>
+<h2 id="group-project">Group project</h2>
+<ul>
+<li>A shared team repository will be created for your group project; all group-level project deliverables will be submitted in this repo.</li>
+<li>Information on organizing this repo can be found on the <a href="group_project_rubrics.html#github-repository-10-pts">Group Project Rubrics Page</a></li>
+</ul>
+<h1 id="main-required-file-types">Main required file types</h1>
+<p>In general for coding assignments, you need to commit and push your <strong>R Markdown, GitHub Markdown, and any associated figure/output files</strong> with your assignments. Note that you <em>should not commit input data to your repository</em>. Writing assignments are the exception (e.g. paper critique, project proposals): a Markdown file sufficient.</p>
+<blockquote>
+<p>This workflow is specific to STAT 540 and may not necessarily reflect your workflow in other contexts.</p>
 </blockquote>
 <h4 id="r-markdown-source-file">R Markdown (source file)</h4>
 <ul>
 <li><strong>Write your homework in R Markdown.</strong> The file extension should be <code>.Rmd</code>.</li>
-<li>Recommendation: Create a skeleton of your report by starting with the Markdown or R Markdown file that creates the assignment itself! You can take some things away (unnecessary detail) and add others (R chunks, explanatory text) to morph this into your homework solution.
-<ul>
-<li>Click on “Raw” when viewing the file on GitHub to get raw Markdown and save to a local file.</li>
-</ul></li>
+<li>Recommendation: For coding assignments, start with the Markdown or R Markdown file that creates the assignment itself! You can take some things away (unnecessary detail) and add others (R chunks, explanatory text) to morph this into your homework solution.</li>
 </ul>
-<h4 id="markdown-output-file">Markdown (output file)</h4>
+<h4 id="github-markdown-output-file">GitHub Markdown (output file)</h4>
 <ul>
-<li><strong>Compile your homework to Markdown (file extension should be <code>.md</code>).</strong>
+<li><strong>Compile your homework to GitHub Markdown (file extension should be <code>.md</code>).</strong>
 <ul>
 <li>In the YAML header, specify <code>output: github_document</code> as shown below</li>
-<li>RStudio’s “Knit” button will create the md file when the output is specified in this way. The github .md file is a file that can be rendered nicely on GitHub.</li>
+<li>RStudio’s “Knit” button will create the GitHub Markdown file (.md) when the output is specified in this way. The Github Markdown file is a file that can be rendered nicely on GitHub.</li>
 </ul></li>
 </ul>
 <pre><code>---
@@ -2516,49 +2521,15 @@ output: github_document
 </ul>
 <h4 id="figure-files-output-files">Figure files (output files)</h4>
 <ul>
-<li>Note that, by default, any figures created by your <code>.Rmd</code> are placed into a subdirectory titled <code>[filename]_files</code> where <code>[filename]</code> is the basename (without extension) of your <code>.Rmd</code> file.</li>
-<li>The Markdown file links to these figure files and, therefore, <strong>requires these files to be present to in order to include the figures in your full report</strong>.</li>
+<li>By default, any figures created by your <code>.Rmd</code> are placed into a subdirectory titled <code>[filename]_files</code> where <code>[filename]</code> is the basename (without extension) of your <code>.Rmd</code> file.</li>
+<li>The GitHub Markdown file links to these figure files and, therefore, <strong>requires these files to be present to in order to include the figures in your full report</strong>.</li>
 </ul>
-<h1 id="how-to-turn-in-your-work">How to “turn in” your work</h1>
-<p>When it’s time to turn in your deliverable, follow these steps carefully:</p>
-<ol type="1">
-<li><strong>Save, Commit, Push</strong>:
-<ul>
-<li>Save all the files associated with your solution locally (<font color="red"><strong>R Markdown and Markdown files are both required</strong></font> for coding assignments).</li>
-<li>Commit those files to your local Git repository.</li>
-<li>Push the current state of your local repo to your private repo on GitHub.</li>
-</ul></li>
-<li><strong>Link to the latest commit, open an issue, tag us</strong>:</li>
-</ol>
-<ol type="i">
-<li>Grab the link to the latest commit:
-<ul>
-<li>Visit your private GitHub repository in a web browser</li>
-<li>Just above the file list, click on the link to the list of commits in your repo</li>
-<li>Click on the SHA tag of the relevant commit (7 letters/numbers)</li>
-<li>Click ‘Browse files’</li>
-<li>Navigate to the folder containing the submitted files</li>
-<li>Copy the link in the address bar of your browser (this link points to the submitted files at the time of the relevant commit)</li>
-</ul></li>
-<li>Open an issue:
-<ul>
-<li>Click on “Issues”, then on “New Issue”</li>
-<li>Paste the link from step (i). in the body of the issue</li>
-<li>Name the issue “Mark <em>the deliverable title</em> of <em>your repository name</em>”, e.g. “Mark seminar 1 of zz_lastname-firstname_STAT540_2022W2”</li>
-</ul></li>
-<li>Tag us:
-<ul>
-<li>In the description of the issue, tag all TAs with the <font color="red"><strong><code>@STAT540-UBC/current_tas</code></strong></font> tag</li>
-<li>Click “Submit new issue”. You’re done! Congratulations!</li>
-</ul></li>
-</ol>
-<blockquote>
-<p>If you’re concerned that something hasn’t gone right with the submission, send the TAs an e-mail with your assignment attached. <strong>Note</strong>: this is <em>only</em> an emergency back-up plan. We will work with you until you eventually get it submitted via GitHub.</p>
-</blockquote>
-<h1 id="general-tips-for-working-on-the-assignments">General tips for working on the assignments</h1>
+<h4 id="files-not-to-commit-data-files-input-files">Files <strong>not</strong> to commit: Data files (input files)</h4>
+<p>Locally, you may keep input data files in some logical place within the assignment’s directory. But list the names of such data files in your top-level <code>.gitignore</code> file, so that Git ignores it. Or better yet, include commands that download the data directly (if available and not too large). This is to reduce storage required on GitHub and when the TAs download your repositories for marking.</p>
+<h2 id="general-tips-for-working-on-the-assignments">General tips for working on the assignments</h2>
 <ul>
 <li><p><strong>Start early</strong>. Even if you are already fluent with all the seminar materials, it will still take time to answer all the questions, and prepare files for submission.</p></li>
-<li><p><strong>Commit early; commit often</strong> (and push). It’s helpful to have an earlier version of your work to return to (e.g. to debug if something suddenly throws an error and you can’t figure out why; your computer crashes and you lose locally saved files).</p></li>
+<li><p><strong>Commit early; commit often</strong> (and push). It’s helpful to have an earlier version of your work to return to (e.g. to debug if something suddenly throws an error and you can’t figure out why 🤯, or if your cat walks on your keyboard and deletes your repo 🤷).</p></li>
 <li><p>When you get stuck or when you run into an error, ask yourself these questions:</p>
 <ul>
 <li>Am I in the right working directory ?<br />
@@ -2569,20 +2540,15 @@ output: github_document
 <li>Am I using the right parameters for this function? (hint, type <code>?function_name()</code> where function_name is the name of the function, to check if you’re using it right)</li>
 </ul></li>
 <li><p>Your Rmarkdown can’t be knitted? Is it because you didn’t define all the variables inside your Rmarkdown? Your code chunk might run in RStudio if all the variables are all defined in the RStudio environment, but it wouldn’t run as the Rmarkdown is being knitted if the variables aren’t defined in the Rmarkdown document.</p></li>
-<li><p>Well-structured dataframes and reusable functions can often lighten your work load and increase readability of code.</p></li>
-<li><p>Overall presentation and mechanics refer to the fluency, neatness, easiness to read. For example:</p></li>
-<li><p>Using headings/subheadings to distinguishes different sections/questions</p></li>
-<li><p><strong>Explain what you’re doing to show your understanding</strong>, i.e. sandwiching your code and result with some explanations and interpretation. We don’t want to see just a graph or some R outputs standing alone in a question.</p></li>
-<li><p>Use inline R code whenever you refers to the value of a variable in a block of text.</p></li>
-<li><p>Comment on your code so that everyone, including yourself, can easily follow through your steps.</p>
+<li><p>Overall presentation and mechanics refer to the fluency, neatness, easiness to read. For example:</p>
 <ul>
-<li>In R, comment follows the number sign. For example <code># What I did here</code><br />
+<li><strong>Explain what you’re doing to show your understanding</strong>, i.e. sandwiching your code and result with some explanations and interpretation. We don’t want to see just a graph or some R outputs standing alone in a question.</li>
+<li>Use headings/subheadings to distinguishes different sections/questions</li>
+<li>Well-structured dataframes and reusable functions can often lighten your work load and increase readability of code.</li>
+<li>Use inline R code whenever you refers to the value of a variable in a block of text.</li>
+<li>Comment on your code so that everyone, including yourself, can easily follow through your steps. In R, comment follows the number sign. For example <code># What I did here</code><br />
 </li>
-</ul></li>
-<li><p>There are a few occasions where, instead of just printing an object with R, you could format the info in an nice table.</p>
-<ul>
-<li>The <code>kable()</code> function from <code>knitr</code> package.</li>
-<li>Also look into the packages <code>xtable</code>, <code>pander</code> for making pretty HTML tables.</li>
+<li>Consider formating R output in a nice table instead of just printing it (e.g. see the <code>kable()</code> function from <code>knitr</code> package)</li>
 </ul></li>
 <li><p>You might find <a href="https://www.rstudio.com/resources/cheatsheets/">cheatsheets from Rstudio</a> useful, in terms of graphing, making an awesome R markdown, etc.</p></li>
 <li><p>Make it easy for others to run your code</p>
@@ -2592,7 +2558,7 @@ output: github_document
 <li>Pretend you are someone else. Clone a fresh copy of your own repo from GitHub, fire up a new RStudio session and try to knit your R markdown file. Does it “just work”? It should!</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

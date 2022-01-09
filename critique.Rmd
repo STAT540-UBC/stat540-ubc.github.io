@@ -14,7 +14,32 @@ To practice your ability to go through a paper, identify the biological problem 
 
 [Comparative Transcriptome Profiling of Human Foreskin Fibroblasts Infected with the Sylvio and Y Strains of *Trypanosoma cruzi*](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159197) by Houston-Ludlam et al (2016).
 
-## Where do I start?
+
+## Deliverables and Rubric:
+
+Aim for a length of 500-700 words in your summary/report. **Submission:** You should write your paper critique in .md format (notice that you don't need to write it in .Rmd since you are not going to have any R code in it). 
+
+In four sections, present:
+
+**1) A brief review of the goal, findings and conclusion of the paper. (1 pt) **
+
+   What's the biological problem (from abstract/introduction)? What did the authors do (introduction/methods)? Briefly, what are some of their key findings (results)? Taken together, what did the authors conclude from these results?
+
+**2) A list (or mentioning) of the related datasets/databases and data types used in the study. In the case of datasets, provide some details of the data matrix and meta data. (0.5 pt)**
+ 
+   What kind of dataset was used/generated in this study? How was it generated? What does the dataset represent (i.e. groups, conditions, timepoints, cell types, mouse strains)?
+
+**3) A brief review of the analytical steps in the paper with more details on some selected parts which are relevant to the course materials. You don’t need to understand all of the analysis, but should be able to identify the key analysis/method used to answer the question the paper is intended to answer. (1.5 pt)**
+
+   What kinds of statistical analyses were used on this dataset? How do they control for variation between/within groups?
+
+**4) Some comments and critiques about the analytical steps, alternative suggestions or improvements. (2 pt)**
+
+   This is where you add your own opinions on their methods. Do you agree with how they interpreted their findings? Do you see any gene function/network analyses? Do you see any limitations with their approach?
+   
+## General Tips:
+
+Where should I start?
 
 Read the title and abstract. Try to identify:
 
@@ -44,25 +69,5 @@ Briefly understand the discussion:
 
  * How did the authors interpret these findings? Do you agree with this?
 
-
-## Deliverables and Rubric:
-
-In four sections, present:
-
-**1) A brief review of the goal, findings and conclusion of the paper. (1 pt) **
-
-   What's the biological problem (from abstract/introduction)? What did the authors do (introduction/methods)? Briefly, what are some of their key findings (results)? Taken together, what did the authors conclude from these results?
-
-**2) A list (or mentioning) of the related datasets/databases and data types used in the study. In the case of datasets, provide some details of the data matrix and meta data. (0.5 pt)**
- 
-   What kind of dataset was used/generated in this study? How was it generated? What does the dataset represent (i.e. groups, conditions, timepoints, cell types, mouse strains)?
-
-**3) A brief review of the analytical steps in the paper with more details on some selected parts which are relevant to the course materials. You don’t need to understand all of the analysis, but should be able to identify the key analysis/method used to answer the question the paper is intended to answer. (1.5 pt)**
-
-   What kinds of statistical analyses were used on this dataset? How do they control for variation between/within groups?
-
-**4) Some comments and critiques about the analytical steps, alternative suggestions or improvements. (2 pt)**
-
-   This is where you add your own opinions on their methods. Do you agree with how they interpreted their findings? Do you see any gene function/network analyses? Do you see any limitations with their approach?
-   
+Here's [another helpful resource](https://github.com/jtleek/readingpapers) on how to read a research paper.
 

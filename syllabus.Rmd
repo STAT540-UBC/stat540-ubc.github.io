@@ -150,7 +150,7 @@ This interdisciplinary course requires a broad range of skills at the interface 
 
 ## Evaluation
 
-You will have three individual assignments, six seminar submissions (one divided into two parts), and one group project. Deadlines are all by 11:59 pm (Pacific time) on the due date, and late assignments are penalized 10% per day/partial day. 
+You will have three individual assignments, six seminar submissions (one divided into two parts), and one group project. <font color="red">**Deadlines are all by 11:59 pm (Pacific time) on the due date. Any submission or modification after the due date will not be graded unless you have requested an extension**</font>. If you anticipate having trouble meeting a deadline and need to request an extension/academic concession please reach out via email.
 
 **For more detail on each of these assignments, see the [assignments page](assignments.html)** (the header of each assignment on this page points to the relevant section of the assignments page). Also refer to this [visual overview of the timeline](timeline.html).
 
@@ -182,33 +182,15 @@ kable(assn %>% filter(Assignment == "Intro Assignment") %>% select(-Category))
 
 
 ```{r, echo = FALSE, warning =  FALSE}
-suppressPackageStartupMessages(library(tidyverse))
-suppressPackageStartupMessages(library(knitr))
-assn <- read.csv("course-admin/assn_2022.csv")
-assn <- assn %>% 
-  select(content, start, Category) %>%
-  rename(Assignment = content, `Due Date` = start) %>%
-  mutate(`Due Date` = as.Date(`Due Date`, "%Y-%m-%d")) %>%
-  arrange(`Due Date`) %>% 
-  mutate(`Due Date` = format(`Due Date`, "%a %d %B %Y"))
 kable(assn %>% filter(Category == "Seminar") %>% select(-Category))
 ```
 
 ### [Paper critique (5%)](assignments.html#paper-critique-5)
 
 - Read, summarize and critique [this paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159197)
-- For detailed instructions, refer to [the assignments page](assignments.html#paper-critique-5)
+- For detailed instructions, refer to [the rubric](critique.html)
 
 ```{r, echo = FALSE, warning =  FALSE}
-suppressPackageStartupMessages(library(tidyverse))
-suppressPackageStartupMessages(library(knitr))
-assn <- read.csv("course-admin/assn_2022.csv")
-assn <- assn %>% 
-  select(content,start, Category) %>%
-  rename(Assignment = content, `Due Date` = start) %>%
-  mutate(`Due Date` = as.Date(`Due Date`, "%Y-%m-%d")) %>%
-  arrange(`Due Date`) %>% 
-  mutate(`Due Date` = format(`Due Date`, "%a %d %B %Y"))
 kable(assn %>% filter(Category == "Paper Critique") %>% select(-Category))
 ```
 
@@ -220,15 +202,6 @@ kable(assn %>% filter(Category == "Paper Critique") %>% select(-Category))
 
 
 ```{r, echo = FALSE, warning =  FALSE}
-suppressPackageStartupMessages(library(tidyverse))
-suppressPackageStartupMessages(library(knitr))
-assn <- read.csv("course-admin/assn_2022.csv")
-assn <- assn %>% 
-  select(content,start, Category) %>%
-  rename(Assignment = content, `Due Date` = start) %>%
-  mutate(`Due Date` = as.Date(`Due Date`, "%Y-%m-%d")) %>%
-  arrange(`Due Date`) %>% 
-  mutate(`Due Date` = format(`Due Date`, "%a %d %B %Y"))
 kable(assn %>% filter(Category == "Individual Assignment", Assignment != "Intro Assignment") %>% select(-Category))
 ```
 
@@ -248,15 +221,6 @@ kable(assn %>% filter(Category == "Individual Assignment", Assignment != "Intro 
 
 
 ```{r, echo = FALSE, warning = FALSE}
-suppressPackageStartupMessages(library(tidyverse))
-suppressPackageStartupMessages(library(knitr))
-assn <- read.csv("course-admin/assn_2022.csv")
-assn <- assn %>% 
-  select(content,start, Category) %>%
-  rename(Assignment = content, `Due Date` = start) %>%
-  mutate(`Due Date` = as.Date(`Due Date`, "%Y-%m-%d")) %>%
-  arrange(`Due Date`) %>% 
-  mutate(`Due Date` = format(`Due Date`, "%a %d %B %Y"))
 kable(assn %>% filter(Category == "Group Project") %>% select(-Category))
 ``` 
 

@@ -53,6 +53,7 @@ html_exists <- Negate(is.na)(cdat$html)
 #cdat$notes[pdf_exists] <-
  # str_replace(cdat$notes[which(pdf_exists)],
 #              "(lecture-[0-9]+)|(lecture-[1-9]+)", '<a href="LINK">\\1</a>')
+cdat$notes <- gsub("lecture-", "Lecture ", cdat$notes)
 
 cdat$notes[pdf_exists] <-
   str_replace(cdat$notes[which(pdf_exists)],
