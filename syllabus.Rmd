@@ -122,7 +122,7 @@ This interdisciplinary course requires a broad range of skills at the interface 
 ### Biology: 
 
 - No requirements, but you are expected to learn things like, e.g. the difference between DNA and RNA, and the difference between a gene and a genome.
-- See [this video](https://www.youtube.com/watch?v=lSqUDu4zb5k) and this [slideset](https://github.com/STAT540-UBC/resources/biology-intro-2017.pdf) for some basic introductory material. 
+- See [this video](https://www.youtube.com/watch?v=lSqUDu4zb5k) and this [slideset](https://github.com/STAT540-UBC/resources/blob/main/biology-intro-2017.pdf) for some basic introductory material. 
 - Go through the (optional, not for a grade) molecular biology quiz on Canvas
 - [This free online book "Concepts of Biology" by Fowler, Roush & Wise](https://openstax.org/books/concepts-biology/pages/1-introduction) is a great resource for biological concepts, in particular chapters 6 and 9
 - [This free online book "Biology" by Clark, Douglas & Choi](https://openstax.org/books/biology-2e/pages/1-introduction) goes more in-depth, see Chapters 14, 15, and 16 for material on genetics that is particularly relevant for this course.
