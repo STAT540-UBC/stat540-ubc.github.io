@@ -42,8 +42,7 @@ knitr::kable(assn)
 
 This assignment is designed to give you independent practice in the workflow used for completing and submitting course work: committing and pushing files to GitHub, formatting an R Markdown document, using R to do simple analyses, and writing about your results. Grade point values are listed in the assignment.
 
-Go to [the intro assignment](https://github.com/STAT540-UBC/STAT540-UBC.github.io/blob/master/homework/intro_assignment/intro_assignment.md) and start now! 
-
+The instructions and questions are available [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/blob/master/homework/intro_assignment/intro_assignment.md).
 
 ## Seminar completion (10%)
 
@@ -61,7 +60,7 @@ Please see [**critique rubric**](critique.html) for detailed instructions on thi
 
 This assignment will assess your understanding of the seminar and lecture materials. Start early because this assignment will take time to fully work through. Use the issues in the Discussion repo and the seminar time to ask questions. You will find most of the analysis workflow of the assignment in the seminar materials. 
 
-The questions and links to the dataset are avalable [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/blob/master/homework/analysis_assignment/stat540_analysis_assignment.md).
+The instruction and questions and are available [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/blob/master/homework/analysis_assignment/stat540_analysis_assignment.md).
 
 The grade point values for each question are listed right in the assignment.
 
