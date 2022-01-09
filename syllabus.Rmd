@@ -122,7 +122,7 @@ This interdisciplinary course requires a broad range of skills at the interface 
 ### Biology: 
 
 - No requirements, but you are expected to learn things like, e.g. the difference between DNA and RNA, and the difference between a gene and a genome.
-- See [this video](https://www.youtube.com/watch?v=lSqUDu4zb5k) and this [slideset](resources/biology-intro-2017.pdf) for some basic introductory material. 
+- See [this video](https://www.youtube.com/watch?v=lSqUDu4zb5k) and this [slideset](https://github.com/STAT540-UBC/resources/biology-intro-2017.pdf) for some basic introductory material. 
 - Go through the (optional, not for a grade) molecular biology quiz on Canvas
 - [This free online book "Concepts of Biology" by Fowler, Roush & Wise](https://openstax.org/books/concepts-biology/pages/1-introduction) is a great resource for biological concepts, in particular chapters 6 and 9
 - [This free online book "Biology" by Clark, Douglas & Choi](https://openstax.org/books/biology-2e/pages/1-introduction) goes more in-depth, see Chapters 14, 15, and 16 for material on genetics that is particularly relevant for this course.
@@ -198,8 +198,6 @@ kable(assn %>% filter(Category == "Paper Critique") %>% select(-Category))
 
 - Involves detailed analysis of real data using R
 - This assignment will assess your ability to understand and apply the methods learned in class 
-- For more detailed instructions, see the [assignments page](assignments.html#analysis-assignment-30) and the [markdown document with the questions](https://github.com/STAT540-UBC/STAT540-UBC.github.io/blob/master/homework/assignment/stat540_analysis_assignment.md)
-
 
 ```{r, echo = FALSE, warning =  FALSE}
 kable(assn %>% filter(Category == "Individual Assignment", Assignment != "Intro Assignment") %>% select(-Category))
@@ -217,7 +215,7 @@ kable(assn %>% filter(Category == "Individual Assignment", Assignment != "Intro 
     - GitHub repository
     - Individual report deadline
 - For more details on the project components and how groups are selected see the [assignments page](assignments.html#final-group-project-50)
-- For detailed grading rubrics of the final project components, see the [final project rubric page](group_project_rubrics.html) and the [final project presentation rubric](homework/ProjectPresentationRubric.pdf)
+- For detailed grading rubrics of the final project components, see the [final project rubric page](group_project_rubrics.html) and the [final project presentation rubric](course-admin/ProjectPresentationRubric.pdf)
 
 
 ```{r, echo = FALSE, warning = FALSE}

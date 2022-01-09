@@ -120,7 +120,7 @@ Each group will prepare one 15 minute oral presentation, which will be followed 
 
 Resources for pre-recording presentations: If you choose to prerecord your group presentation, you may do so using a variety of tools. One option is to record during a group meeting using [Microsoft Teams](https://support.microsoft.com/en-us/office/record-a-meeting-in-teams-34dfbe7f-b07d-4a27-b4c6-de62f1348c24) or [Zoom](https://support.zoom.us/hc/en-us/articles/201362473-Local-recording). Another option is to record in [Powerpoint](https://support.microsoft.com/en-us/office/record-a-presentation-2570dff5-f81c-40bc-b404-e04e95ffab33). You could also use screencast software such as [QuickTime for Mac](https://support.apple.com/en-ca/guide/quicktime-player/qtp97b08e666/mac). If you need advice (or have advice to share) on recording/editing software for your system, please post in the Discussion repo.
 
-#### [Presentation evaluation](https://github.com/STAT540-UBC/STAT540-UBC.github.io/raw/master/homework/ProjectPresentationRubric.pdf)
+#### [Presentation evaluation](course-admin/ProjectPresentationRubric.pdf)
 
 Your oral presentation is evaluated in 4 major categories:
 
@@ -129,7 +129,7 @@ Your oral presentation is evaluated in 4 major categories:
 3. Quality of presentation
 4. Scientific maturity
 
-You can find the full detailed rubric for presentation evaluation in each of these categories [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/raw/master/homework/ProjectPresentationRubric.pdf).
+You can find the full detailed rubric for presentation evaluation in each of these categories [here](course-admin/ProjectPresentationRubric.pdf).
 
 #### Presentation slides submission
 

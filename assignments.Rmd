@@ -42,7 +42,7 @@ knitr::kable(assn)
 
 This assignment is designed to give you independent practice in the workflow used for completing and submitting course work: committing and pushing files to GitHub, formatting an R Markdown document, using R to do simple analyses, and writing about your results. Grade point values are listed in the assignment.
 
-The instructions and questions are available [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/blob/master/homework/intro_assignment/intro_assignment.md).
+The instructions and questions are available [here](https://github.com/STAT540-UBC/intro-assignment/blob/main/intro_assignment.md).
 
 ## Seminar completion (10%)
 
@@ -60,7 +60,7 @@ Please see [**critique rubric**](critique.html) for detailed instructions on thi
 
 This assignment will assess your understanding of the seminar and lecture materials. Start early because this assignment will take time to fully work through. Use the issues in the Discussion repo and the seminar time to ask questions. You will find most of the analysis workflow of the assignment in the seminar materials. 
 
-The instruction and questions and are available [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/blob/master/homework/analysis_assignment/stat540_analysis_assignment.md).
+The instruction and questions and are available [here](https://github.com/STAT540-UBC/analysis-assignment/blob/main/analysis_assignment.md).
 
 The grade point values for each question are listed right in the assignment.
 
@@ -110,5 +110,5 @@ Details and grading rubrics for each component of the final group project can be
 * [Proposal (5%)](group_project_rubrics.html#proposal-5-pts)
 * [Progress report (8%)](group_project_rubrics.html#progress-report-8-pts)
 * [GitHub repository (10%)](group_project_rubrics.html#github-repository-10-pts)
-* [Oral presentation (20%)](group_project_rubrics.html#oral-presentation-20-pts) - A Detailed rubric can be found [here](homework/ProjectPresentationRubric.pdf)
+* [Oral presentation (20%)](group_project_rubrics.html#oral-presentation-20-pts) - A Detailed rubric can be found [here](course-admin/ProjectPresentationRubric.pdf)
 * [Individual report (7%)](group_project_rubrics.html#individual-report-7-pts)
