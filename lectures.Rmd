@@ -6,6 +6,7 @@ title: "Lectures"
 ```{r include = FALSE}
 library(dplyr)
 library(stringr)
+library(httr)
 ```
 
 ```{r include = FALSE}
@@ -26,8 +27,12 @@ cdat <- rawdat_cm %>%
 cdat %>% head(3)
 
 ## link to the class page of any class meetings where such exists
+req <- GET("https://api.github.com/repos/STAT540-UBC/lectures/git/trees/main?recursive=1")
+stop_for_status(req)
+filelist <- unlist(lapply(content(req)$tree, "[", "path"), use.names = F)
+
 cmdat <-
-  data.frame(pdf = list.files(path="lectures", pattern = '^lect.*pdf', full.names=TRUE),
+  data.frame(pdf = filelist[grepl('^lect.*pdf', filelist)],
              stringsAsFactors = FALSE)
 cmdath <-
   data.frame(html = list.files(path="lectures", pattern = '^lect.*html', full.names=TRUE),
@@ -57,10 +62,10 @@ cdat$notes <- gsub("lecture-", "Lecture ", cdat$notes)
 
 cdat$notes[pdf_exists] <-
   str_replace(cdat$notes[which(pdf_exists)],
-              "(lecture-[0-9]+)|(lecture-[1-9]+)", '[\\1](LINK)')
+              "(Lecture [0-9]+)|(Lecture [1-9]+)", '[\\1](LINK)')
 # Replace placeholder "LINK" which pdf file names
 if (sum(pdf_exists) > 0)
-  cdat$notes[pdf_exists] <- str_replace(cdat$notes[which(pdf_exists)], "LINK", cdat$pdf[which(pdf_exists)])
+  cdat$notes[pdf_exists] <- str_replace(cdat$notes[which(pdf_exists)], "LINK", paste0("https://github.com/STAT540-UBC/lectures/raw/main/", cdat$pdf[which(pdf_exists)]))
 
 # Append notes field with link to html if it exists
 if (sum(html_exists) > 0)
@@ -81,7 +86,9 @@ dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
 * *Before January 24*: as part of UBC's response to the COVID-19 omicron variant, lectures will be held online for the first two weeks (synchronously via Zoom; meeting links posted in Canvas)
 * *On January 24 and after*: it is expected that class will be held in person in [ESB 2012](https://ssc.adm.ubc.ca/classroomservices/function/viewlocation?userEvent=ShowLocation&buildingID=ESB&roomID=2012) after the first two weeks. In case of any changes to this plan, stay tuned to [UBC Broadcast communications](https://covid19.ubc.ca/) 
 
-**Supplemental Files**: Source files for lectures created using Rmarkdown can be found [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/tree/master/lectures/lectures_2021/source) 
+```{r, echo = FALSE, eval = FALSE}
+**Supplemental Files**: Source files for lectures created using Rmarkdown can be found [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/tree/master/lectures/lectures_2021/source)
+```
 
 ```{r results = 'asis', echo = FALSE}
 knitr::kable(dat_cm[["STAT540"]] %>% select(date, notes, instructor) %>%
