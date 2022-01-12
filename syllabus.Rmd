@@ -67,7 +67,7 @@ Virtual office hours: Thursday 11am-12pm TBA (Pacific time)
 
 ## Schedule  
 
-Note that as part of UBC's response to the COVID-19 omicron variant, lecture and seminar will be held online for the first two weeks of the term (synchronously via Zoom; meeting links posted in Canvas). It is expected that lecture and seminar will be held in person starting January 24. In case of any changes to this plan, stay tuned to [UBC Broadcast communications](https://covid19.ubc.ca/).
+Note that as part of UBC's response to the COVID-19 omicron variant, lecture and seminar will be held online for the first part of the term (synchronously via Zoom; meeting links posted in Canvas). It is expected that lecture and seminar will be held in person starting February 7. In case of any changes to this plan, stay tuned to [UBC Broadcast communications](https://covid19.ubc.ca/).
 
 Lectures held in person will also be live-streamed whenever possible (links shared in Canvas) to minimize disruption for those students who are unable to attend class due to illness or isolation. Seminar sessions will not be recorded, as these are primarily interactive.
 
@@ -75,16 +75,16 @@ Lectures held in person will also be live-streamed whenever possible (links shar
 
 - Time : Mon Wed 9:30 - 11am
 - Location: 
-    * *Before January 24*: online (Zoom meeting links posted in Canvas)
-    * *On January 24 and after*: in person in [ESB 2012](https://ssc.adm.ubc.ca/classroomservices/function/viewlocation?userEvent=ShowLocation&buildingID=ESB&roomID=2012) 
+    * *Before Februrary 7*: online (Zoom meeting links posted in Canvas)
+    * *On February 7 and after*: in person in [ESB 2012](https://ssc.adm.ubc.ca/classroomservices/function/viewlocation?userEvent=ShowLocation&buildingID=ESB&roomID=2012) 
 - See [Lectures](lectures.html) for lecture materials and schedule 
 
 ### Seminars (Sec S2B) 
 
 - Time : Mon 12pm - 1pm
 - Location: 
-    * *Before January 24*: online (Zoom meeting links posted in Canvas)
-    * *On January 24 and after*: in person in [ESB 1012](https://ssc.adm.ubc.ca/classroomservices/function/viewlocation?userEvent=ShowLocation&buildingID=ESB&roomID=1012)
+    * *Before February 7*: online (Zoom meeting links posted in Canvas)
+    * *On February 7 and after*: in person in [ESB 1012](https://ssc.adm.ubc.ca/classroomservices/function/viewlocation?userEvent=ShowLocation&buildingID=ESB&roomID=1012)
 
 - See [Seminars](seminars.html) for schedule and seminar materials 
 - We strongly recommend reading the seminar materials prior to attending each seminar. 

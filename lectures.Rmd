@@ -83,8 +83,8 @@ dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
 
 **Location**: 
 
-* *Before January 24*: as part of UBC's response to the COVID-19 omicron variant, lectures will be held online for the first two weeks (synchronously via Zoom; meeting links posted in Canvas)
-* *On January 24 and after*: it is expected that class will be held in person in [ESB 2012](https://ssc.adm.ubc.ca/classroomservices/function/viewlocation?userEvent=ShowLocation&buildingID=ESB&roomID=2012) after the first two weeks. In case of any changes to this plan, stay tuned to [UBC Broadcast communications](https://covid19.ubc.ca/) 
+* *Before February 7*: as part of UBC's response to the COVID-19 omicron variant, class will be held online for the first part of the term (synchronously via Zoom; meeting links posted in Canvas)
+* *On February 7 and after*: it is expected that class will be held in person in [ESB 2012](https://ssc.adm.ubc.ca/classroomservices/function/viewlocation?userEvent=ShowLocation&buildingID=ESB&roomID=2012) after the online transition period. In case of any changes to this plan, stay tuned to [UBC Broadcast communications](https://covid19.ubc.ca/) 
 
 ```{r, echo = FALSE, eval = FALSE}
 **Supplemental Files**: Source files for lectures created using Rmarkdown can be found [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/tree/master/lectures/lectures_2021/source)
