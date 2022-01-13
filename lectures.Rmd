@@ -9,6 +9,8 @@ library(stringr)
 library(httr)
 ```
 
+
+
 ```{r include = FALSE}
 # Import schedule
 rawdat <- read.csv(file.path("course-admin", "schedule_2022.csv"), stringsAsFactors = FALSE, colClasses = list(course = 'factor', dow = 'factor'))
@@ -26,33 +28,27 @@ cdat <- rawdat_cm %>%
                         sprintf("%s: %s", lect, raw_notes), raw_notes))
 cdat %>% head(3)
 
+
 ## link to the class page of any class meetings where such exists
 req <- GET("https://api.github.com/repos/STAT540-UBC/lectures/git/trees/main?recursive=1")
 stop_for_status(req)
 filelist <- unlist(lapply(content(req)$tree, "[", "path"), use.names = F)
 
+# now grab pdf file names
 cmdat <-
   data.frame(pdf = filelist[grepl('^lect.*pdf', filelist)],
              stringsAsFactors = FALSE)
-cmdath <-
-  data.frame(html = list.files(path="lectures", pattern = '^lect.*html', full.names=TRUE),
-             stringsAsFactors = FALSE)
+
 cmdat <- cmdat %>% mutate(lect = str_extract(pdf, "lect[0-9]+"))
 cmdat$lect <- sapply(cmdat$lect, str_replace, pattern="lect0*([0-9]+)", replacement="lecture-\\1")
-cmdath <- cmdath %>% mutate(lect = str_extract(html, "lect[0-9]+"))
-cmdath$lect <- sapply(cmdath$lect, str_replace, pattern="lect0*([0-9]+)", replacement="lecture-\\1")
+
 if (nrow(cmdat) >0){
   cdat <- cdat %>% left_join(cmdat, by="lect")
 }else{
   cdat$pdf <- NA
 }
-if (nrow(cmdath) >0){
-  cdat <- cdat %>% left_join(cmdath, by="lect")
-}else{
-  cdat$html <- NA
-}
+
 pdf_exists <- Negate(is.na)(cdat$pdf)
-html_exists <- Negate(is.na)(cdat$html)
 
 # Insert placeholder link to notes 
 #cdat$notes[pdf_exists] <-
@@ -67,9 +63,6 @@ cdat$notes[pdf_exists] <-
 if (sum(pdf_exists) > 0)
   cdat$notes[pdf_exists] <- str_replace(cdat$notes[which(pdf_exists)], "LINK", paste0("https://github.com/STAT540-UBC/lectures/raw/main/", cdat$pdf[which(pdf_exists)]))
 
-# Append notes field with link to html if it exists
-if (sum(html_exists) > 0)
-  cdat$notes[html_exists] <- paste0(cdat$notes[which(html_exists)], " [[html](", cdat$html[which(html_exists)], ")]")
 
 dat_cm <- cdat %>% split(cdat$course)
 dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
@@ -86,9 +79,11 @@ dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
 * *Before February 7*: as part of UBC's response to the COVID-19 omicron variant, class will be held online for the first part of the term (synchronously via Zoom; meeting links posted in Canvas)
 * *On February 7 and after*: it is expected that class will be held in person in [ESB 2012](https://ssc.adm.ubc.ca/classroomservices/function/viewlocation?userEvent=ShowLocation&buildingID=ESB&roomID=2012) after the online transition period. In case of any changes to this plan, stay tuned to [UBC Broadcast communications](https://covid19.ubc.ca/) 
 
-```{r, echo = FALSE, eval = FALSE}
-**Supplemental Files**: Source files for lectures created using Rmarkdown can be found [here](https://github.com/STAT540-UBC/STAT540-UBC.github.io/tree/master/lectures/lectures_2021/source)
-```
+
+**Supplemental Files**: 
+
+* Source files for lectures created using Rmarkdown can be found the [STAT540-UBC/lectures GitHub repo](https://github.com/STAT540-UBC/lectures)
+* Additional companion notes can be found in the [STAT540-UBC/resources GitHub repo](https://github.com/STAT540-UBC/resources)
 
 ```{r results = 'asis', echo = FALSE}
 knitr::kable(dat_cm[["STAT540"]] %>% select(date, notes, instructor) %>%
@@ -97,3 +92,4 @@ knitr::kable(dat_cm[["STAT540"]] %>% select(date, notes, instructor) %>%
   kableExtra::column_spec(1, width = "6em") %>%
   kableExtra::kable_styling(full_width = TRUE)
 ```
+

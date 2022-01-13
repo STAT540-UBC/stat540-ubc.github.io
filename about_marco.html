@@ -733,8 +733,8 @@
             --aside-size:      12px;
             --fig-cap-size:    13px;
             /*-- Main font colors --*/
-            --title-color:     #000000;
-            --header-color:    rgba(0, 0, 0, 0.8);
+            --title-color:     #197aa0;
+            --header-color:    #197aa0;
             --body-color:      rgba(0, 0, 0, 0.8);
             --aside-color:     rgba(0, 0, 0, 0.6);
             --fig-cap-color:   rgba(0, 0, 0, 0.6);
@@ -815,7 +815,32 @@
             margin-top: 50px;
           }
 
-          </style>
+
+
+          /* Change link appearance */
+          d-article a {
+            border-bottom: 2px solid #197aa0;
+          }
+
+           /* unvisited link */
+          a:link {
+            color: #197aa0;
+          }
+
+          /* visited link */
+          a:visited {
+            color: #197aa0;
+          }
+
+          /* mouse over link */
+          a:hover {
+            color: grey;
+          }
+
+          /* selected link */
+          a:active {
+            color: blue;
+          } </style>
           <style type="text/css">
           /* base style */
 
