@@ -2,17 +2,17 @@ course,lect,dow,month,day,week,lecture_num,raw_notes,instructor,mode
 STAT540-Seminar,seminar-01,Mon,January,10,1,1,"Introduction to version control, Git, GitHub",Marco,Zoom
 STAT540-Seminar,seminar-02a,Mon,January,17,2,2,"Introduction to Markdown, Knitr",Asfar,Zoom
 STAT540-Seminar,seminar-02b,Mon,January,17,2,2,R graphics -- Intro to ggplot2,Asfar,Zoom
-STAT540-Seminar,seminar-03,Mon,January,24,3,3,Getting your hands dirty with R -- simulate data and do some statistics,,In person
-STAT540-Seminar,seminar-04,Mon,January,31,4,4,Load and analyze some gene expression data -- data aggregation with dplyr,,In person
-STAT540-Seminar,seminar-05,Mon,February,7,5,5,"Two group testing, fitting and interpreting linear models",,In person
-STAT540-Seminar,seminar-06,Mon,February,14,6,6,RNA-seq upstream -- BAM to count data,,In person
+STAT540-Seminar,seminar-03,Mon,January,24,3,3,Getting your hands dirty with R -- simulate data and do some statistics,Marco,In person
+STAT540-Seminar,seminar-04,Mon,January,31,4,4,Load and analyze some gene expression data -- data aggregation with dplyr,Asfar,In person
+STAT540-Seminar,seminar-05,Mon,February,7,5,5,"Two group testing, fitting and interpreting linear models",Marco,In person
+STAT540-Seminar,seminar-06,Mon,February,14,6,6,RNA-seq upstream -- BAM to count data,Asfar,In person
 STAT540-Seminar,No Seminar,Mon,February,21,7,NA,Reading break (no class),,
-STAT540-Seminar,seminar-07,Mon,February,28,8,7,Gene set enrichment analysis ,,In person
+STAT540-Seminar,seminar-07,Mon,February,28,8,7,Gene set enrichment analysis ,Marco,In person
 STAT540-Seminar,No Seminar,Mon,March,7,9,NA,Visit office hours for group project advice,,
-STAT540-Seminar,seminar-08,Mon,March,14,10,8,"Dimensionality reduction and data visualization -- clustering, PCA, t-sne",,In person
-STAT540-Seminar,seminar-09,Mon,March,21,11,9,"Supervised learning, cross-validation, variable selection",,In person
-STAT540-Seminar,seminar-10,Mon,March,28,12,10,Methylation microarray analysis,,In person
-STAT540-Seminar,seminar-11,Mon,April,4,13,11,"eQTL (or mQTL) analysis -- finding cis variants per gene, testing for association",,In person
+STAT540-Seminar,seminar-08,Mon,March,14,10,8,"Dimensionality reduction and data visualization -- clustering, PCA, t-sne",Asfar,In person
+STAT540-Seminar,seminar-09,Mon,March,21,11,9,"Supervised learning, cross-validation, variable selection",Asfar,In person
+STAT540-Seminar,seminar-10,Mon,March,28,12,10,Methylation microarray analysis,Marco,In person
+STAT540-Seminar,seminar-11,Mon,April,4,13,11,"eQTL (or mQTL) analysis -- finding cis variants per gene, testing for association",Marco,In person
 ,,,,,,,,,
 ,,,,,,,,,
 ,,,,,,,,,
