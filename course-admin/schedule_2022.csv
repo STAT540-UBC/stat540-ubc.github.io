@@ -17,7 +17,7 @@ STAT540-Seminar,seminar-11,Mon,April,4,13,11,"eQTL (or mQTL) analysis -- finding
 ,,,,,,,,,
 ,,,,,,,,,
 STAT540,lecture-1,Mon,January,10,1,1,Course intro; Molecular biology primer,Keegan,Zoom 
-STAT540,lecture-2,Wed,January,12,1,2,"High-dimensional biology intro: RNA, DNA, methylation, ChiP-Seq",Keegan,Zoom 
+STAT540,lecture-2,Wed,January,12,1,2,High-dimensional genomics assays & data,Keegan,Zoom 
 STAT540,lecture-3,Mon,January,17,2,3,Exploratory data analysis & experimental design,Keegan,Zoom
 STAT540,lecture-4,Wed,January,19,2,4,Statistics & probability primer,Keegan,Zoom
 STAT540,lecture-5,Mon,January,24,3,5,Statistical inference: two groups,Keegan,In person
