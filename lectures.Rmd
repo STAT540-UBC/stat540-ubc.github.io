@@ -36,7 +36,7 @@ filelist <- unlist(lapply(content(req)$tree, "[", "path"), use.names = F)
 
 # now grab pdf file names
 cmdat <-
-  data.frame(pdf = filelist[grepl('^lect.*pdf', filelist)],
+  data.frame(pdf = filelist[grepl('^lect.*pdf', basename(filelist))],
              stringsAsFactors = FALSE)
 
 cmdat <- cmdat %>% mutate(lect = str_extract(pdf, "lect[0-9]+"))
