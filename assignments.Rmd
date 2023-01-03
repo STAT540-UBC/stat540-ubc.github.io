@@ -26,7 +26,7 @@ For a visual summary, click [here](timeline.html).
 
 ```{r, echo=FALSE, warning=FALSE}
 suppressPackageStartupMessages(library(tidyverse))
-assn <- read.csv("course-admin/assn_2022.csv")
+assn <- read.csv("course-admin/assn_2023.csv")
 assn <- assn %>% 
   select(content,start, Category) %>%
   rename(Assignment = content, `Due Date` = start) %>%

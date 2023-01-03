@@ -40,8 +40,8 @@ navbar:
           href: about_yongjin.html
         - text: "Asfar Lathif (TA)"
           href: about_asfar.html
-        - text: "Marco Tello (TA)"
-          href: about_marco.html
+        - text: "Ishika Luthra (TA)"
+          href: about_ishika.html
     - text: "FAQ"
       href: faq.html
     - icon: fab fa-github

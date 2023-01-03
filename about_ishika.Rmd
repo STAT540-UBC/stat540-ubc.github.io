@@ -1,0 +1,19 @@
+---
+title: "Ishika Luthra"
+image: "https://deboer.bme.ubc.ca/wp-content/uploads/2020/09/Ishika-300x200.jpg"
+links:
+  - label: Twitter
+    url: ""
+  - label: GitHub
+    url: "https://github.com/IshikaLuthra"
+  - label: Email
+    url: "mailto:ishika.luthra@ubc.ca"
+output:
+  postcards::trestles
+---
+ 
+## Teaching Assistant
+
+**Pronouns**:    
+**Virtual office hours**: 
+

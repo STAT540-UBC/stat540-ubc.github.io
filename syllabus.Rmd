@@ -163,7 +163,7 @@ You will have three individual assignments, six seminar submissions (one divided
 ```{r, echo = FALSE, warning =  FALSE}
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(knitr))
-assn <- read.csv("course-admin/assn_2022.csv")
+assn <- read.csv("course-admin/assn_2023.csv")
 assn <- assn %>% 
   select(content,start,Category) %>%
   rename(Assignment = content, `Due Date` = start) %>%
