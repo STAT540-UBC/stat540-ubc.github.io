@@ -1,0 +1,18 @@
+id,content,start,end,Category,style
+1,Intro Assignment,2023-01-24,,Individual Assignment,background-color: gold;
+2,Paper Critique,2023-02-07,,Paper Critique,background-color: aqua;
+3,Analysis Assignment,2023-02-28,,Individual Assignment,background-color: pink;
+4,Project Proposal Lightning Talks,2023-01-31,,Group Project,background-color: lavender;
+5,Written Project Proposal,2023-02-09,,Group Project,background-color: lavender;
+6,Project Progress Report,2023-03-09,,Group Project,background-color: lavender;
+8,Github Repo,2023-04-06,,Group Project,background-color: lavender;
+9,Individual Report,2023-04-13,,Group Project,background-color: lavender;
+10,Seminar 1,2023-01-13,,Seminar,background-color: palegreen;
+11,Seminar 2a & 2b,2023-01-20,,Seminar,background-color: palegreen;
+12,Seminar 3,2023-01-27,,Seminar,background-color: palegreen;
+13,Seminar 4,2023-02-03,,Seminar,background-color: palegreen;
+14,Seminar 5,2023-02-10,,Seminar,background-color: palegreen;
+15,Seminar 7,2023-03-03,,Seminar,background-color: palegreen;
+16,Presentation Day 1,2023-04-06,,Group Project,background-color: #6600ff; color: white;
+17,Presentation Day 2,2023-04-11,,Group Project,background-color: #6600ff; color: white;
+18,Presentation Day 3,2023-04-13,,Group Project,background-color: #6600ff; color: white;
