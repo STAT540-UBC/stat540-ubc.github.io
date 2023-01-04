@@ -2513,55 +2513,59 @@ PEOPLE
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#project-groups-initial-proposal-0-pts" id="toc-project-groups-initial-proposal-0-pts">Project groups &amp; Initial Proposal (0 pts)</a></li>
-<li><a href="#proposal-5-pts" id="toc-proposal-5-pts">Proposal (5 pts)</a></li>
+<li><a href="#project-proposal-lightning-talks-5-pts" id="toc-project-proposal-lightning-talks-5-pts">Project Proposal Lightning Talks (5 pts)</a></li>
+<li><a href="#written-proposal-5-pts" id="toc-written-proposal-5-pts">Written Proposal (5 pts)</a></li>
 <li><a href="#progress-report-8-pts" id="toc-progress-report-8-pts">Progress report (8 pts)</a></li>
-<li><a href="#github-repository-10-pts" id="toc-github-repository-10-pts">GitHub repository (10 pts)</a></li>
-<li><a href="#oral-presentation-20-pts" id="toc-oral-presentation-20-pts">Oral presentation (20 pts)</a></li>
+<li><a href="#final-report-10-pts" id="toc-final-report-10-pts">Final report (10 pts)</a></li>
+<li><a href="#oral-presentation-15-pts" id="toc-oral-presentation-15-pts">Oral presentation (15 pts)</a></li>
 <li><a href="#individual-report-7-pts" id="toc-individual-report-7-pts">Individual report (7 pts)</a></li>
 </ul>
 </nav>
 </div>
-<p>This page contains more specific instructions for each project deliverable as well as their point values for grading. Each point represents 1 percent of total course grade; i.e. since the final project represents 50% of the final grade, you can think of each point as a percentage of the final grade. Ensure your repo is <a href="#github-repository-10-pts">organized</a> from the start so the TAs can easily find your work for marking.</p>
-<h2 id="project-groups-initial-proposal-0-pts">Project groups &amp; Initial Proposal (0 pts)</h2>
-<p>A brief (1-paragraph) initial proposal along with group member information. This is not assigned any grade, but you will need to submit it by the due date in order to receive timely feedback that you can use in writing your finalized proposal (see next item).</p>
-<p>Copy and paste the raw example text below into a Markdown file (called <code>initial_project_proposal.md</code>) in your newly created group project repo, and fill in your team’s info. The first part will be rendered as a table in Markdown. Add a link to this file in your main group repo <code>README.md</code> file so the TAs can easily find your work for marking. This is a group-level deliverable (one submission per team).</p>
-<pre><code>| Name | Department/Program | Expertise/Interests |GitHub ID | 
-| ------------- | ------------- | ------------- | ------------- |
-| example: Keegan Korthauer | Statistics |  Epigenetics, Selection-corrected inference |  `@kdkorthauer` |
-|  |   |  | 
-|  |   |  |
-|  |   |  |
-
-Team name: 
-
-One paragraph on the basic idea of the project: </code></pre>
-<h2 id="proposal-5-pts">Proposal (5 pts)</h2>
-<p>Create a ~one-page proposal (as a Markdown file called <code>final_project_proposal.md</code>). Please make sure that you have incorporated the feedback and comments by the professors/TAs on your initial proposal. Add a link to this file in your main group repo <code>README.md</code> file so the TAs can easily find your work for marking.</p>
+<p>This page contains more specific instructions for each project deliverable as well as their point values for grading. Each point represents 1 percent of total course grade; i.e. since the final project represents 50% of the final grade, you can think of each point as a percentage of the final grade. Ensure your repo is <a href="#github-repository-organization-5-pts">organized</a> from the start so the TAs can easily find your work for marking.</p>
+<h2 id="project-proposal-lightning-talks-5-pts">Project Proposal Lightning Talks (5 pts)</h2>
+<p>Your group will prepare a short (5 minute, 5 slides) lightning talk presenting your project proposal. You will push a PDF of your slides to your group project repo, and give the oral presentation in class. Each group member should present at least one slide. Add a link to this file in your main group repo <code>README.md</code> file so the TAs can easily find your work for marking. This is a group-level deliverable (one submission per team).</p>
+<p>Rubric: Marks will be based on effective communication of the main ideas of the following four aspects:
+* Background/Motivation (1 point)
+- What is already known in the context of this study?
+* Question/Hypothesis (2 points)
+- What is the knowledge gap you are trying to fill?
+- What do you expect to find?
+* Data (1 point)
+- Describe the content and source of the data you will use?
+- If using previously published data, how will your project differ from previous literature?
+* Analysis Plan (1 point)
+- How will you answer your main research question?</p>
+<h2 id="written-proposal-5-pts">Written Proposal (5 pts)</h2>
+<p>Create a ~one-page proposal (as a Markdown file called <code>final_project_proposal.md</code>). This will be an expanded, more detailed description of your project. Please make sure that you have incorporated the feedback and comments by the professors/TAs on your proposal lightning talks. Add a link to this file in your main group repo <code>README.md</code> file so the TAs can easily find your work for marking. Provide references for any sections as needed.</p>
 <p>Your project proposal includes:</p>
-<h4 id="motivation-and-background-work-1-pt">Motivation and background work (1 pt)</h4>
+<h4 id="motivation-and-background-1-pt">Motivation and background (1 pt)</h4>
 <ul>
-<li>State the background and rationale for the study.</li>
-<li>What is the overall hypothesis and objectives for the project?</li>
-<li>Why is it important to answer this question? Identify knowledge gaps.</li>
+<li>What is the relevance and significance of your project?</li>
+<li>What is already known in the context of your project?</li>
+</ul>
+<h4 id="questionhypothesis-2-points">Question/Hypothesis (2 points)</h4>
+<ul>
+<li>What is the knowledge gap you are trying to fill?</li>
+<li>What do you expect to find?</li>
+</ul>
+<h4 id="dataset-1-pt">Dataset (1 pt)</h4>
+<ul>
+<li>What kind of data are you working with? e.g. what technology was used to generate it?</li>
+<li>What is the general description and characteristics of the data? e.g. how many rows, how many columns, experimental design etc.</li>
+<li>How will this data help you answer your research question?</li>
+<li>If your data is small enough, create a read only subdirectory called <code>data</code> and keep your data there</li>
+</ul>
+<h4 id="aims-and-methodology-2-pt">Aims and methodology (2 pt)</h4>
+<ul>
+<li>What are the specific aims that you will address in order to answer your research question?</li>
+<li>For each of the aims, what computational/statistical approaches will you use? (Note: your methodology might change as you are progressing, exploring your data and reading through the literature)</li>
+<li>If you are using data that is previously published, how will your project differ from previous literature?</li>
 </ul>
 <h4 id="division-of-labour-1-pt">Division of labour (1 pt)</h4>
 <ul>
 <li>Who is going to do what? State assignment of tasks and projected contributions for each group members.</li>
 <li>Please provide a table of group members with their background, degree, affiliations and job assignments.</li>
-</ul>
-<h4 id="dataset-1-pt">Dataset (1 pt)</h4>
-<ul>
-<li>What kind of data are you working with? What is the general description and characteristics of the data?</li>
-<li>State the technology used to generate the data.</li>
-<li>If your data is small enough, create a read only subdirectory called <code>data</code> and keep your data there (see example project repo figure).</li>
-<li>Add a <code>README.md</code> file in the subdirectory to describe your data in more detail, e.g., how many rows, how many columns, experimental design etc.</li>
-</ul>
-<h4 id="aims-and-methodology-2-pt">Aims and methodology (2 pt)</h4>
-<ul>
-<li>What are the specific questions/aims that you will address in order to achieve the final goals of the project?</li>
-<li>For each of the aims, what computational/statistical approaches did you use? (Note: your methodology might change as you are progressing, exploring your data and reading through the literature)</li>
-<li>Provide references for any sections as needed.</li>
 </ul>
 <h2 id="progress-report-8-pts">Progress report (8 pts)</h2>
 <p>Your group progress report will be a Markdown document called <code>progress_report.md</code>. Add a link to this file in your main group repo <code>README.md</code> file so the TAs can easily find your work for marking.</p>
@@ -2585,10 +2589,17 @@ One paragraph on the basic idea of the project: </code></pre>
 <li>Were you able to answer your hypothesis? Did you have any positive results? If no, postulate a discussion as to why that may be. Provide plots and/or tables to present your results.</li>
 <li>List some challenges that you have encountered or anticipate. How will you address them?</li>
 </ul>
-<h2 id="github-repository-10-pts">GitHub repository (10 pts)</h2>
+<h2 id="final-report-10-pts">Final report (10 pts)</h2>
 <p>This is the final state of your group project repo, including your final written report summarizing your results, all analysis code, and presentation slides. It should contain the materials (or associated live links) an instructor would need to evaluate your work and that a group member would need to reproduce/reuse/extend the work. This is a group-level deliverable.</p>
-<h4 id="github-organization-5-pts.">GitHub organization (5 pts.)</h4>
-<p>Create subdirectories for different parts of your analyses. For example:</p>
+<h4 id="written-report-5-pts">Written report (5 pts)</h4>
+<p>Think of it as a technical report of your presentation that includes analysis and results. This should generally be GitHub Markdown output of your key statistical results generated from R Markdown analyses. Be sure to:</p>
+<ul>
+<li>Include text throughout explaining the aim and main conclusions of each part.<br />
+</li>
+<li>Make sure your code is readable, documented, and could be run by instructors. Make sure you are addressing the important files, such as “inputs” (e.g. the dataset(s) you analyzed) and “outputs” (e.g. figures). Provide valid links for the files you use in your scripts. Link to the report in your main README file.</li>
+</ul>
+<h4 id="github-repository-organization-5-pts.">GitHub repository organization (5 pts.)</h4>
+<p>Organizing your project files logically and consistently will help your team and the instructors to keep track of them. One best practice is to create subdirectories for different parts of your analyses. For example:</p>
 <ul>
 <li><p><code>src</code>: contains source code (e.g <code>.R</code> files)</p></li>
 <li><p><code>results</code>: contains summary figures and/or reports (e.g. <code>.pdf</code> or <code>html</code> files)</p></li>
@@ -2602,28 +2613,22 @@ One paragraph on the basic idea of the project: </code></pre>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/group_repo.png" alt="Example of a group repository directory structure" width="300px" style="display: block; margin: auto;" /></p>
 </div>
-<h4 id="written-report-5-pts">Written report (5 pts)</h4>
-<ul>
-<li>Think of it as a technical report of your presentation that includes analysis and results. Add brief comments and text throughout explaining the aim and conclusions of each part. You do not need to talk about all the analysis you have done but make sure you are addressing the important files, such as “inputs” (e.g. the dataset(s) you analyzed) and “outputs”)</li>
-<li>This should generally be GitHub Markdown output of your key statistical results generated from R Markdown analyses.</li>
-<li>Link to the report in your main README file.</li>
-<li>Make sure your code is readable and could be run by instructors. So, it is necessary to provide valid addresses for the files you use in your scripts. Add comments for different chunks of your code and document it.</li>
-</ul>
-<h2 id="oral-presentation-20-pts">Oral presentation (20 pts)</h2>
+<p>For lots more detail and discussion on project organization and research computing, see <a href="https://swcarpentry.github.io/good-enough-practices-in-scientific-computing/">this article</a>.</p>
+<h4 id="presentation-slides-submission">Presentation slides submission</h4>
+<p>Your presentation slides files (e.g. <code>presentation.PPTX</code> or <code>presentation.pdf</code> or <code>presentation.html</code>) should be placed in your group repo. If your slides require extra files (e.g. if you used Rmd or Latex), create a subdirectory for those materials. Please provide a link to your final presentation slides in your group repo <code>README.md</code>. This is a group-level deliverable and is due with your final report (but is marked as part of your oral presentation).</p>
+<h2 id="oral-presentation-15-pts">Oral presentation (15 pts)</h2>
 <h4 id="presentation-sessions">Presentation sessions</h4>
-<p>Each group will prepare one 15 minute oral presentation, which will be followed by 3 minutes for questions. We will have oral presentation sessions on the last three scheduled lecture sessions. These sessions <strong>will be recorded</strong> (only made available to teaching team and registered students). Assignments for presentation dates will be posted in the Discussion repo. Groups may choose to present synchronously (live), or prerecord their presentation and play the video during their presentation slot. This is a group-level deliverable, and all group members should be present during the presentation even if prerecorded so they can answer questions. In addition, each individual will randomly be assigned 2 other group presentations to peer review (see <a href="#individual-report-7-pts">Individual report</a>), so be sure to be present during the other presentation days as well.</p>
+<p>Each group will prepare one 15 minute oral presentation, which will be followed by 3 minutes for questions. We will have oral presentation sessions on the last three scheduled lecture sessions. Assignments for presentation dates will be posted on Slack. Groups may choose to present synchronously (live), or prerecord their presentation and play the video during their presentation slot. This is a group-level deliverable, and all group members should participate, and be present during the presentation even if prerecorded so they can answer questions. In addition, each individual will randomly be assigned 2 other group presentations to peer review (see <a href="#individual-report-7-pts">Individual report</a>), so be sure to be present during the other presentation days as well.</p>
 <p>Resources for pre-recording presentations: If you choose to prerecord your group presentation, you may do so using a variety of tools. One option is to record during a group meeting using <a href="https://support.microsoft.com/en-us/office/record-a-meeting-in-teams-34dfbe7f-b07d-4a27-b4c6-de62f1348c24">Microsoft Teams</a> or <a href="https://support.zoom.us/hc/en-us/articles/201362473-Local-recording">Zoom</a>. Another option is to record in <a href="https://support.microsoft.com/en-us/office/record-a-presentation-2570dff5-f81c-40bc-b404-e04e95ffab33">Powerpoint</a>. You could also use screencast software such as <a href="https://support.apple.com/en-ca/guide/quicktime-player/qtp97b08e666/mac">QuickTime for Mac</a>. If you need advice (or have advice to share) on recording/editing software for your system, please post in the Discussion repo.</p>
 <h4 id="presentation-evaluation"><a href="course-admin/ProjectPresentationRubric.pdf">Presentation evaluation</a></h4>
 <p>Your oral presentation is evaluated in 4 major categories:</p>
 <ol type="1">
-<li>Background/introduction</li>
-<li>Statistical analysis</li>
-<li>Quality of presentation</li>
-<li>Scientific maturity</li>
+<li>Background/introduction (3 points)</li>
+<li>Statistical analysis (4 points)</li>
+<li>Quality of presentation (4 points)</li>
+<li>Scientific maturity (4 points)</li>
 </ol>
 <p>You can find the full detailed rubric for presentation evaluation in each of these categories <a href="course-admin/ProjectPresentationRubric.pdf">here</a>.</p>
-<h4 id="presentation-slides-submission">Presentation slides submission</h4>
-<p>Your presentation slides files (e.g. <code>presentation.PPTX</code> or <code>presentation.pdf</code> or <code>presentation.html</code>) should be placed in your group repo. If your slides require extra files (e.g. if you used Rmd or Latex), create a subdirectory for those materials. Please provide a link to your final presentation slides in your group repo <code>README.md</code>. This is a group-level deliverable and is due with your GitHub Repo.</p>
 <h2 id="individual-report-7-pts">Individual report (7 pts)</h2>
 <p>A one-page individual report as <code>individual_report.md</code> is an individual deliverable and should be in an individual private repository (it will have its own invitation link on Canvas). The report includes:</p>
 <h4 id="peer-evaluation-2-pts">Peer evaluation (2 pts)</h4>
@@ -2643,9 +2648,9 @@ One paragraph on the basic idea of the project: </code></pre>
 <li>What worked well and what did not? What was the most challenging or rewarding moment during your group project?</li>
 <li>How did you find having members of different backgrounds for a scientific project?</li>
 <li>What have you learned from this group project?</li>
-<li>Any other comments on how the group project could have been structured differently (i.e. delivery requirements, assessment”)</li>
+<li>Any other comments on how the group project could have been structured differently (i.e. delivery requirements, assessment)</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

@@ -28,7 +28,7 @@ For a visual summary, click [here](timeline.html).
 suppressPackageStartupMessages(library(tidyverse))
 assn <- read.csv("course-admin/assn_2023.csv")
 assn <- assn %>% 
-  select(content,start, Category) %>%
+  select(Category, content, start) %>%
   rename(Assignment = content, `Due Date` = start) %>%
   mutate(`Due Date` = as.Date(`Due Date`, "%Y-%m-%d")) %>%
   arrange(`Due Date`) %>% 
@@ -106,9 +106,9 @@ Groups will be formed by the instructional team following the results of an in c
 
 Details and grading rubrics for each component of the final group project can be found on the [**Group project rubrics page**](group_project_rubrics.html).
 
-* [Project groups & Initial Proposal (0%)](group_project_rubrics.html#project-groups-initial-proposal-0-pts)
-* [Proposal (5%)](group_project_rubrics.html#proposal-5-pts)
+* [Project Proposal Lightning Talks (5%)](group_project_rubrics.html#project-proposal-lightning-talks-5-pts)
+* [Written Proposal (5%)](group_project_rubrics.html#written-proposal-5-pts)
 * [Progress report (8%)](group_project_rubrics.html#progress-report-8-pts)
-* [GitHub repository (10%)](group_project_rubrics.html#github-repository-10-pts)
-* [Oral presentation (20%)](group_project_rubrics.html#oral-presentation-20-pts) - A Detailed rubric can be found [here](course-admin/ProjectPresentationRubric.pdf)
+* [Final report (10%)](group_project_rubrics.html#final-report-10-pts)
+* [Oral presentation (15%)](group_project_rubrics.html#oral-presentation-15-pts) - A Detailed rubric can be found [here](course-admin/ProjectPresentationRubric.pdf)
 * [Individual report (7%)](group_project_rubrics.html#individual-report-7-pts)

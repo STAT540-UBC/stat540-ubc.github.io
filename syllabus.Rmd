@@ -8,7 +8,7 @@ output:
     toc_depth: 2
 ---
 
-Winter Term 2 2022 (January 9, 2023 - April 13, 2023) 
+2022-2023 Winter Term 2 (January 9, 2023 - April 13, 2023) 
 
 STAT 540 is a 3 credit course with a mandatory computing seminar 
 
@@ -193,15 +193,15 @@ kable(assn %>% filter(Category == "Individual Assignment", Assignment != "Intro 
 
 ### [Group project (50%)](assignments.html#final-group-project-50) 
 
-- A semester-long data analysis group project that will allow you to apply the techniques covered in class to a research question of your choosing
+- A semester-long data analysis group project where you will apply the techniques covered in class to a research question of your choosing
 - Groups of target size of 4 students will be formed at the beginning of the course
 - Important checkpoints during the term (with deliverables): 
-    - Initial project proposal (one-paragraph)
-    - Finalize the one page project proposal 
-    - Progress report
-    - 15 minute oral presentation 
-    - GitHub repository
-    - Individual report deadline
+    - Project Proposal Lightning Talks
+    - Written Project Proposal 
+    - Progress Report
+    - Oral presentation 
+    - Written Report & GitHub repository
+    - Individual and Group Evaluation 
 - For more details on the project components and how groups are selected see the [assignments page](assignments.html#final-group-project-50)
 - For detailed grading rubrics of the final project components, see the [final project rubric page](group_project_rubrics.html) and the [final project presentation rubric](course-admin/ProjectPresentationRubric.pdf)
 
