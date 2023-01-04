@@ -9,7 +9,7 @@ links:
   - label: GitHub
     url: "https://github.com/kdkorthauer"
   - label: Email
-    url: "mailto:keegan@stat.ubc.ca"
+    url: "mailto:kkorthauer@cmmt.ubc.ca"
 output:
   postcards::trestles
 ---
@@ -17,6 +17,6 @@ output:
 ## Instructor
 
 **Pronouns**: She/Her/Hers  
-**Virtual office hours**: Thurs 9-10am (Pacific time)
+**Virtual office hours**: By appointment
 
 I am an Assistant Professor in the Department of Statistics at UBC and an Investigator at the BC Children's Hospital Research Institute. I grew up and studied in the United States before moving to Vancouver in 2019. My research is focused on developing and applying statistical and computational tools for the analysis of high-throughput sequencing data, with the ultimate goal of uncovering new molecular signals in cancer, child health, and development. My hobbies include board gaming and spending time outdoors with my family. Please feel free to address me as "Keegan" or "Dr. Korthauer". 

@@ -2,7 +2,7 @@
 title: "Statistical Methods for High Dimensional Biology"
 description: |
   STAT 540 @ UBC <br>
-  Jan-Apr 2022
+  Jan-Apr 2023
 site: distill::distill_website
 ---
 
@@ -16,5 +16,5 @@ site: distill::distill_website
 
 * [Announcements & Discussion forum](https://github.com/STAT540-UBC-2022/Discussion/issues)
 * [Canvas course page](https://canvas.ubc.ca/courses/82590)
-* [GitHub course page](https://github.com/STAT540-UBC-2022)
+* [GitHub course page](https://github.com/STAT540-UBC-2023)
 * [Additional resources](syllabus.html#prerequisites-and-resources)

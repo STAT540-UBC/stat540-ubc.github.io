@@ -20,7 +20,7 @@ rawdat$course <- as.factor(rawdat$course)
 rawdat_cm <- rawdat[rawdat$course == "STAT540",]
 
 cdat <- rawdat_cm %>%
-  mutate(ugly_date = ISOdate(2022, match(month, month.name), day),
+  mutate(ugly_date = ISOdate(2023, match(month, month.name), day),
          date = sprintf("%s %s %d",
                         dow, months(ugly_date, abbreviate = TRUE),
                         day),
@@ -72,12 +72,9 @@ dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
 
 ### Class meetings and schedule 
 
-**Time** : Mon Wed 9:30 - 11am
+**Time** : Tues Thurs 9:00 - 10:30am
 
-**Location**: 
-
-* *Before February 7*: as part of UBC's response to the COVID-19 omicron variant, class will be held online for the first part of the term (synchronously via Zoom; meeting links posted in Canvas)
-* *On February 7 and after*: it is expected that class will be held in person in [ESB 2012](https://ssc.adm.ubc.ca/classroomservices/function/viewlocation?userEvent=ShowLocation&buildingID=ESB&roomID=2012) after the online transition period. In case of any changes to this plan, stay tuned to [UBC Broadcast communications](https://covid19.ubc.ca/) 
+**Location**: Frank Forward 317
 
 
 **Supplemental Files**: 
