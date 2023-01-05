@@ -76,11 +76,10 @@ dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
 
 **Location**: Frank Forward 317
 
-
 **Supplemental Files**: 
 
-* Source files for lectures created using Rmarkdown can be found the [STAT540-UBC/lectures GitHub repo](https://github.com/STAT540-UBC/lectures)
 * Additional companion notes can be found in the [STAT540-UBC/resources GitHub repo](https://github.com/STAT540-UBC/resources)
+* Source files for lectures can be found the [STAT540-UBC/lectures GitHub repo](https://github.com/STAT540-UBC/lectures)
 
 ```{r results = 'asis', echo = FALSE}
 knitr::kable(dat_cm[["STAT540"]] %>% select(date, notes, instructor) %>%

@@ -20,7 +20,7 @@ rawdat$course <- as.factor(rawdat$course)
 rawdat_sm <- rawdat[rawdat$course == "STAT540-Seminar",]
 
 sdat <- rawdat_sm %>%
-  mutate(ugly_date = ISOdate(2021, match(month, month.name), day),
+  mutate(ugly_date = ISOdate(2023, match(month, month.name), day),
          date = sprintf("%s %s %d",
                         dow, 
                         months(ugly_date, abbreviate = TRUE),
@@ -33,7 +33,8 @@ smdat <- data.frame(repo = sprintf("https://github.com/STAT540-UBC/seminar-%02d"
 smdat$repo[2:3] <- paste0(smdat$repo[2:3], c("a", "b"))
 smdat$lect <- gsub("https://github.com/STAT540-UBC/", 
                    "", smdat$repo)
-
+smdat$lect <- gsub("-0", 
+                   "-", smdat$lect)
 sdat <- sdat %>% left_join(smdat, by="lect")
 
 sdat <- sdat %>% split(sdat$course) 

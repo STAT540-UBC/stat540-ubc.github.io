@@ -83,11 +83,11 @@ Virtual office hours:
 
 #### Announcements 
 
-Course announcements will be posted in the [course Slack workspace](ADD LINK). You are responsible for checking it regularly.
+Course announcements will be posted in the [course Slack workspace](https://stat540students.slack.com). You are responsible for checking it regularly.
 
 #### General questions
 
-Please also use the [course Slack workspace](ADD LINK) for posting questions (e.g. topics discussed in class, questions about course organization, assignment clarifications, if you are stuck on an assignment and need help). This ensures the message can be seen by the entire teaching team, and that others in the class who might have the same question can learn from responses. You are also welcome to share your input on questions posted by others. 
+Please also use the [course Slack workspace](https://stat540students.slack.com) for posting questions (e.g. topics discussed in class, questions about course organization, assignment clarifications, if you are stuck on an assignment and need help). This ensures the message can be seen by the entire teaching team, and that others in the class who might have the same question can learn from responses. You are also welcome to share your input on questions posted by others. 
 
 #### Private matters
 

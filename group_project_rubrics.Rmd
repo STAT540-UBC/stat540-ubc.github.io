@@ -13,6 +13,7 @@ This page contains more specific instructions for each project deliverable as we
 Your group will prepare a short (5 minute, 5 slides) lightning talk presenting your project proposal. You will push a PDF of your slides to your group project repo, and give the oral presentation in class. Each group member should present at least one slide. Add a link to this file in your main group repo `README.md` file so the TAs can easily find your work for marking. This is a group-level deliverable (one submission per team). 
 
 Rubric: Marks will be based on effective communication of the main ideas of the following four aspects:
+
 * Background/Motivation (1 point)
   - What is already known in the context of this study?
 * Question/Hypothesis (2 points)
@@ -45,7 +46,6 @@ Your project proposal includes:
 - What kind of data are you working with? e.g. what technology was used to generate it?
 - What is the general description and characteristics of the data? e.g. how many rows, how many columns, experimental design etc. 
 - How will this data help you answer your research question?
-- If your data is small enough, create a read only subdirectory called `data` and keep your data there
 
 #### Aims and methodology (2 pt)
 
@@ -92,7 +92,7 @@ This is the final state of your group project repo, including your final written
 Think of it as a technical report of your presentation that includes analysis and results. This should generally be GitHub Markdown output of your key statistical results generated from R Markdown analyses. Be sure to:
 
 - Include text throughout explaining the aim and main conclusions of each part.  
-- Make sure your code is readable, documented, and could be run by instructors. Make sure you are addressing the important files, such as "inputs" (e.g. the dataset(s) you analyzed) and "outputs" (e.g. figures). Provide valid links for the files you use in your scripts. Link to the report in your main README file.
+- Make sure your code is readable, documented, and could be run by instructors. Make sure you are addressing the important files, such as "inputs" (e.g. links to the dataset(s) you analyzed) and "outputs" (e.g. figures). Provide valid links for the files you use in your scripts. Link to the report in your main README file.
 
 #### GitHub repository organization (5 pts.)
 
@@ -145,7 +145,7 @@ A one-page individual report as `individual_report.md` is an individual delivera
 
 - You will be randomly assigned to provide peer feedback for two (2) oral presentations from other teams.
 - Following the presentations, please review and provide constructive feedback using the 4-component [Reflect Inquire Suggest Elevate (RISE) model of peer feedback](https://www.risemodel.com/s/RISE-Model-Peer-EmilyWray.pdf). Include a statement/question for each of the 4 RISE components. 
-- Please copy and paste each of your peer reviews as a discussion post in the discussion repo (so that the teams can receive your feedback), and include links to these posts in this report.
+- Please copy and paste each of your peer reviews in the Slack peer-review channel (so that the teams can receive your feedback), and include links to these messages in this report.
 
 
 #### A concise summary of contributions of each group member (2 pts)
