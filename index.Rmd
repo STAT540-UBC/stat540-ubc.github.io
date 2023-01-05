@@ -14,6 +14,6 @@ site: distill::distill_website
 
 ## Quick links for current students:
 
-* [Canvas course page](https://canvas.ubc.ca/courses/82590)
+* [Canvas course page](https://canvas.ubc.ca/courses/110129)
 * [Slack Workspace](https://stat540students.slack.com)
 * [Additional resources](syllabus.html#prerequisites-and-resources)
