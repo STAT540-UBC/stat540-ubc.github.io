@@ -2,9 +2,9 @@
 title: "Submission Guide"
 ---
 
-# How to start and submit assignments through GitHub
+# How to start and submit assignments through GitHub and Canvas
 
-You need to have Git installed on your computer, and have a GitHub account. You can use command line Git or a Git client (such as GitHub Desktop), or even RStudio itself to push, pull, etc. to/from GitHub. See [Seminar 1](seminars.html) for a setup guide and illustration of the workflow from accepting an assignment to submission using RStudio. 
+You need to have Git installed on your computer, and have a GitHub account. You can use command line Git or a Git client (such as GitHub Desktop), or even RStudio itself to push, pull, etc. to/from GitHub. See [Seminar 1](seminars.html) for a setup guide and illustration of the workflow from accepting an assignment to submission. 
 
 ## Start your assignment
 
