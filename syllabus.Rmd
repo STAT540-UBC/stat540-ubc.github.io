@@ -229,7 +229,7 @@ What does academic integrity look like in this course?
 
 * **Do your own work**. All individual work that you submit should be completed by you and submitted by you. Do not receive or share completed coursework with students who take the course in another term.
 
-* **Acknowledge others’ ideas**. Scholars build on the work of others, and give credit accordingly. This refers to both outside sources (e.g. from the literature), and inside sources (e.g from your peers).
+* **Acknowledge others’ ideas**. Scholars build on the work of others, and give credit accordingly. This refers to both outside sources (e.g. from the literature, or AI tools), and inside sources (e.g from your peers).
 
 * **Learn to avoid unintentional plagiarism.** Visit the [Learning Commons’ guide to academic integrity](http://learningcommons.ubc.ca/resource-guides/avoiding-plagiarism/) to help you organize your writing as well as understand how to prevent unintentional plagiarism. 
 
