@@ -58,7 +58,7 @@ Virtual office hours:
 ### Teaching Assistants
 
 * [Asfar Lathif](about_asfar.html) (He/Him/His)  
-Email: <asfarlathifbt@gmail.com>  
+Email: <asfar.lathif@ubc.ca>  
 Virtual office hours:   
 
 * [Ishika Luthra](about_ishkika.html) 
@@ -76,7 +76,7 @@ Virtual office hours: Friday 10-11am (PST)
 ### Seminars (Sec S2B) 
 
 - Time: Mon 12pm - 1pm
-- Location: Neville Scarfe 206
+- Location: Frank Forward 317
 - See [Seminars](seminars.html) for schedule and seminar materials 
 
 ## Course communication

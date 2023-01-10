@@ -46,7 +46,7 @@ sdat <- sdat[["STAT540-Seminar"]]
 
 **Time**: Monday 12 - 1pm
 
-**Location**: Neville Scarfe 206
+**Location**: Frank Forward 317
 
 We strongly recommend reading the seminar materials prior to attending each seminar
 
