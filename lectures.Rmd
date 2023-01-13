@@ -82,8 +82,21 @@ dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
 * Source files for lectures can be found the [STAT540-UBC/lectures GitHub repo](https://github.com/STAT540-UBC/lectures)
 
 ```{r results = 'asis', echo = FALSE}
-knitr::kable(dat_cm[["STAT540"]] %>% select(date, notes, instructor) %>%
-  dplyr::rename(Date=date, Topic=notes, Instructor=instructor),
+# add readings
+sched <- dat_cm[["STAT540"]] %>%
+  mutate(readings = "") %>%
+  select(date, readings, notes, instructor)
+
+# lect 4
+sched$readings[4] <- "
+[1](http://genomicsclass.github.io/book/pages/populations_and_samples.html), 
+[2](http://genomicsclass.github.io/book/pages/random_variables.html), 
+[3](http://genomicsclass.github.io/book/pages/clt_and_t-distribution.html)
+"
+
+# print final table
+knitr::kable(sched %>% 
+  dplyr::rename(Date=date, "Pre-reading"=readings, Topic=notes, Instructor=instructor),
   "html", escape = FALSE) %>% 
   kableExtra::column_spec(1, width = "6em") %>%
   kableExtra::kable_styling(full_width = TRUE)
