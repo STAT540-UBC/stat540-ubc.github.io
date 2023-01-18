@@ -34,21 +34,23 @@ req <- GET("https://api.github.com/repos/STAT540-UBC/lectures/git/trees/main?rec
 stop_for_status(req)
 filelist <- unlist(lapply(content(req)$tree, "[", "path"), use.names = F)
 
-# now grab pdf file names
+# now grab pdf & html file names
 cmdat <-
-  data.frame(pdf = filelist[grepl('^lect.*pdf', basename(filelist))],
+  data.frame(file = filelist[grepl('^lect.*pdf|^lect.*html', basename(filelist))],
              stringsAsFactors = FALSE)
 
-cmdat <- cmdat %>% mutate(lect = str_extract(pdf, "lect[0-9]+"))
+cmdat <- cmdat %>% mutate(lect = str_extract(file, "lect[0-9]+"))
 cmdat$lect <- sapply(cmdat$lect, str_replace, pattern="lect0*([0-9]+)", replacement="lecture-\\1")
 
 if (nrow(cmdat) >0){
   cdat <- cdat %>% left_join(cmdat, by="lect")
 }else{
-  cdat$pdf <- NA
+  cdat$file <- NA
 }
 
-pdf_exists <- Negate(is.na)(cdat$pdf)
+pdf_exists <- grepl("*.pdf", cdat$file)
+html_exists <- grepl("*.html", cdat$file)
+file_exists <- Negate(is.na)(cdat$file)
 
 # Insert placeholder link to notes 
 #cdat$notes[pdf_exists] <-
@@ -56,13 +58,16 @@ pdf_exists <- Negate(is.na)(cdat$pdf)
 #              "(lecture-[0-9]+)|(lecture-[1-9]+)", '<a href="LINK">\\1</a>')
 cdat$notes <- gsub("lecture-", "Lecture ", cdat$notes)
 
-cdat$notes[pdf_exists] <-
-  str_replace(cdat$notes[which(pdf_exists)],
+cdat$notes[file_exists] <-
+  str_replace(cdat$notes[which(file_exists)],
               "(Lecture [0-9]+)|(Lecture [1-9]+)", '[\\1](LINK)')
-# Replace placeholder "LINK" which pdf file names
+# Replace placeholder "LINK" with pdf file names
 if (sum(pdf_exists) > 0)
-  cdat$notes[pdf_exists] <- str_replace(cdat$notes[which(pdf_exists)], "LINK", paste0("https://github.com/STAT540-UBC/lectures/raw/main/", cdat$pdf[which(pdf_exists)]))
+  cdat$notes[pdf_exists] <- str_replace(cdat$notes[which(pdf_exists)], "LINK", paste0("https://github.com/STAT540-UBC/lectures/raw/main/", cdat$file[which(pdf_exists)]))
 
+# Replace placeholder "LINK" with html file names
+if (sum(html_exists) > 0)
+  cdat$notes[html_exists] <- str_replace(cdat$notes[which(html_exists)], "LINK", paste0("https://stat540-ubc.github.io/lectures/", cdat$file[which(html_exists)]))
 
 dat_cm <- cdat %>% split(cdat$course)
 dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
