@@ -4,7 +4,7 @@ title: "Lectures"
 
 
 ```{r include = FALSE}
-library(dplyr)
+library(tidyverse)
 library(stringr)
 library(httr)
 ```
@@ -26,8 +26,6 @@ cdat <- rawdat_cm %>%
                         day),
          notes = ifelse(grepl("^lect", lect) & raw_notes != "",
                         sprintf("%s: %s", lect, raw_notes), raw_notes))
-cdat %>% head(3)
-
 
 ## link to the class page of any class meetings where such exists
 req <- GET("https://api.github.com/repos/STAT540-UBC/lectures/git/trees/main?recursive=1")
@@ -35,12 +33,14 @@ stop_for_status(req)
 filelist <- unlist(lapply(content(req)$tree, "[", "path"), use.names = F)
 
 # now grab pdf & html file names
-cmdat <-
+cmdat <- 
   data.frame(file = filelist[grepl('^lect.*pdf|^lect.*html', basename(filelist))],
-             stringsAsFactors = FALSE)
-
-cmdat <- cmdat %>% mutate(lect = str_extract(file, "lect[0-9]+"))
-cmdat$lect <- sapply(cmdat$lect, str_replace, pattern="lect0*([0-9]+)", replacement="lecture-\\1")
+             stringsAsFactors = FALSE) %>% 
+  mutate(lect = str_extract(file, "lect[0-9]+")) %>%
+  mutate(lect = sapply(lect, str_replace, pattern="lect0*([0-9]+)",
+                       replacement="lecture-\\1")) %>%
+  mutate(type = ifelse(grepl("pdf", file), "pdf", "html")) %>%
+  pivot_wider(lect, names_from = type, values_from = file)
 
 if (nrow(cmdat) >0){
   cdat <- cdat %>% left_join(cmdat, by="lect")
@@ -48,26 +48,38 @@ if (nrow(cmdat) >0){
   cdat$file <- NA
 }
 
-pdf_exists <- grepl("*.pdf", cdat$file)
-html_exists <- grepl("*.html", cdat$file)
-file_exists <- Negate(is.na)(cdat$file)
-
+pdf_exists <- grepl("*.pdf", cdat$pdf)
+html_exists <- grepl("*.html", cdat$html)
+  
 # Insert placeholder link to notes 
 #cdat$notes[pdf_exists] <-
  # str_replace(cdat$notes[which(pdf_exists)],
 #              "(lecture-[0-9]+)|(lecture-[1-9]+)", '<a href="LINK">\\1</a>')
 cdat$notes <- gsub("lecture-", "Lecture ", cdat$notes)
 
-cdat$notes[file_exists] <-
-  str_replace(cdat$notes[which(file_exists)],
+cdat$notes[pdf_exists] <-
+  str_replace(cdat$notes[which(pdf_exists)],
               "(Lecture [0-9]+)|(Lecture [1-9]+)", '[\\1](LINK)')
-# Replace placeholder "LINK" with pdf file names
-if (sum(pdf_exists) > 0)
-  cdat$notes[pdf_exists] <- str_replace(cdat$notes[which(pdf_exists)], "LINK", paste0("https://github.com/STAT540-UBC/lectures/raw/main/", cdat$file[which(pdf_exists)]))
 
-# Replace placeholder "LINK" with html file names
-if (sum(html_exists) > 0)
-  cdat$notes[html_exists] <- str_replace(cdat$notes[which(html_exists)], "LINK", paste0("https://stat540-ubc.github.io/lectures/", cdat$file[which(html_exists)]))
+
+for (i in seq_along(html_exists)){
+if (html_exists[i]){
+  # Replace placeholder "LINK" with html file names
+  cdat$notes[i] <- str_replace(cdat$notes[i], "LINK",
+                               paste0("https://stat540-ubc.github.io/lectures/",
+                                      cdat$html[i]))
+  if (pdf_exists[i]){
+  # Append pdf files
+  cdat$notes[i] <- paste0(cdat$notes[i],
+                          paste0("\ [(pdf)](https://github.com/STAT540-UBC/lectures/raw/main/",
+                                 cdat$pdf[i], ")"))
+  }
+}else if (pdf_exists[i]){
+# Replace placeholder "LINK" with pdf file names
+  cdat$notes[i] <- str_replace(cdat$notes[i], "LINK",
+                                        paste0("https://github.com/STAT540-UBC/lectures/raw/main/",
+                                               cdat$pdf[i]))
+}}
 
 dat_cm <- cdat %>% split(cdat$course)
 dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
