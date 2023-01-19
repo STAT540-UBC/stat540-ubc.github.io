@@ -17,6 +17,6 @@ output:
 ## Instructor
 
 **Pronouns**: He/Him/His  
-**Virtual office hours**: Wed 1pm-2pm (Pacific time)
+**Virtual office hours**: By appointment
 
 I am an Assistant Professor in the Department of Pathology and Statistics since Fall 2020. My research primarily focuses on developing scalable probabilistic inference methods to elucidate hidden causal mechanisms of human diseases, such as cancer and other common/complex disorders. Since I am a data-driven scientist, I become excited when hidden patterns emerge, and data finally start speaking back to me. I firmly believe in Don Knuth's famous quote, "best practice is inspired by theory," and "best theory is inspired by practice."
