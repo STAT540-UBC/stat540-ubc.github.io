@@ -110,6 +110,7 @@ sched$readings[4] <- "
 [2](http://genomicsclass.github.io/book/pages/random_variables.html), 
 [3](http://genomicsclass.github.io/book/pages/clt_and_t-distribution.html)
 "
+sched$readings[5] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect05-twoGroup/README.md)"
 
 # print final table
 knitr::kable(sched %>% 
