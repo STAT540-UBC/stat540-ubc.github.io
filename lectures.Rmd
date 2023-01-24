@@ -110,7 +110,15 @@ sched$readings[4] <- "
 [2](http://genomicsclass.github.io/book/pages/random_variables.html), 
 [3](http://genomicsclass.github.io/book/pages/clt_and_t-distribution.html)
 "
+# lect 5
 sched$readings[5] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect05-twoGroup/README.md)"
+
+# lect 6
+sched$readings[6] <- "
+[1](http://genomicsclass.github.io/book/pages/matrix_notation.html), 
+[2](http://genomicsclass.github.io/book/pages/matrix_operations.html), 
+[3](http://genomicsclass.github.io/book/pages/expressing_design_formula.html)
+"
 
 # print final table
 knitr::kable(sched %>% 
