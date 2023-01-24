@@ -57,8 +57,8 @@ html_exists <- grepl("*.html", cdat$html)
 #              "(lecture-[0-9]+)|(lecture-[1-9]+)", '<a href="LINK">\\1</a>')
 cdat$notes <- gsub("lecture-", "Lecture ", cdat$notes)
 
-cdat$notes[pdf_exists] <-
-  str_replace(cdat$notes[which(pdf_exists)],
+cdat$notes[pdf_exists|html_exists] <-
+  str_replace(cdat$notes[which(pdf_exists|html_exists)],
               "(Lecture [0-9]+)|(Lecture [1-9]+)", '[\\1](LINK)')
 
 
