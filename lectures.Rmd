@@ -93,11 +93,6 @@ dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
 
 **Location**: Frank Forward 317
 
-**Supplemental Files**: 
-
-* Additional companion notes can be found in the [STAT540-UBC/resources GitHub repo](https://github.com/STAT540-UBC/resources)
-* Source files for lectures can be found the [STAT540-UBC/lectures GitHub repo](https://github.com/STAT540-UBC/lectures)
-
 ```{r results = 'asis', echo = FALSE}
 # add readings
 sched <- dat_cm[["STAT540"]] %>%
@@ -119,6 +114,8 @@ sched$readings[6] <- "
 [2](http://genomicsclass.github.io/book/pages/matrix_operations.html), 
 [3](http://genomicsclass.github.io/book/pages/expressing_design_formula.html)
 "
+# lect 7
+sched$readings[8] <- "[1](http://genomicsclass.github.io/book/pages/interactions_and_contrasts.html)"
 
 # print final table
 knitr::kable(sched %>% 
@@ -127,4 +124,9 @@ knitr::kable(sched %>%
   kableExtra::column_spec(1, width = "6em") %>%
   kableExtra::kable_styling(full_width = TRUE)
 ```
+
+**Supplemental Files**: 
+
+* Additional companion notes can be found in the [STAT540-UBC/resources GitHub repo](https://github.com/STAT540-UBC/resources)
+* Source files for lectures can be found the [STAT540-UBC/lectures GitHub repo](https://github.com/STAT540-UBC/lectures)
 
