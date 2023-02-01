@@ -36,7 +36,7 @@ Your project proposal includes:
 - What is the relevance and significance of your project?
 - What is already known in the context of your project?
 
-#### Question/Hypothesis (2 points)
+#### Question/Hypothesis (1 pt)
 
 - What is the knowledge gap you are trying to fill?
 - What do you expect to find?
@@ -47,7 +47,7 @@ Your project proposal includes:
 - What is the general description and characteristics of the data? e.g. how many rows, how many columns, experimental design etc. 
 - How will this data help you answer your research question?
 
-#### Aims and methodology (2 pt)
+#### Aims and methodology (1 pt)
 
 - What are the specific aims that you will address in order to answer your research question?
 - For each of the aims, what computational/statistical approaches will you use? (Note: your methodology might change as you are progressing, exploring your data and reading through the literature)
