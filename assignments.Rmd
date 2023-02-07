@@ -46,7 +46,7 @@ The instructions and questions are available [here](https://github.com/STAT540-U
 
 ## Seminar completion (10%)
 
-You will submit short "deliverables" for six seminars: 1, 2 (split into two parts - Seminar 2a and 2b together count as one deliverable), 3, 4, 5, and 7. These deliverables give practical experience applying the knowledge that will be helpful on the homework assignment, final project, and (hopefully) your future research. Each of these six Seminar session deliverables is weighted equally, but the lowest score will be dropped (so that the 5 deliverables with highest score will each count for 2% of the final grade). Seminar deliverables are due on the Monday following the TA-led session for that seminar. See the [Seminars page](seminars.html) for the submission materials.
+You will submit short "deliverables" for six seminars: 1, 2 (split into two parts - Seminar 2a and 2b together count as one deliverable), 3, 4, 5, and 8. These deliverables give practical experience applying the knowledge that will be helpful on the homework assignment, final project, and (hopefully) your future research. Each of these six Seminar session deliverables is weighted equally, but the lowest score will be dropped (so that the 5 deliverables with highest score will each count for 2% of the final grade). Seminar deliverables are due on the Monday following the TA-led session for that seminar. See the [Seminars page](seminars.html) for the submission materials.
 
 ## Paper critique (5%)
 

@@ -118,7 +118,10 @@ sched$readings[6] <- "
 sched$readings[8] <- "[1](http://genomicsclass.github.io/book/pages/interactions_and_contrasts.html)"
 
 # lect 8
-sched$readings[9] <- "[1](https://github.com/STAT540-UBC/lectures/tree/main/lect08-continuous)"
+sched$readings[9] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect08-continuous/README.md)"
+
+# lect 9
+sched$readings[10] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect09-multipleTesting/README.md)"
 
 # print final table
 knitr::kable(sched %>% 
