@@ -124,7 +124,7 @@ sched$readings[9] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect
 sched$readings[10] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect09-multipleTesting/README.md)"
 
 # lect 10
-sched$readings[11] <- "[1](https://github.com/STAT540-UBC/resources/blob/main/rnaseqdiffex-examples/examples-RNAseq.md)"
+sched$readings[11] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect10-RNAseq/README.md)"
 
 # print final table
 knitr::kable(sched %>% 
