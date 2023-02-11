@@ -123,6 +123,9 @@ sched$readings[9] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect
 # lect 9
 sched$readings[10] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect09-multipleTesting/README.md)"
 
+# lect 10
+sched$readings[11] <- "[1](https://github.com/STAT540-UBC/resources/blob/main/rnaseqdiffex-examples/examples-RNAseq.md)"
+
 # print final table
 knitr::kable(sched %>% 
   dplyr::rename(Date=date, "Pre-reading"=readings, Topic=notes, Instructor=instructor),
