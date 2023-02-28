@@ -53,7 +53,7 @@ We strongly recommend reading the seminar materials prior to attending each semi
 ```{r results = 'asis', echo = FALSE}
 sdat <- sdat %>%
   mutate(name = gsub("-", " ", gsub("s", "S", lect))) %>%
-  mutate(name = gsub("Seminar 0", "Seminar ", name))
+  mutate(name = gsub("No Seminar", "", name))
 
 sdat <- sdat %>% 
   mutate(exists = url.exists(repo)) %>%
