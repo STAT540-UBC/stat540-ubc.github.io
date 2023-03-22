@@ -145,7 +145,7 @@ A one-page individual report as `individual_report.md` is an individual delivera
 
 - You will be randomly assigned to provide peer feedback for two (2) oral presentations from other teams.
 - Following the presentations, please review and provide constructive feedback using the 4-component [Reflect Inquire Suggest Elevate (RISE) model of peer feedback](https://www.risemodel.com/s/RISE-Model-Peer-EmilyWray.pdf). Include a statement/question for each of the 4 RISE components. 
-- Please copy and paste each of your peer reviews in the Slack peer-review channel (so that the teams can receive your feedback), and include links to these messages in this report.
+- Please copy and paste each of your peer reviews in the [Slack #peer-review channel](https://stat540students.slack.com/archives/peer-review) (so that the teams can receive your feedback), and include links to these messages in this report.
 
 
 #### A concise summary of contributions of each group member (2 pts)
@@ -154,7 +154,7 @@ A one-page individual report as `individual_report.md` is an individual delivera
 - Do you think the task assignments were fairly assigned and appropriate given each member’s background and skills? If no, how would you change it?
 
 
-#### Your specific contributions and comments (3 pts)
+#### Your specific contributions and comments (2 pts)
 
 - Explain what are your contributions to the project?
 - What worked well and what did not? What was the most challenging or rewarding moment during your group project?
@@ -162,3 +162,14 @@ A one-page individual report as `individual_report.md` is an individual delivera
 - What have you learned from this group project? 
 - Any other comments on how the group project could have been structured differently (i.e. delivery requirements, assessment) 
 
+#### Would you like to share your presentation? (1 pt)
+
+Thanks to your feedback, we would like to make project presentation slides available to future students with your consent. Indicate which of the following statements is true (mark in this section is for completion; you will earn 1 point as long as you include one of these statements):
+
+<ol type="a">
+  <li>I consent to sharing of my team's final presentation slides on the course website for the benefit of future enrolled students as well as potential students.</li>
+  <li>I consent to sharing of my team's final presentation slides via Canvas for the benefit of future enrolled students only.</li>
+  <li>I do not consent to sharing of my team's final presentation slides with anyone.</li>
+</ol>
+
+Note that slides will only be shared on the course website if all individuals in your team provide consent level a. Likewise, slides will only be shared on Canvas if all individuals in your team provide consent level a or b. If at least one person in the team selects option c (or does include a statement at all), your slides will not be shared with anyone. Note also that if you have used data that is not publicly available, it is your responsibility to first obtain consent from the data custodian if you choose option a or b.  
