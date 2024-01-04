@@ -8,7 +8,7 @@ title: "Timeline Visualization"
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(timevis))
 
-assignment_data <- read.csv("course-admin/assn_2023.csv",as.is = T,sep = ",")
+assignment_data <- read.csv("course-admin/assn_2024.csv",as.is = T,sep = ",")
 assignment_data$start <- paste0(assignment_data$start, " 23:59:00")
 timevis(assignment_data, options= list(verticalScroll=TRUE, zoomable = FALSE),
         height=375)

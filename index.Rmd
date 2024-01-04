@@ -2,7 +2,7 @@
 title: "Statistical Methods for High Dimensional Biology"
 description: |
   STAT 540 @ UBC <br>
-  Jan-Apr 2023
+  Jan-Apr 2024
 site: distill::distill_website
 ---
 

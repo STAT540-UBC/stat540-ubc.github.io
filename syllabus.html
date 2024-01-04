@@ -459,8 +459,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
   <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
@@ -830,9 +830,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -927,6 +939,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1688,6 +1705,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1765,8 +1788,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1792,12 +1816,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -2426,7 +2451,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2505,6 +2530,7 @@ PEOPLE
 
 <div class="d-title">
 <h1>Syllabus</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p><p>STAT 540: Statistical Methods for High Dimensional Biology</p></p>
@@ -2528,11 +2554,12 @@ PEOPLE
 <li><a href="#academic-integrity" id="toc-academic-integrity">Academic Integrity</a></li>
 <li><a href="#privacy" id="toc-privacy">Privacy</a></li>
 <li><a href="#learning-environment-support" id="toc-learning-environment-support">Learning Environment &amp; Support</a></li>
-<li><a href="#safety-in-the-classroom" id="toc-safety-in-the-classroom">Safety in the Classroom</a></li>
+<li><a href="#health-and-safety-in-the-classroom" id="toc-health-and-safety-in-the-classroom">Health and Safety in the Classroom</a></li>
+<li><a href="#extreme-environmental-conditions-contingency-plan" id="toc-extreme-environmental-conditions-contingency-plan">Extreme Environmental Conditions Contingency Plan</a></li>
 </ul>
 </nav>
 </div>
-<p>2022-2023 Winter Term 2 (January 9, 2023 - April 13, 2023)</p>
+<p>2023-2024 Winter Term 2 (January 8, 2024 - April 12, 2024)</p>
 <p>STAT 540 is a 3 credit course with a mandatory computing seminar</p>
 <p>Cross-listed as STAT 540, BIOF 540, GSAT 540</p>
 <h2 id="land-acknowledgement">Land acknowledgement</h2>
@@ -2576,7 +2603,7 @@ Virtual office hours: By appointment</p></li>
 <li><p><a href="about_asfar.html">Asfar Lathif</a> (He/Him/His)<br />
 Email: <a href="mailto:asfar.lathif@ubc.ca" class="email">asfar.lathif@ubc.ca</a><br />
 Virtual office hours: Tuesday 4-5pm (PST)</p></li>
-<li><p><a href="about_ishkika.html">Ishika Luthra</a>
+<li><p><a href="about_ishkika.html">Ishika Luthra</a><br />
 Email: <a href="mailto:ishika.luthra@ubc.ca" class="email">ishika.luthra@ubc.ca</a><br />
 Virtual office hours: Friday 10-11am (PST)</p></li>
 </ul>
@@ -2584,24 +2611,24 @@ Virtual office hours: Friday 10-11am (PST)</p></li>
 <h3 id="lectures-sec-201">Lectures (Sec 201)</h3>
 <ul>
 <li>Time: Tues Thurs 9:00 - 10:30am</li>
-<li>Location: Frank Forward 317</li>
+<li>Location: Building and room number listed on Canvas</li>
 <li>See <a href="lectures.html">Lectures</a> for lecture materials and schedule</li>
 </ul>
 <h3 id="seminars-sec-s2b">Seminars (Sec S2B)</h3>
 <ul>
-<li>Time: Mon 12pm - 1pm</li>
-<li>Location: Frank Forward 317</li>
+<li>Time: Tues 12:30pm - 1:30pm</li>
+<li>Location: Building and room number listed on Canvas</li>
 <li>See <a href="seminars.html">Seminars</a> for schedule and seminar materials</li>
 </ul>
 <h2 id="course-communication">Course communication</h2>
 <h4 id="announcements">Announcements</h4>
-<p>Course announcements will be posted in the <a href="https://stat540students.slack.com">course Slack workspace</a>. You are responsible for checking it regularly.</p>
+<p>Course announcements will be posted on Canvas. You are responsible for checking it regularly.</p>
 <h4 id="general-questions">General questions</h4>
-<p>Please also use the <a href="https://stat540students.slack.com">course Slack workspace</a> for posting questions (e.g. topics discussed in class, questions about course organization, assignment clarifications, if you are stuck on an assignment and need help). This ensures the message can be seen by the entire teaching team, and that others in the class who might have the same question can learn from responses. You are also welcome to share your input on questions posted by others.</p>
+<p>Piazza (in Canvas) for posting questions (e.g. topics discussed in class, questions about course organization, assignment clarifications, if you are stuck on an assignment and need help). This ensures the message can be seen by the entire teaching team, and that others in the class who might have the same question can learn from responses. You are also welcome to share your input on questions posted by others.</p>
 <h4 id="private-matters">Private matters</h4>
-<p>For private matters (e.g. requesting an extension, scheduling appointment for office hours), please contact the Teaching team by email (listed above). Please refrain from using email to ask general questions described above.</p>
+<p>For private matters (e.g. requesting an extension, scheduling appointment for office hours), please contact the Teaching team by email (listed above). Do not use email to ask general questions described above.</p>
 <h4 id="group-work">Group work</h4>
-<p>In your final project groups, we expect you to (1) arrange regular meetings either in person or virtually and (2) make use of your group’s private Slack channel. Please reach out if you have any questions or challenges in this space.</p>
+<p>In your final project groups, we expect you to (1) arrange regular meetings either in person or virtually and (2) make use of your team’s Piazza group.</p>
 <h2 id="prerequisites-and-resources">Prerequisites and Resources</h2>
 <p>This interdisciplinary course requires a broad range of skills at the interface of statistics, molecular biology / genomics, and computing. While you may have some background in one or more of the following areas, you are not expected to be an expert in all. That said, to be successful in the course, you may need to spend a bit more time in the areas that you have less experience in. Although there are no official prerequisites for the course, here is a list of useful skills to bring into the course and/or learn along the way.</p>
 <h3 id="statistics">Statistics:</h3>
@@ -2642,9 +2669,9 @@ Virtual office hours: Friday 10-11am (PST)</p></li>
 <li>We’ll learn about using <a href="https://rmarkdown.rstudio.com/">R markdown</a> to generate readable and reproducible reports with code and text, and you’ll be using that a lot in this course - see <a href="https://happygitwithr.com/rmd-test-drive.html">Chapter 18 of the ‘Happy Git’ resource: “Test drive R markdown”</a>.</li>
 </ul>
 <h2 id="evaluation">Evaluation</h2>
-<p>You will have three individual assignments, six seminar submissions (one divided into two parts), and one group project. <font color="red"><strong>Deadlines are all by 11:59 pm (Pacific time) on the due date. Any submission or modification after the due date will not be graded unless you have requested an extension</strong></font>. If you anticipate having trouble meeting a deadline and need to request an extension/academic concession please reach out via email.</p>
+<p>You will have three individual assignments, six seminar submissions (one divided into two parts), and one group project. <font color="red"><strong>Deadlines are all by 11:59 pm (Pacific time) on the due date. Any submission or modification after the due date will not be graded unless you have requested an extension</strong></font>. If you anticipate having trouble meeting a deadline and need to request an extension/academic concession please reach out in advance via email to the instructors.</p>
 <p><strong>For more detail on each of these assignments, see the <a href="assignments.html">assignments page</a></strong> (the header of each assignment on this page points to the relevant section of the assignments page). Also refer to this <a href="timeline.html">visual overview of the timeline</a>.</p>
-<p><strong>For detailed instructions on how to work and submit assignments using GitHub and Canvas for this course, please see the <a href="submission_guide.html">Submission Guide</a>.</strong></p>
+<p><strong>For detailed instructions on how to work and submit assignments for this course, please see the <a href="submission_guide.html">Submission Guide</a>.</strong></p>
 <h3 id="intro-assignment-5"><a href="assignments.html#intro-assignment-5">Intro Assignment (5%)</a></h3>
 <ul>
 <li>An introductory assignment designed to assess basic knowledge of GitHub, R and Rmarkdown</li>
@@ -2667,16 +2694,16 @@ Due Date
 Intro Assignment
 </td>
 <td style="text-align:left;">
-Tue 24 January 2023
+Thu 25 January 2024
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-<h3 id="seminar-completion-10"><a href="assignments.html#seminar-completion-10">Seminar completion (10%)</a></h3>
+<h3 id="seminar-completion-20"><a href="assignments.html#seminar-completion-20">Seminar completion (20%)</a></h3>
 <ul>
-<li>You will submit short “deliverables” for seminars 1, 2 (split into two parts - Seminar 2a and 2b together count as one deliverable), 3, 4, 5, and 7</li>
-<li>Each of these six Seminar session deliverables is weighted equally, but the lowest score will be dropped (so that the 5 deliverables with highest score will each count for 2% of the final grade).</li>
+<li>You will submit short “deliverables” for each seminar session</li>
+<li>Each seminar session is weighted equally, but the lowest score will be dropped (so that the 10 seminars with highest score will each count for 2% of the final grade).</li>
 <li>These deliverables give practical experience applying the knowledge that will be helpful on the homework assignment, final project, and (hopefully) your future research.</li>
 <li>Each deliverable is due on the Friday following the TA-led session for that seminar</li>
 </ul>
@@ -2698,7 +2725,7 @@ Due Date
 Seminar 1
 </td>
 <td style="text-align:left;">
-Fri 13 January 2023
+Fri 12 January 2024
 </td>
 </tr>
 <tr>
@@ -2706,7 +2733,7 @@ Fri 13 January 2023
 Seminar 2a &amp; 2b
 </td>
 <td style="text-align:left;">
-Fri 20 January 2023
+Fri 19 January 2024
 </td>
 </tr>
 <tr>
@@ -2714,7 +2741,7 @@ Fri 20 January 2023
 Seminar 3
 </td>
 <td style="text-align:left;">
-Fri 27 January 2023
+Fri 26 January 2024
 </td>
 </tr>
 <tr>
@@ -2722,7 +2749,7 @@ Fri 27 January 2023
 Seminar 4
 </td>
 <td style="text-align:left;">
-Fri 03 February 2023
+Fri 02 February 2024
 </td>
 </tr>
 <tr>
@@ -2730,7 +2757,23 @@ Fri 03 February 2023
 Seminar 5
 </td>
 <td style="text-align:left;">
-Fri 10 February 2023
+Fri 09 February 2024
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Seminar 6
+</td>
+<td style="text-align:left;">
+Fri 16 February 2024
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Seminar 7
+</td>
+<td style="text-align:left;">
+Fri 01 March 2024
 </td>
 </tr>
 <tr>
@@ -2738,7 +2781,31 @@ Fri 10 February 2023
 Seminar 8
 </td>
 <td style="text-align:left;">
-Fri 17 March 2023
+Fri 08 March 2024
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Seminar 9
+</td>
+<td style="text-align:left;">
+Fri 22 March 2024
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Seminar 10
+</td>
+<td style="text-align:left;">
+Fri 29 March 2024
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Seminar 11
+</td>
+<td style="text-align:left;">
+Fri 05 April 2024
 </td>
 </tr>
 </tbody>
@@ -2767,7 +2834,7 @@ Due Date
 Paper Critique
 </td>
 <td style="text-align:left;">
-Tue 14 February 2023
+Thu 15 February 2024
 </td>
 </tr>
 </tbody>
@@ -2796,13 +2863,13 @@ Due Date
 Analysis Assignment
 </td>
 <td style="text-align:left;">
-Tue 28 February 2023
+Thu 29 February 2024
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-<h3 id="group-project-50"><a href="assignments.html#final-group-project-50">Group project (50%)</a></h3>
+<h3 id="group-project-40"><a href="assignments.html#final-group-project-40">Group project (40%)</a></h3>
 <ul>
 <li>A semester-long data analysis group project where you will apply the techniques covered in class to a research question of your choosing</li>
 <li>Groups of target size of 4 students will be formed at the beginning of the course</li>
@@ -2815,7 +2882,7 @@ Tue 28 February 2023
 <li>Written Report &amp; GitHub repository</li>
 <li>Individual and Group Evaluation</li>
 </ul></li>
-<li>For more details on the project components and how groups are selected see the <a href="assignments.html#final-group-project-50">assignments page</a></li>
+<li>For more details on the project components and how groups are selected see the <a href="assignments.html#final-group-project-40">assignments page</a></li>
 <li>For detailed grading rubrics of the final project components, see the <a href="group_project_rubrics.html">final project rubric page</a> and the <a href="course-admin/ProjectPresentationRubric.pdf">final project presentation rubric</a></li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
@@ -2836,7 +2903,7 @@ Due Date
 Proposal Lightning Talks
 </td>
 <td style="text-align:left;">
-Mon 30 January 2023
+Tue 30 January 2024
 </td>
 </tr>
 <tr>
@@ -2844,7 +2911,7 @@ Mon 30 January 2023
 Written Proposal
 </td>
 <td style="text-align:left;">
-Thu 09 February 2023
+Thu 08 February 2024
 </td>
 </tr>
 <tr>
@@ -2852,7 +2919,7 @@ Thu 09 February 2023
 Progress Report
 </td>
 <td style="text-align:left;">
-Tue 14 March 2023
+Thu 07 March 2024
 </td>
 </tr>
 <tr>
@@ -2860,7 +2927,7 @@ Tue 14 March 2023
 Final Report
 </td>
 <td style="text-align:left;">
-Thu 06 April 2023
+Tue 02 April 2024
 </td>
 </tr>
 <tr>
@@ -2868,7 +2935,7 @@ Thu 06 April 2023
 Presentation Day 1
 </td>
 <td style="text-align:left;">
-Thu 06 April 2023
+Tue 02 April 2024
 </td>
 </tr>
 <tr>
@@ -2876,15 +2943,7 @@ Thu 06 April 2023
 Presentation Day 2
 </td>
 <td style="text-align:left;">
-Tue 11 April 2023
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Individual &amp; Group Evaluation
-</td>
-<td style="text-align:left;">
-Thu 13 April 2023
+Thu 04 April 2024
 </td>
 </tr>
 <tr>
@@ -2892,7 +2951,23 @@ Thu 13 April 2023
 Presentation Day 3
 </td>
 <td style="text-align:left;">
-Thu 13 April 2023
+Tue 09 April 2024
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Presentation Day 4
+</td>
+<td style="text-align:left;">
+Thu 11 April 2024
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Individual &amp; Group Evaluation
+</td>
+<td style="text-align:left;">
+Fri 12 April 2024
 </td>
 </tr>
 </tbody>
@@ -2917,12 +2992,16 @@ Thu 13 April 2023
 </ul>
 <p>At any time: if you are unsure if a certain type of assistance is authorized, please ask us.</p>
 <h2 id="privacy">Privacy</h2>
-<p>This course requires students to work and communicate on github.com and Slack. Please be advised that the material and information you put on GitHub and Slack will be stored on servers outside of Canada. Data used for these tools may not be protected, as they have not gone through a Privacy Impact Assessment (PIA) and been identified as FIPPA compliant. When you access GitHub or Slack, you will be required to create an account. While both tools have a privacy policy (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub privacy policy</a>, <a href="https://slack.com/trust/privacy/privacy-policy">Slack privacy policy</a>), UBC cannot guarantee security of your private details on servers outside of Canada. Please exercise caution whenever providing personal information. You may wish to use a pseudonym to protect your privacy if you have concerns. If you choose to do so, you will need to inform the instructional team of your alias. Please feel free to contact UBC (<a href="mailto:access.and.privacy@ubc.ca" class="email">access.and.privacy@ubc.ca</a>) or the support team for GitHub or Slack if you have any questions.</p>
+<p>This course requires students to work on github.com. Please be advised that the material and information you put on GitHub will be stored on servers outside of Canada. Data used for these tools may not be protected, as they have not gone through a Privacy Impact Assessment (PIA) and been identified as FIPPA compliant. When you access GitHub, you will be required to create an account. While this tool has a <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">privacy policy</a>, UBC cannot guarantee security of your private details on servers outside of Canada. Please exercise caution whenever providing personal information. Please feel free to contact UBC (<a href="mailto:access.and.privacy@ubc.ca" class="email">access.and.privacy@ubc.ca</a>) or the support team for GitHub if you have any questions.</p>
 <h2 id="learning-environment-support">Learning Environment &amp; Support</h2>
-<p>We strive to provide a learning environment where all students can succeed. Please join me in contributing to a classroom culture where everyone feels valued. If you encounter an issue that presents a barrier to your learning, please reach out to us. You can also contact the Ombudsperson for help: <a href="https://ombudsoffice.ubc.ca" class="uri">https://ombudsoffice.ubc.ca</a>. If you have a documented disability that affects your learning, you may contact the UBC Centre for Acessibility: <a href="https://students.ubc.ca/about-student-services/centre-for-accessibility" class="uri">https://students.ubc.ca/about-student-services/centre-for-accessibility</a>, and contact us as soon as possible if you think you may require accommodation options for course work.</p>
+<p>We strive to provide a learning environment where all students can succeed. Please join me in contributing to a classroom culture where everyone feels valued. If you encounter an issue that presents a barrier to your learning, please reach out to us. You can also contact the Ombudsperson for help: <a href="https://ombudsoffice.ubc.ca" class="uri">https://ombudsoffice.ubc.ca</a>. If you have a documented disability that affects your learning, you may contact the UBC Centre for Acessibility: <a href="https://students.ubc.ca/about-student-services/centre-for-accessibility" class="uri">https://students.ubc.ca/about-student-services/centre-for-accessibility</a>, and contact us as soon as possible if you think you may require accommodation options for course work. Use of class time
+Discussions during our scheduled class time are intended to relate to the learning outcomes for the course.</p>
 <p>Your mental health and wellbeing impacts your academic performance. Sometimes it is possible to manage challenges on your own, while other times you may need support. UBC is committed to providing student mental health and wellbeing resources, strategies, and services that help you achieve your goals. Visit <a href="https://students.ubc.ca/health" class="uri">https://students.ubc.ca/health</a> for more information.</p>
-<h2 id="safety-in-the-classroom">Safety in the Classroom</h2>
-<p>Please follow the current <a href="https://srs.ubc.ca/covid-19/ubc-campus-rules-guidance-documents/">UBC COVID-19 Campus Rules</a> regarding self-monitoring, and staying home if you are sick. Although masks are no longer required on campus, please respect the choices of your fellow students and the instructional team who may continue to wear masks.</p>
+<h2 id="health-and-safety-in-the-classroom">Health and Safety in the Classroom</h2>
+<p>Please follow the current <a href="https://srs.ubc.ca/health-safety/safety-programs/communicable-disease-prevention-framework/">UBC Communicable Disease Prevention Guidelines</a> regarding self-monitoring, and staying home if you are sick. Although masks are no longer required on campus, please respect the choices of your fellow students and the instructional team who may continue to wear masks.</p>
+<h2 id="extreme-environmental-conditions-contingency-plan">Extreme Environmental Conditions Contingency Plan</h2>
+<p>In-person, on campus activities may need to be cancelled due to issues such as weather conditions (e.g., snow). The most up-to-date information about cancellations will be posted on <a href="https://www.ubc.ca/">ubc.ca</a>. Please check <a href="https://www.ubc.ca/">ubc.ca</a> often during times when an extreme weather event could disrupt our course activities. Here is what you can expect in the event an in-person lecture or lab session is cancelled:</p>
+<p>Depending on the nature of the planned in-class activities, class may take place over Zoom (in this case, Zoom link will be posted on Canvas), or an alternate activity may be posted on Canvas for you to complete before the next scheduled class. We will communicate via Canvas to announce the specifics for each case that arises as soon as we can.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

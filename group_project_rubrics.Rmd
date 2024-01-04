@@ -6,7 +6,7 @@ output:
     toc_depth: 2
 ---
 
-This page contains more specific instructions for each project deliverable as well as their point values for grading. Each point represents 1 percent of total course grade; i.e. since the final project represents 50% of the final grade, you can think of each point as a percentage of the final grade. Ensure your repo is [organized](#github-repository-organization-5-pts) from the start so the TAs can easily find your work for marking.
+This page contains more specific instructions for each project deliverable as well as their point values for grading. Each point represents 1 percent of total course grade; i.e. since the final project represents 40% of the final grade, you can think of each point as a percentage of the final grade. Ensure your repo is [organized](#github-repository-organization-5-pts) from the start so the TAs can easily find your work for marking.
 
 ## Project Proposal Lightning Talks (5 pts)
 
@@ -59,17 +59,17 @@ Your project proposal includes:
 - Please provide a table of group members with their background, degree, affiliations and job assignments.
 
 
-## Progress report (8 pts)
+## Progress report (5 pts)
 
 Your group progress report will be a Markdown document called `progress_report.md`. Add a link to this file in your main group repo `README.md` file so the TAs can easily find your work for marking.
 
-#### What has changed based on the final proposal (2 pt.)
+#### What has changed based on the final proposal (1 pt.)
 
 - Did your dataset change? If so, why?
 - Have you decided to do a different analysis than what was mentioned in your proposal? If so, Why?
 - Are there any changes in task assignments of group members?
 
-#### What is the progress of the analyses (4 pts.)
+#### What is the progress of the analyses (2 pts.)
 
 - Since your initial proposal, you should have decided more concretely on what methods to use for each step of your analyses, and employed some of those methods.
 - Briefly and concisely explain your methodology and progress for the aims you have investigated so far. Which parts were modified and which parts remained the same?
@@ -93,6 +93,8 @@ Think of it as a technical report of your presentation that includes analysis an
 
 - Include text throughout explaining the aim and main conclusions of each part.  
 - Make sure your code is readable, documented, and could be run by instructors. Make sure you are addressing the important files, such as "inputs" (e.g. links to the dataset(s) you analyzed) and "outputs" (e.g. figures). Provide valid links for the files you use in your scripts. Link to the report in your main README file.
+
+You can find the full detailed rubric for evaluation of the written report [here](course-admin/rubric_final_report.pdf).
 
 #### GitHub repository organization (5 pts.)
 
@@ -118,7 +120,7 @@ For lots more detail and discussion on project organization and research computi
 
 Your presentation slides files (e.g. `presentation.PPTX` or `presentation.pdf` or `presentation.html`) should be placed in your group repo. If your slides require extra files (e.g. if you used Rmd or Latex), create a subdirectory for those materials. Please provide a link to your final presentation slides in your group repo `README.md`. This is a group-level deliverable and is due with your final report (but is marked as part of your oral presentation).
 
-## Oral presentation (15 pts)
+## Oral presentation (10 pts)
 
 #### Presentation sessions
 
@@ -130,14 +132,14 @@ Resources for pre-recording presentations: If you choose to prerecord your group
 
 Your oral presentation is evaluated in 4 major categories:
 
-1. Background/introduction (3 points)
-2. Statistical analysis (4 points)
-3. Quality of presentation (4 points)
-4. Scientific maturity (4 points)
+1. Background/introduction (2 points)
+2. Statistical analysis (3 points)
+3. Quality of presentation (2 points)
+4. Scientific maturity (3 points)
 
 You can find the full detailed rubric for presentation evaluation in each of these categories [here](course-admin/ProjectPresentationRubric.pdf).
 
-## Individual report (7 pts)
+## Individual report (5 pts)
 
 A one-page individual report as `individual_report.md` is an individual deliverable and should be in an individual private repository (it will have its own invitation link on Canvas). The report includes:
 
@@ -148,13 +150,13 @@ A one-page individual report as `individual_report.md` is an individual delivera
 - Please copy and paste each of your peer reviews in the [Slack #peer-review channel](https://stat540students.slack.com/archives/peer-review) (so that the teams can receive your feedback), and include links to these messages in this report.
 
 
-#### A concise summary of contributions of each group member (2 pts)
+#### A concise summary of contributions of each group member (1 pts)
 
 - Describes the tasks and contributions of each of your group members
 - Do you think the task assignments were fairly assigned and appropriate given each member’s background and skills? If no, how would you change it?
 
 
-#### Your specific contributions and comments (2 pts)
+#### Your specific contributions and comments (1 pts)
 
 - Explain what are your contributions to the project?
 - What worked well and what did not? What was the most challenging or rewarding moment during your group project?

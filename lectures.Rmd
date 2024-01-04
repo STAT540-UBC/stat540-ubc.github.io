@@ -13,15 +13,15 @@ library(httr)
 
 ```{r include = FALSE}
 # Import schedule
-rawdat <- read.csv(file.path("course-admin", "schedule_2023.csv"), stringsAsFactors = FALSE, colClasses = list(course = 'factor', dow = 'factor'))
+rawdat <- read.csv(file.path("course-admin", "schedule_2024.csv"), stringsAsFactors = FALSE, colClasses = list(course = 'factor', dow = 'factor'))
 rawdat$course <- as.factor(rawdat$course)
 
 # Class meetings
 rawdat_cm <- rawdat[rawdat$course == "STAT540",]
 
 cdat <- rawdat_cm %>%
-  mutate(ugly_date = ISOdate(2023, match(month, month.name), day),
-         date = sprintf("%s %s %d",
+  mutate(ugly_date = ISOdate(2024, match(month, month.name), day),
+         date = sprintf("%s %s %s",
                         dow, months(ugly_date, abbreviate = TRUE),
                         day),
          notes = ifelse(grepl("^lect", lect) & raw_notes != "",
@@ -40,7 +40,7 @@ cmdat <-
   mutate(lect = sapply(lect, str_replace, pattern="lect0*([0-9]+)",
                        replacement="lecture-\\1")) %>%
   mutate(type = ifelse(grepl("pdf", file), "pdf", "html")) %>%
-  pivot_wider(lect, names_from = type, values_from = file)
+  pivot_wider(id_cols = lect, names_from = type, values_from = file)
 
 if (nrow(cmdat) >0){
   cdat <- cdat %>% left_join(cmdat, by="lect")
@@ -91,7 +91,7 @@ dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
 
 **Time** : Tues Thurs 9:00 - 10:30am
 
-**Location**: Frank Forward 317
+**Location**: Building and room number listed on Canvas
 
 ```{r results = 'asis', echo = FALSE}
 # add readings
@@ -99,35 +99,41 @@ sched <- dat_cm[["STAT540"]] %>%
   mutate(readings = "") %>%
   select(date, readings, notes, instructor)
 
+
+# lect 1
+sched$readings[1] <- "[1](https://stat540-ubc.github.io/syllabus.html)"
+
 # lect 4
-sched$readings[4] <- "
-[1](http://genomicsclass.github.io/book/pages/populations_and_samples.html), 
-[2](http://genomicsclass.github.io/book/pages/random_variables.html), 
-[3](http://genomicsclass.github.io/book/pages/clt_and_t-distribution.html)
-"
+#sched$readings[4] <- "
+#[1](http://genomicsclass.github.io/book/pages/populations_and_samples.html), 
+#[2](http://genomicsclass.github.io/book/pages/random_variables.html), 
+#[3](http://genomicsclass.github.io/book/pages/clt_and_t-distribution.html)
+#"
+
 # lect 5
-sched$readings[5] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect05-twoGroup/README.md)"
+#sched$readings[5] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect05-twoGroup/README.md)"
 
 # lect 6
-sched$readings[6] <- "
-[1](http://genomicsclass.github.io/book/pages/matrix_notation.html), 
-[2](http://genomicsclass.github.io/book/pages/matrix_operations.html), 
-[3](http://genomicsclass.github.io/book/pages/expressing_design_formula.html)
-"
+#sched$readings[6] <- "
+#[1](http://genomicsclass.github.io/book/pages/matrix_notation.html), 
+#[2](http://genomicsclass.github.io/book/pages/matrix_operations.html), 
+#[3](http://genomicsclass.github.io/book/pages/expressing_design_formula.html)
+#"
+
 # lect 7
-sched$readings[8] <- "[1](http://genomicsclass.github.io/book/pages/interactions_and_contrasts.html)"
+#sched$readings[8] <- "[1](http://genomicsclass.github.io/book/pages/interactions_and_contrasts.html)"
 
 # lect 8
-sched$readings[9] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect08-continuous/README.md)"
+#sched$readings[9] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect08-continuous/README.md)"
 
 # lect 9
-sched$readings[10] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect09-multipleTesting/README.md)"
+#sched$readings[10] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect09-multipleTesting/README.md)"
 
 # lect 10
-sched$readings[11] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect10-RNAseq/README.md)"
+#sched$readings[11] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect10-RNAseq/README.md)"
 
 # lect 11
-sched$readings[12] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect11-epigenetics/README.md)"
+#sched$readings[12] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect11-epigenetics/README.md)"
 
 # print final table
 knitr::kable(sched %>% 

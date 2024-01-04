@@ -1,0 +1,47 @@
+course,lect,dow,month,day,week,lecture_num,raw_notes,instructor
+STAT540-Seminar,seminar-1,Tue,January,9,1,1,"Introduction to version control, Git, GitHub",
+STAT540-Seminar,seminar-2a,Tue,January,16,2,2,"Introduction to Markdown, Knitr",
+STAT540-Seminar,seminar-2b,Tue,January,16,2,2,R graphics -- Intro to ggplot2,
+STAT540-Seminar,seminar-3,Tue,January,23,3,3,Probability and simulations,
+STAT540-Seminar,seminar-4,Tue,January,30,4,4,Reading in data and wrangling,
+STAT540-Seminar,seminar-5,Tue,February,6,5,5,"Two group testing, fitting and interpreting linear models",
+STAT540-Seminar,seminar-6,Tue,February,13,6,6,RNA-seq: from beginning to end -- BAM to count data,
+STAT540-Seminar,No Seminar,Tue,February,20,7,NA,No seminar (reading break),
+STAT540-Seminar,seminar-7,Tue,February,27,8,7,Methylation microarray analysis,
+STAT540-Seminar,No Seminar,Tue,March,5,9,NA,No seminar,
+STAT540-Seminar,seminar-8,Tue,March,12,10,8,Gene set enrichment analysis,
+STAT540-Seminar,seminar-9,Tue,March,19,11,9,Unsupervised learning - clustering and dimension reduction,
+STAT540-Seminar,seminar-10,Tue,March,26,12,10,"Supervised learning, cross-validation, variable selection",
+STAT540-Seminar,seminar-11,Tue,April,2,13,11,eQTL analysis,
+STAT540-Seminar,No Seminar,Tue,April,9,14,NA,No seminar,
+,,,,,,,,
+,,,,,,,,
+,,dow,month,day,week,,,
+STAT540,lecture-1,Tue,January,9,1,1,Course intro; Molecular biology primer,Keegan
+STAT540,lecture-2,Thu,January,11,1,2,"High-dimensional biology intro: RNA, DNA, methylation, ChIP-Seq",Keegan
+STAT540,lecture-3,Tue,January,16,2,3,Exploratory data analysis,Keegan
+STAT540,lecture-4,Thu,January,18,2,4,Statistics & probability primer,Keegan
+STAT540,lecture-5,Tue,January,23,3,5,Statistical inference: two groups,Keegan
+STAT540,lecture-6,Thu,January,25,3,6,Statistical inference: linear regression & ANOVA,Keegan
+STAT540,Presentations,Tue,January,30,4,NA,Project lightning talk,
+STAT540,lecture-8,Thu,February,1,4,7,Statistical inference: multiple linear regression,Keegan
+STAT540,lecture-9,Tue,February,6,5,8,Statistical inference: continuous model & limma,Keegan
+STAT540,lecture-10,Thu,February,8,5,9,Statistical inference: multiple testing,Keegan
+STAT540,lecture-11,Tue,February,13,6,10,Application of statistical inference to RNA-seq,Yongjin
+STAT540,lecture-12,Thu,February,15,6,11,Application of statistical inference to epigenetics,Yongjin
+STAT540,break,Tue,February,20,7,NA,Reading break (no class),
+STAT540,break,Thu,February,22,7,NA,Reading break (no class),
+STAT540,lecture-13,Tue,February,27,8,12,Gene set enrichment; confounding and batch effects,Keegan
+STAT540,lecture-14,Tue,February,29,8,13,Supervised learning (univariate): GWAS and eQTL,Yongjin
+STAT540,lecture-15,Thu,March,5,9,14,Supervised learning (multivariate): polygenic risk prediction,Yongjin
+STAT540,lecture-16,Tue,March,7,9,15,Supervised learning (advanced): regulatory genomics and deep learning,Yongjin
+STAT540,lecture-17,Thu,March,12,10,16,Sparse data analysis: technology and batch correction,Yongjin
+STAT540,lecture-18,Tue,March,14,10,17,Classical unsupervised learning methods with applications in scRNA and pop gen,Yongjin
+STAT540,lecture-19,Thu,March,19,11,18,Unsupervised embedding methods with applications in high-dimensional space,Yongjin
+STAT540,lecture-20,Tue,March,21,11,19,"Classical clustering analysis: hierarchical agglomerative methods, k-means (EM)",Yongjin
+STAT540,lecture-21,Thu,March,26,12,20,Spatial Transcriptomics: deconvolution and statistical alignment,Yongjin
+STAT540,lecture-22,Tue,March,28,12,21,Multiomics data integration,Yongjin
+STAT540,Presentations,Thu,April,2,13,NA,Final Project Presentations,
+STAT540,Presentations,Tue,April,4,13,NA,Final Project Presentations,
+STAT540,Presentations,Thu,April,9,14,NA,Final Project Presentations,
+STAT540,Presentations,Tue,April,11,14,NA,Final Project Presentations,

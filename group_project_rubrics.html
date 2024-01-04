@@ -456,8 +456,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
   <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
@@ -827,9 +827,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -924,6 +936,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1685,6 +1702,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1762,8 +1785,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1789,12 +1813,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -2423,7 +2448,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2502,6 +2527,7 @@ PEOPLE
 
 <div class="d-title">
 <h1>Group project instructions &amp; rubrics</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2515,14 +2541,14 @@ PEOPLE
 <ul>
 <li><a href="#project-proposal-lightning-talks-5-pts" id="toc-project-proposal-lightning-talks-5-pts">Project Proposal Lightning Talks (5 pts)</a></li>
 <li><a href="#written-proposal-5-pts" id="toc-written-proposal-5-pts">Written Proposal (5 pts)</a></li>
-<li><a href="#progress-report-8-pts" id="toc-progress-report-8-pts">Progress report (8 pts)</a></li>
+<li><a href="#progress-report-5-pts" id="toc-progress-report-5-pts">Progress report (5 pts)</a></li>
 <li><a href="#final-report-10-pts" id="toc-final-report-10-pts">Final report (10 pts)</a></li>
-<li><a href="#oral-presentation-15-pts" id="toc-oral-presentation-15-pts">Oral presentation (15 pts)</a></li>
-<li><a href="#individual-report-7-pts" id="toc-individual-report-7-pts">Individual report (7 pts)</a></li>
+<li><a href="#oral-presentation-10-pts" id="toc-oral-presentation-10-pts">Oral presentation (10 pts)</a></li>
+<li><a href="#individual-report-5-pts" id="toc-individual-report-5-pts">Individual report (5 pts)</a></li>
 </ul>
 </nav>
 </div>
-<p>This page contains more specific instructions for each project deliverable as well as their point values for grading. Each point represents 1 percent of total course grade; i.e. since the final project represents 50% of the final grade, you can think of each point as a percentage of the final grade. Ensure your repo is <a href="#github-repository-organization-5-pts">organized</a> from the start so the TAs can easily find your work for marking.</p>
+<p>This page contains more specific instructions for each project deliverable as well as their point values for grading. Each point represents 1 percent of total course grade; i.e. since the final project represents 40% of the final grade, you can think of each point as a percentage of the final grade. Ensure your repo is <a href="#github-repository-organization-5-pts">organized</a> from the start so the TAs can easily find your work for marking.</p>
 <h2 id="project-proposal-lightning-talks-5-pts">Project Proposal Lightning Talks (5 pts)</h2>
 <p>Your group will prepare a short (5 minute, 5 slides) lightning talk presenting your project proposal. You will push a PDF of your slides to your group project repo, and give the oral presentation in class. Each group member should present at least one slide. Add a link to this file in your main group repo <code>README.md</code> file so the TAs can easily find your work for marking. This is a group-level deliverable (one submission per team).</p>
 <p>Rubric: Marks will be based on effective communication of the main ideas of the following four aspects:</p>
@@ -2576,15 +2602,15 @@ PEOPLE
 <li>Who is going to do what? State assignment of tasks and projected contributions for each group members.</li>
 <li>Please provide a table of group members with their background, degree, affiliations and job assignments.</li>
 </ul>
-<h2 id="progress-report-8-pts">Progress report (8 pts)</h2>
+<h2 id="progress-report-5-pts">Progress report (5 pts)</h2>
 <p>Your group progress report will be a Markdown document called <code>progress_report.md</code>. Add a link to this file in your main group repo <code>README.md</code> file so the TAs can easily find your work for marking.</p>
-<h4 id="what-has-changed-based-on-the-final-proposal-2-pt.">What has changed based on the final proposal (2 pt.)</h4>
+<h4 id="what-has-changed-based-on-the-final-proposal-1-pt.">What has changed based on the final proposal (1 pt.)</h4>
 <ul>
 <li>Did your dataset change? If so, why?</li>
 <li>Have you decided to do a different analysis than what was mentioned in your proposal? If so, Why?</li>
 <li>Are there any changes in task assignments of group members?</li>
 </ul>
-<h4 id="what-is-the-progress-of-the-analyses-4-pts.">What is the progress of the analyses (4 pts.)</h4>
+<h4 id="what-is-the-progress-of-the-analyses-2-pts.">What is the progress of the analyses (2 pts.)</h4>
 <ul>
 <li>Since your initial proposal, you should have decided more concretely on what methods to use for each step of your analyses, and employed some of those methods.</li>
 <li>Briefly and concisely explain your methodology and progress for the aims you have investigated so far. Which parts were modified and which parts remained the same?</li>
@@ -2607,6 +2633,7 @@ PEOPLE
 </li>
 <li>Make sure your code is readable, documented, and could be run by instructors. Make sure you are addressing the important files, such as “inputs” (e.g. links to the dataset(s) you analyzed) and “outputs” (e.g. figures). Provide valid links for the files you use in your scripts. Link to the report in your main README file.</li>
 </ul>
+<p>You can find the full detailed rubric for evaluation of the written report <a href="course-admin/rubric_final_report.pdf">here</a>.</p>
 <h4 id="github-repository-organization-5-pts.">GitHub repository organization (5 pts.)</h4>
 <p>Organizing your project files logically and consistently will help your team and the instructors to keep track of them. One best practice is to create subdirectories for different parts of your analyses. For example:</p>
 <ul>
@@ -2625,20 +2652,20 @@ PEOPLE
 <p>For lots more detail and discussion on project organization and research computing, see <a href="https://swcarpentry.github.io/good-enough-practices-in-scientific-computing/">this article</a>.</p>
 <h4 id="presentation-slides-submission">Presentation slides submission</h4>
 <p>Your presentation slides files (e.g. <code>presentation.PPTX</code> or <code>presentation.pdf</code> or <code>presentation.html</code>) should be placed in your group repo. If your slides require extra files (e.g. if you used Rmd or Latex), create a subdirectory for those materials. Please provide a link to your final presentation slides in your group repo <code>README.md</code>. This is a group-level deliverable and is due with your final report (but is marked as part of your oral presentation).</p>
-<h2 id="oral-presentation-15-pts">Oral presentation (15 pts)</h2>
+<h2 id="oral-presentation-10-pts">Oral presentation (10 pts)</h2>
 <h4 id="presentation-sessions">Presentation sessions</h4>
 <p>Each group will prepare one 15 minute oral presentation, which will be followed by 3 minutes for questions. We will have oral presentation sessions on the last three scheduled lecture sessions. Assignments for presentation dates will be posted on Slack. Groups may choose to present synchronously (live), or prerecord their presentation and play the video during their presentation slot. This is a group-level deliverable, and all group members should participate, and be present during the presentation even if prerecorded so they can answer questions. In addition, each individual will randomly be assigned 2 other group presentations to peer review (see <a href="#individual-report-7-pts">Individual report</a>), so be sure to be present during the other presentation days as well.</p>
 <p>Resources for pre-recording presentations: If you choose to prerecord your group presentation, you may do so using a variety of tools. One option is to record during a group meeting using <a href="https://support.microsoft.com/en-us/office/record-a-meeting-in-teams-34dfbe7f-b07d-4a27-b4c6-de62f1348c24">Microsoft Teams</a> or <a href="https://support.zoom.us/hc/en-us/articles/201362473-Local-recording">Zoom</a>. Another option is to record in <a href="https://support.microsoft.com/en-us/office/record-a-presentation-2570dff5-f81c-40bc-b404-e04e95ffab33">Powerpoint</a>. You could also use screencast software such as <a href="https://support.apple.com/en-ca/guide/quicktime-player/qtp97b08e666/mac">QuickTime for Mac</a>. If you need advice (or have advice to share) on recording/editing software for your system, please post in the Discussion repo.</p>
 <h4 id="presentation-evaluation"><a href="course-admin/ProjectPresentationRubric.pdf">Presentation evaluation</a></h4>
 <p>Your oral presentation is evaluated in 4 major categories:</p>
 <ol type="1">
-<li>Background/introduction (3 points)</li>
-<li>Statistical analysis (4 points)</li>
-<li>Quality of presentation (4 points)</li>
-<li>Scientific maturity (4 points)</li>
+<li>Background/introduction (2 points)</li>
+<li>Statistical analysis (3 points)</li>
+<li>Quality of presentation (2 points)</li>
+<li>Scientific maturity (3 points)</li>
 </ol>
 <p>You can find the full detailed rubric for presentation evaluation in each of these categories <a href="course-admin/ProjectPresentationRubric.pdf">here</a>.</p>
-<h2 id="individual-report-7-pts">Individual report (7 pts)</h2>
+<h2 id="individual-report-5-pts">Individual report (5 pts)</h2>
 <p>A one-page individual report as <code>individual_report.md</code> is an individual deliverable and should be in an individual private repository (it will have its own invitation link on Canvas). The report includes:</p>
 <h4 id="peer-evaluation-2-pts">Peer evaluation (2 pts)</h4>
 <ul>
@@ -2646,12 +2673,12 @@ PEOPLE
 <li>Following the presentations, please review and provide constructive feedback using the 4-component <a href="https://www.risemodel.com/s/RISE-Model-Peer-EmilyWray.pdf">Reflect Inquire Suggest Elevate (RISE) model of peer feedback</a>. Include a statement/question for each of the 4 RISE components.</li>
 <li>Please copy and paste each of your peer reviews in the <a href="https://stat540students.slack.com/archives/peer-review">Slack #peer-review channel</a> (so that the teams can receive your feedback), and include links to these messages in this report.</li>
 </ul>
-<h4 id="a-concise-summary-of-contributions-of-each-group-member-2-pts">A concise summary of contributions of each group member (2 pts)</h4>
+<h4 id="a-concise-summary-of-contributions-of-each-group-member-1-pts">A concise summary of contributions of each group member (1 pts)</h4>
 <ul>
 <li>Describes the tasks and contributions of each of your group members</li>
 <li>Do you think the task assignments were fairly assigned and appropriate given each member’s background and skills? If no, how would you change it?</li>
 </ul>
-<h4 id="your-specific-contributions-and-comments-2-pts">Your specific contributions and comments (2 pts)</h4>
+<h4 id="your-specific-contributions-and-comments-1-pts">Your specific contributions and comments (1 pts)</h4>
 <ul>
 <li>Explain what are your contributions to the project?</li>
 <li>What worked well and what did not? What was the most challenging or rewarding moment during your group project?</li>

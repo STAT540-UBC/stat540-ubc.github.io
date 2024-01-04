@@ -11,10 +11,10 @@ output:
 You will have three individual assignments, six seminar submissions, and one group project: 
 
 * One intro assignment (5%)
-* Six in-seminar submissions (10% total; 2% each after dropping the lowest score)
+* Seminar participation (20% total; 2% each after dropping the lowest score)
 * One paper review (5%) 
 * One analysis assignment (30%)
-* Final group project (50%) which contains multiple parts. 
+* Final group project (40%) which contains multiple parts. 
 
 <font color="red">**Deadlines are all by 11:59 pm (Pacific time) on the due date. Any submission or modification after the due date will not be graded unless you have requested an extension**</font>. If you anticipate having trouble meeting a deadline and need to request an extension/academic concession please reach out via email.
 
@@ -26,7 +26,7 @@ For a visual summary, click [here](timeline.html).
 
 ```{r, echo=FALSE, warning=FALSE}
 suppressPackageStartupMessages(library(tidyverse))
-assn <- read.csv("course-admin/assn_2023.csv")
+assn <- read.csv("course-admin/assn_2024.csv")
 assn <- assn %>% 
   select(Category, content, start) %>%
   rename(Assignment = content, `Due Date` = start) %>%
@@ -44,15 +44,13 @@ This assignment is designed to give you independent practice in the workflow use
 
 The instructions and questions are available [here](https://github.com/STAT540-UBC/intro-assignment/blob/main/intro_assignment.md).
 
-## Seminar completion (10%)
+## Seminar participation (20%)
 
-You will submit short "deliverables" for six seminars: 1, 2 (split into two parts - Seminar 2a and 2b together count as one deliverable), 3, 4, 5, and 8. These deliverables give practical experience applying the knowledge that will be helpful on the homework assignment, final project, and (hopefully) your future research. Each of these six Seminar session deliverables is weighted equally, but the lowest score will be dropped (so that the 5 deliverables with highest score will each count for 2% of the final grade). Seminar deliverables are due on the Monday following the TA-led session for that seminar. See the [Seminars page](seminars.html) for the submission materials.
+You will submit short "deliverables" to demonstrate your participation for every seminar. These deliverables give practical experience applying the knowledge that will be helpful on the homework assignment, final project, and (hopefully) your future research. Each of Seminar session is weighted equally, but the lowest score will be dropped (so that the 10 seminars with highest score will each count for 2% of the final grade). Seminar deliverables are due on the Friday following the TA-led session for that seminar. See the [Seminars page](seminars.html) for the submission materials and schedule.
 
 ## Paper critique (5%)
 
-Each student should review and provide a 500-700 word critique this paper:
-
-* [Comparative Transcriptome Profiling of Human Foreskin Fibroblasts Infected with the Sylvio and Y Strains of *Trypanosoma cruzi*](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159197) by Houston-Ludlam et al (2016)
+Each student will review and provide a 500-700 word critique a paper that will be posted on Canvas.
 
 Please see [**critique rubric**](critique.html) for detailed instructions on this task. 
 
@@ -60,12 +58,12 @@ Please see [**critique rubric**](critique.html) for detailed instructions on thi
 
 This assignment will assess your understanding of the seminar and lecture materials. Start early because this assignment will take time to fully work through. Use the issues in the Discussion repo and the seminar time to ask questions. You will find most of the analysis workflow of the assignment in the seminar materials. 
 
-The instruction and questions and are available [here](https://github.com/STAT540-UBC/analysis-assignment/blob/main/analysis_assignment.md).
+The instruction and questions will be available [here](https://github.com/STAT540-UBC/analysis-assignment/).
 
 The grade point values for each question are listed right in the assignment.
 
 
-## Final group project (50%)
+## Final group project (40%)
 
 ### General principles
 
@@ -108,7 +106,7 @@ Details and grading rubrics for each component of the final group project can be
 
 * [Project Proposal Lightning Talks (5%)](group_project_rubrics.html#project-proposal-lightning-talks-5-pts)
 * [Written Proposal (5%)](group_project_rubrics.html#written-proposal-5-pts)
-* [Progress report (8%)](group_project_rubrics.html#progress-report-8-pts)
+* [Progress report (5%)](group_project_rubrics.html#progress-report-8-pts)
 * [Final report (10%)](group_project_rubrics.html#final-report-10-pts)
-* [Oral presentation (15%)](group_project_rubrics.html#oral-presentation-15-pts) - A Detailed rubric can be found [here](course-admin/ProjectPresentationRubric.pdf)
-* [Individual report (7%)](group_project_rubrics.html#individual-report-7-pts)
+* [Oral presentation (10%)](group_project_rubrics.html#oral-presentation-15-pts) - A Detailed rubric can be found [here](course-admin/ProjectPresentationRubric.pdf)
+* [Individual report (5%)](group_project_rubrics.html#individual-report-7-pts)
