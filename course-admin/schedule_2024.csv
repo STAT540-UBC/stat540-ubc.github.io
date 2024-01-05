@@ -1,18 +1,18 @@
 course,lect,dow,month,day,week,lecture_num,raw_notes,instructor
 STAT540-Seminar,seminar-1,Tue,January,9,1,1,"Introduction to version control, Git, GitHub", Ishika
-STAT540-Seminar,seminar-2a,Tue,January,16,2,2,"Introduction to Markdown, Knitr",
-STAT540-Seminar,seminar-2b,Tue,January,16,2,2,R graphics -- Intro to ggplot2,
-STAT540-Seminar,seminar-3,Tue,January,23,3,3,Probability and simulations,
-STAT540-Seminar,seminar-4,Tue,January,30,4,4,Reading in data and wrangling,
-STAT540-Seminar,seminar-5,Tue,February,6,5,5,"Two group testing, fitting and interpreting linear models",
-STAT540-Seminar,seminar-6,Tue,February,13,6,6,RNA-seq: from beginning to end -- BAM to count data,
+STAT540-Seminar,seminar-2a,Tue,January,16,2,2,"Introduction to Markdown, Knitr", Ishika
+STAT540-Seminar,seminar-2b,Tue,January,16,2,2,R graphics -- Intro to ggplot2, Ishika
+STAT540-Seminar,seminar-3,Tue,January,23,3,3,Probability and simulations, Ishika
+STAT540-Seminar,seminar-4,Tue,January,30,4,4,Reading in data and wrangling, Asfar
+STAT540-Seminar,seminar-5,Tue,February,6,5,5,"Two group testing, fitting and interpreting linear models", Asfar
+STAT540-Seminar,seminar-6,Tue,February,13,6,6,RNA-seq: from beginning to end -- BAM to count data, Ishika
 STAT540-Seminar,No Seminar,Tue,February,20,7,NA,No seminar (reading break),
-STAT540-Seminar,seminar-7,Tue,February,27,8,7,Methylation microarray analysis,
+STAT540-Seminar,seminar-7,Tue,February,27,8,7,Methylation microarray analysis, Asfar
 STAT540-Seminar,No Seminar,Tue,March,5,9,NA,No seminar,
-STAT540-Seminar,seminar-8,Tue,March,12,10,8,Gene set enrichment analysis,
-STAT540-Seminar,seminar-9,Tue,March,19,11,9,Unsupervised learning - clustering and dimension reduction,
-STAT540-Seminar,seminar-10,Tue,March,26,12,10,"Supervised learning, cross-validation, variable selection",
-STAT540-Seminar,seminar-11,Tue,April,2,13,11,eQTL analysis,
+STAT540-Seminar,seminar-8,Tue,March,12,10,8,Gene set enrichment analysis, Asfar
+STAT540-Seminar,seminar-9,Tue,March,19,11,9,Unsupervised learning - clustering and dimension reduction, Asfar
+STAT540-Seminar,seminar-10,Tue,March,26,12,10,"Supervised learning, cross-validation, variable selection", Ishika
+STAT540-Seminar,seminar-11,Tue,April,2,13,11,eQTL analysis, Ishika
 STAT540-Seminar,No Seminar,Tue,April,9,14,NA,No seminar,
 ,,,,,,,,
 ,,,,,,,,
