@@ -1,5 +1,5 @@
 course,lect,dow,month,day,week,lecture_num,raw_notes,instructor
-STAT540-Seminar,seminar-1,Tue,January,9,1,1,"Introduction to version control, Git, GitHub",
+STAT540-Seminar,seminar-1,Tue,January,9,1,1,"Introduction to version control, Git, GitHub", Ishika
 STAT540-Seminar,seminar-2a,Tue,January,16,2,2,"Introduction to Markdown, Knitr",
 STAT540-Seminar,seminar-2b,Tue,January,16,2,2,R graphics -- Intro to ggplot2,
 STAT540-Seminar,seminar-3,Tue,January,23,3,3,Probability and simulations,
