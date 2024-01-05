@@ -175,8 +175,7 @@ kable(assn %>% filter(Category == "Seminar") %>% select(-Category))
 
 ### [Paper critique (5%)](assignments.html#paper-critique-5)
 
-- Read, summarize and critique [this paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159197)
-- For detailed instructions, refer to [the rubric](critique.html)
+See [here](critique.html) for detailed instructions and rubric.
 
 ```{r, echo = FALSE, warning =  FALSE}
 kable(assn %>% filter(Category == "Paper Critique") %>% select(-Category))
