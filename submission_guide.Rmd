@@ -2,19 +2,19 @@
 title: "Submission Guide"
 ---
 
-# How to start and submit assignments through GitHub and Canvas
+# How to start and submit assignments through GitHub and Gradescope
 
-You need to have Git installed on your computer, and have a GitHub account. You can use command line Git or a Git client (such as GitHub Desktop), or even RStudio itself to push, pull, etc. to/from GitHub. See [Seminar 1](seminars.html) for a setup guide and illustration of the workflow from accepting an assignment to submission. 
+You need to have Git installed on your computer, and have a GitHub account. You can use command line Git or RStudio itself to push, pull, etc. to/from GitHub. See [Seminar 1](seminars.html) for an illustrated setup guide and illustration of the full workflow from accepting an assignment to submission. 
 
-## Start your assignment
+## Start a new assignment
 
-1. **Accept**: Click on the assignment invitation link for the assignment in Canvas. Each individual assignment/deliverable will have its own link, whereas the group project will only have one link at the start of the project (all deliverables will use the same shared repo). After you accept the assignment, a GitHub repo will be automatically be generated for you. 
+1. **Accept**: Click on the assignment invitation link for the assignment in Canvas. Each individual assignment/deliverable will have its own link, whereas the group project will only have one link at the start of the project (all deliverables will use the same shared repository). After you accept the assignment, a GitHub repository will be automatically be generated for you. 
 
-2. **Clone** the repository to your local machine (see [Seminar 1](seminars.html) for illustration of this workflow). Now you can begin working on your submission files locally. See [below](#files-organization) for more detail on this repo and organizing files.
+2. **Clone** the repository to your local machine (see [Seminar 1](seminars.html) for illustration of this workflow). Now you can begin working on your submission files locally. See [below](#files-organization) for more detail on repositories and organizing files.
 
 ## How to "turn in" your work: **Save, Commit, Push, Submit**
 
-Follow these steps carefully, and be sure they are complete before the deadline of each deliverable. <span style="color: red">**Important Note: If you commit/push any changes after the deadline (even by one second), they will not be graded.**</span>
+Follow these steps carefully, and be sure they are complete before the deadline of each deliverable. <span style="color: red">**Important Note: the deadline is automated, so you will not be able to perform a late submission (even by one second). Make sure to allow plenty of time for submission!**</span>
 
 1. **Save** all the files associated with your solution locally (i.e. for coding assignments R Markdown, GitHub Markdown, and any associated output files - see [below](#main-required-file-types) for more detail).
 
@@ -22,17 +22,17 @@ Follow these steps carefully, and be sure they are complete before the deadline 
 
 3. **Push** the current state of your local repo to your private repo on GitHub. Double check that this was successful, by viewing your repo on GitHub to verify that the most recent commits are visible. 
 
-4. **Submit** the repository URL on Canvas - copy and paste the URL of your assignment repository as the submission for that assignment on Canvas (e.g. the link for your Seminar 1 repo will be something like `https://github.com/STAT540-UBC-2023/seminar-01-yourGitHubID`). 
+4. **Submit** the repository on Gradescope via the link in Canvas. 
 
 That's it! You can commit/push to update your assignment as often as you'd like before the deadline ([frequent commits are actually encouraged](#general-tips-for-working-on-the-assignments)). A snapshot of your repo at the deadline will automatically be captured for grading. 
 
-> If you're concerned that something hasn't gone right with the submission and the deadline is imminent, send the TAs an e-mail with your assignment attached. **Note**: this is *only* a last-minute emergency back-up plan. We will work with you until you get it submitted via GitHub.
+> If you're concerned that something hasn't gone right with the submission and the deadline is imminent, send the TAs an e-mail with your assignment attached. **Note**: this is *only* a last-minute emergency back-up plan, and penalties may apply. We will work with you until you get it submitted via GitHub/Gradescope.
 
 # Files & organization
 
 ## Individual assignments
 
-  * Use the repositories that are automatically generated for you when you accept each assignment (e.g., the repo with the format `STAT540-UBC-2023/seminar-01-yourGitHubID` will contain your Seminar 1 deliverable). Do not use additional branches or any other repositories to submit your course work.
+  * Use the repositories that are automatically generated for you when you accept each assignment (e.g., the repo with the format `STAT540-UBC-2024/seminar-01-yourGitHubID` will contain your Seminar 1 deliverable). Do not use additional branches or any other repositories to submit your course work.
   * All your work for each deliverable should be nicely organized in its repository. 
   * Your repositories should include a `README.md` file with a clear description. These are like each assignment's landing page.
   
