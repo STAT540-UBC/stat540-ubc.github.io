@@ -50,7 +50,19 @@ if (nrow(cmdat) >0){
 
 pdf_exists <- grepl("*.pdf", cdat$pdf)
 html_exists <- grepl("*.html", cdat$html)
-  
+
+if (length(html_exists) == 0){
+  if (length(pdf_exists) > 0){
+    html_exists <- rep(FALSE, length(pdf_exists))
+  }
+}
+
+if (length(pdf_exists) == 0){
+  if (length(html_exists) > 0){
+    pdf_exists <- rep(FALSE, length(html_exists))
+  }
+}
+           
 # Insert placeholder link to notes 
 #cdat$notes[pdf_exists] <-
  # str_replace(cdat$notes[which(pdf_exists)],
