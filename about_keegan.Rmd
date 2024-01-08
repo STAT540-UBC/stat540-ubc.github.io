@@ -3,7 +3,7 @@ title: "Keegan Korthauer"
 image: "images/Keegan_shot.jpg"
 links:
   - label: Website
-    url: "https://kkorthauer.org"
+    url: "https://www.korthauerlab.com/"
   - label: Twitter
     url: "https://twitter.com/keegankorthauer"
   - label: GitHub
