@@ -98,7 +98,7 @@ You can find the full detailed rubric for evaluation of the written report [here
 
 #### GitHub repository organization (5 pts.)
 
-Organizing your project files logically and consistently will help your team and the instructors to keep track of them. One best practice is to create subdirectories for different parts of your analyses. For example:
+Detailed rubric [here](course-admin/rubric_repro.pdf). Organizing your project files logically and consistently will help your team and the instructors to keep track of them. One best practice is to create subdirectories for different parts of your analyses. For example:
 
   * `src`: contains source code (e.g `.R` files)
   * `results`: contains summary figures and/or reports (e.g. `.pdf` or `html` files)
