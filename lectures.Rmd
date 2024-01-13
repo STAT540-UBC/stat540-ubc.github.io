@@ -115,6 +115,9 @@ sched <- dat_cm[["STAT540"]] %>%
 # lect 1
 sched$readings[1] <- "[1](https://stat540-ubc.github.io/syllabus.html)"
 
+# lect 3
+sched$readings[3] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect03-eda/README.md)"
+  
 # lect 4
 #sched$readings[4] <- "
 #[1](http://genomicsclass.github.io/book/pages/populations_and_samples.html), 
