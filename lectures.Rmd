@@ -119,11 +119,11 @@ sched$readings[1] <- "[1](https://stat540-ubc.github.io/syllabus.html)"
 sched$readings[3] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect03-eda/README.md)"
   
 # lect 4
-#sched$readings[4] <- "
-#[1](http://genomicsclass.github.io/book/pages/populations_and_samples.html), 
-#[2](http://genomicsclass.github.io/book/pages/random_variables.html), 
-#[3](http://genomicsclass.github.io/book/pages/clt_and_t-distribution.html)
-#"
+sched$readings[4] <- "
+[1](http://genomicsclass.github.io/book/pages/populations_and_samples.html), 
+[2](http://genomicsclass.github.io/book/pages/random_variables.html), 
+[3](http://genomicsclass.github.io/book/pages/clt_and_t-distribution.html)
+"
 
 # lect 5
 #sched$readings[5] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect05-twoGroup/README.md)"
