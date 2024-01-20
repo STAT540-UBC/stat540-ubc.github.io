@@ -126,14 +126,14 @@ sched$readings[4] <- "
 "
 
 # lect 5
-#sched$readings[5] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect05-twoGroup/README.md)"
+sched$readings[5] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect05-twoGroup/README.md)"
 
 # lect 6
-#sched$readings[6] <- "
-#[1](http://genomicsclass.github.io/book/pages/matrix_notation.html), 
-#[2](http://genomicsclass.github.io/book/pages/matrix_operations.html), 
-#[3](http://genomicsclass.github.io/book/pages/expressing_design_formula.html)
-#"
+sched$readings[6] <- "
+[1](http://genomicsclass.github.io/book/pages/matrix_notation.html), 
+[2](http://genomicsclass.github.io/book/pages/matrix_operations.html), 
+[3](http://genomicsclass.github.io/book/pages/expressing_design_formula.html)
+"
 
 # lect 7
 #sched$readings[8] <- "[1](http://genomicsclass.github.io/book/pages/interactions_and_contrasts.html)"
