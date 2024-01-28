@@ -16,13 +16,15 @@ You need to have Git installed on your computer, and have a GitHub account. You 
 
 Follow these steps carefully, and be sure they are complete before the deadline of each deliverable. <span style="color: red">**Important Note: the deadline is automated, so you will not be able to perform a late submission (even by one second). Make sure to allow plenty of time for submission!**</span>
 
-1. **Save** all the files associated with your solution locally (i.e. for coding assignments R Markdown, GitHub Markdown, and any associated output files - see [below](#main-required-file-types) for more detail).
+1. Please include a link to your assignment repository at the top of your main output file.
 
-2. **Commit** those files to your local Git repository.
+2. **Save** all the files associated with your solution locally (i.e. for coding assignments R Markdown, GitHub Markdown, and any associated output files - see [below](#main-required-file-types) for more detail).
 
-3. **Push** the current state of your local repo to your private repo on GitHub. Double check that this was successful, by viewing your repo on GitHub to verify that the most recent commits are visible. 
+3. **Commit** those files to your local Git repository.
 
-4. **Submit** the repository on Gradescope via the link in Canvas. 
+4. **Push** the current state of your local repo to your private repo on GitHub. Double check that this was successful, by viewing your repo on GitHub to verify that the most recent commits are visible. 
+
+5. **Submit** the repository on Gradescope via the link in Canvas. 
 
 That's it! You can commit/push to update your assignment as often as you'd like before the deadline ([frequent commits are actually encouraged](#general-tips-for-working-on-the-assignments)). A snapshot of your repo at the deadline will automatically be captured for grading. 
 

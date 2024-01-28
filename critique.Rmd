@@ -12,7 +12,7 @@ To practice your ability to go through a paper, identify the biological problem 
 
 ## Paper in question:
 
-To be announced.
+[Takahama, M., Patil, A., Richey, G. et al. A pairwise cytokine code explains the organism-wide response to sepsis. Nat Immunol (2024).](https://doi.org/10.1038/s41590-023-01722-8)
 
 ## Deliverables and Rubric:
 
