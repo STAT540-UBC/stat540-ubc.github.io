@@ -139,10 +139,10 @@ sched$readings[6] <- "
 sched$readings[8] <- "[1](http://genomicsclass.github.io/book/pages/interactions_and_contrasts.html)"
 
 # lect 8
-#sched$readings[9] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect08-continuous/README.md)"
+sched$readings[9] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect08-continuous/README.md)"
 
 # lect 9
-#sched$readings[10] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect09-multipleTesting/README.md)"
+sched$readings[10] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect09-multipleTesting/README.md)"
 
 # lect 10
 #sched$readings[11] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect10-RNAseq/README.md)"
