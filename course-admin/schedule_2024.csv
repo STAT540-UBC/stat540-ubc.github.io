@@ -19,7 +19,7 @@ STAT540-Seminar,No Seminar,Tue,April,9,14,NA,No seminar,
 ,,dow,month,day,week,,,
 STAT540,lecture-1,Tue,January,9,1,1,Course intro; Molecular biology primer,Keegan
 STAT540,lecture-2,Thu,January,11,1,2,"High-dimensional biology intro: RNA, DNA, methylation, ChIP-Seq",Keegan
-STAT540,lecture-3,Tue,January,16,2,3,Exploratory data analysis,Keegan
+STAT540,lecture-3,Tue,January,16,2,3,Exploratory data analysis; confounding & batch effects,Keegan
 STAT540,lecture-4,Thu,January,18,2,4,Statistics & probability primer,Keegan
 STAT540,lecture-5,Tue,January,23,3,5,Statistical inference: two groups,Keegan
 STAT540,lecture-6,Thu,January,25,3,6,Statistical inference: linear regression & ANOVA,Keegan
@@ -31,16 +31,16 @@ STAT540,lecture-10,Tue,February,13,6,10,Application of statistical inference to 
 STAT540,lecture-11,Thu,February,15,6,11,Application of statistical inference to epigenetics,Yongjin
 STAT540,break,Tue,February,20,7,NA,Reading break (no class),
 STAT540,break,Thu,February,22,7,NA,Reading break (no class),
-STAT540,lecture-12,Tue,February,27,8,12,Gene set enrichment; confounding and batch effects,Keegan
-STAT540,lecture-13,Thu,February,29,8,13,"Supervised learning: GWAS and eQTL",Yongjin
-STAT540,lecture-14,Tue,March,5,9,14,"Supervised learning: polygenic risk prediction",Yongjin
-STAT540,lecture-15,Thu,March,7,9,15,"Supervised learning: post-GWAS & causal inference",Yongjin
-STAT540,lecture-16,Tue,March,12,10,16,"Single-cell data analysis: technology and data normalization",Yongjin
-STAT540,lecture-17,Thu,March,14,10,17,"Unsupervised learning: application of latent factor models to scRNA-seq",Yongjin
-STAT540,lecture-18,Tue,March,19,11,18,"Unsupervised learning: recent approaches",Yongjin
-STAT540,lecture-19,Thu,March,21,11,19,"Model-based analysis: statistical learning methods in genomics",Yongjin
-STAT540,lecture-20,Tue,March,26,12,20,"Spatial Transcriptomics",Yongjin
-STAT540,lecture-21,Thu,March,28,12,21,"Multiomics data integration",Yongjin
+STAT540,lecture-12,Tue,February,27,8,12,Gene set enrichment,Keegan
+STAT540,lecture-13,Thu,February,29,8,13,Supervised learning: GWAS and eQTL,Yongjin
+STAT540,lecture-14,Tue,March,5,9,14,Supervised learning: polygenic risk prediction,Yongjin
+STAT540,lecture-15,Thu,March,7,9,15,Supervised learning: post-GWAS & causal inference,Yongjin
+STAT540,lecture-16,Tue,March,12,10,16,Single-cell data analysis: technology and data normalization,Yongjin
+STAT540,lecture-17,Thu,March,14,10,17,Unsupervised learning: application of latent factor models to scRNA-seq,Yongjin
+STAT540,lecture-18,Tue,March,19,11,18,Unsupervised learning: recent approaches,Yongjin
+STAT540,lecture-19,Thu,March,21,11,19,Model-based analysis: statistical learning methods in genomics,Yongjin
+STAT540,lecture-20,Tue,March,26,12,20,Spatial Transcriptomics,Yongjin
+STAT540,lecture-21,Thu,March,28,12,21,Multiomics data integration,Yongjin
 STAT540,Presentations,Tue,April,2,13,NA,Final Project Presentations,
 STAT540,Presentations,Thu,April,4,13,NA,Final Project Presentations,
 STAT540,Presentations,Tue,April,9,14,NA,Final Project Presentations,
