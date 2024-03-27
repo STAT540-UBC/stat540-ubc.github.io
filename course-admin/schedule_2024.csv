@@ -12,8 +12,9 @@ STAT540-Seminar,No Seminar,Tue,March,5,9,NA,No seminar,
 STAT540-Seminar,seminar-8,Tue,March,12,10,8,Gene set enrichment analysis, Asfar
 STAT540-Seminar,seminar-9,Tue,March,19,11,9,Unsupervised learning - clustering and dimension reduction, Asfar
 STAT540-Seminar,seminar-10,Tue,March,26,12,10,"Supervised learning, cross-validation, variable selection", Ishika
-STAT540-Seminar,seminar-11,Tue,April,2,13,11,eQTL analysis, Ishika
-STAT540-Seminar,No Seminar,Tue,April,9,14,NA,No seminar,
+STAT540-Seminar,No Seminar,Tue,April,2,13,NA,No seminar,
+STAT540-Seminar,seminar-11,Tue,April,9,14,11,eQTL analysis, Ishika
+
 ,,,,,,,,
 ,,,,,,,,
 ,,dow,month,day,week,,,
@@ -41,7 +42,7 @@ STAT540,lecture-18,Tue,March,19,11,18,Unsupervised learning: recent approaches,Y
 STAT540,lecture-19,Thu,March,21,11,19,Model-based data analysis,Yongjin
 STAT540,lecture-20,Tue,March,26,12,20,Spatial Transcriptomics,Yongjin
 STAT540,lecture-21,Thu,March,28,12,21,Multiomics data integration,Yongjin
-STAT540,Presentations,Tue,April,2,13,NA,Final Project Presentations,
+STAT540,break,Tue,April,2,13,NA,Presentation Prep Time (no class),
 STAT540,Presentations,Thu,April,4,13,NA,Final Project Presentations,
 STAT540,Presentations,Tue,April,9,14,NA,Final Project Presentations,
 STAT540,Presentations,Thu,April,11,14,NA,Final Project Presentations,
