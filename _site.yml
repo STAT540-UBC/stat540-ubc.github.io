@@ -40,8 +40,8 @@ navbar:
           href: about_yongjin.html
         - text: "Asfar Lathif (TA)"
           href: about_asfar.html
-        - text: "Ishika Luthra (TA)"
-          href: about_ishika.html
+        - text: "JJ Hum (TA)"
+          href: about_JJ.html
     - text: "FAQ"
       href: faq.html
     - icon: fab fa-github
