@@ -14,5 +14,5 @@ site: distill::distill_website
 
 ## Quick links for current students:
 
-* [Canvas course page](https://canvas.ubc.ca/courses/132914)
+* [Canvas course page](https://canvas.ubc.ca/courses/158233)
 * [Additional resources](syllabus.html#prerequisites-and-resources)
