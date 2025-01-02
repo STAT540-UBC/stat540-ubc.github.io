@@ -26,7 +26,7 @@ For a visual summary, click [here](timeline.html).
 
 ```{r, echo=FALSE, warning=FALSE}
 suppressPackageStartupMessages(library(tidyverse))
-assn <- read.csv("course-admin/assn_2024.csv")
+assn <- read.csv("course-admin/assn.csv")
 assn <- assn %>% 
   select(Category, content, start) %>%
   rename(Assignment = content, `Due Date` = start) %>%
@@ -104,8 +104,8 @@ Groups will be formed by the instructional team following the results of an in c
 
 Details and grading rubrics for each component of the final group project can be found on the [**Group project rubrics page**](group_project_rubrics.html).
 
-* [Project Proposal Lightning Talks (5%)](group_project_rubrics.html#project-proposal-lightning-talks-5-pts)
-* [Written Proposal (5%)](group_project_rubrics.html#written-proposal-5-pts)
+* [Initial Proposal (5%)](group_project_rubrics.html#initial-proposal-5-pts)
+* [Final Proposal (5%)](group_project_rubrics.html#final-proposal-5-pts)
 * [Progress report (5%)](group_project_rubrics.html#progress-report-8-pts)
 * [Final report (10%)](group_project_rubrics.html#final-report-10-pts)
 * [Oral presentation (10%)](group_project_rubrics.html#oral-presentation-15-pts) - A Detailed rubric can be found [here](course-admin/ProjectPresentationRubric.pdf)

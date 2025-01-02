@@ -195,8 +195,8 @@ kable(assn %>% filter(Category == "Individual Assignment", Assignment != "Intro 
 - A semester-long data analysis group project where you will apply the techniques covered in class to a research question of your choosing
 - Groups of target size of 4 students will be formed at the beginning of the course
 - Important checkpoints during the term (with deliverables): 
-    - Project Proposal Lightning Talks
-    - Written Project Proposal 
+    - Initial Proposal
+    - Final Proposal 
     - Progress Report
     - Oral presentation 
     - Written Report & GitHub repository

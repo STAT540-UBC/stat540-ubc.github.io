@@ -1,23 +1,23 @@
-id,content,start,end,Category,style,,,,
-1,Intro Assignment,2024-01-25,,Individual Assignment,background-color: gold;,,,,
-2,Paper Critique,2024-02-22,,Paper Critique,background-color: aqua;,,,,
-3,Analysis Assignment,2024-02-29,,Individual Assignment,background-color: pink;,,,,
-4,Proposal Lightning Talks,2024-01-30,,Group Project,background-color: lavender;,,,,
-5,Written Proposal,2024-02-08,,Group Project,background-color: lavender;,,,,
-6,Progress Report,2024-03-07,,Group Project,background-color: lavender;,,,,
-8,Final Report,2024-04-02,,Group Project,background-color: lavender;,,,,
-9,Individual & Group Evaluation,2024-04-12,,Group Project,background-color: lavender;,,,,
-10,Seminar 1,2024-01-12,,Seminar,background-color: palegreen;,,,,
-11,Seminar 2a & 2b,2024-01-19,,Seminar,background-color: palegreen;,,,,
-12,Seminar 3,2024-01-26,,Seminar,background-color: palegreen;,,,,
-13,Seminar 4,2024-02-02,,Seminar,background-color: palegreen;,,,,
-14,Seminar 5,2024-02-09,,Seminar,background-color: palegreen;,,,,
-15,Seminar 6,2024-02-16,,Seminar,background-color: palegreen;,,,,
-16,Seminar 7,2024-03-01,,Seminar,background-color: palegreen;,,,,
-17,Seminar 8,2024-03-15,,Seminar,background-color: palegreen;,,,,
-18,Seminar 9,2024-03-22,,Seminar,background-color: palegreen;,,,,
-19,Seminar 10,2024-03-29,,Seminar,background-color: palegreen;,,,,
-20,Seminar 11,2024-04-12,,Seminar,background-color: palegreen;,,,,
-21,Presentation Day 1,2024-04-04,,Group Project,background-color: #6600ff; color: white;,,,,
-22,Presentation Day 2,2024-04-09,,Group Project,background-color: #6600ff; color: white;,,,,
-23,Presentation Day 3,2024-04-11,,Group Project,background-color: #6600ff; color: white;,,,,
+id,content,start,end,Category,style
+1,Intro Assignment,2025-01-23,,Individual Assignment,background-color: gold;
+2,Paper Critique,2025-02-20,,Paper Critique,background-color: aqua;
+3,Analysis Assignment,2025-03-06,,Individual Assignment,background-color: pink;
+4,Initial Proposal,2025-01-27,,Group Project,background-color: lavender;
+5,Final Proposal,2025-02-11,,Group Project,background-color: lavender;
+6,Progress Report,2025-03-11,,Group Project,background-color: lavender;
+8,Final Report,2025-04-01,,Group Project,background-color: lavender;
+9,Individual & Group Evaluation,2025-04-11,,Group Project,background-color: lavender;
+10,Seminar 1,2025-01-10,,Seminar,background-color: palegreen;
+11,Seminar 2a & 2b,2025-01-17,,Seminar,background-color: palegreen;
+12,Seminar 3,2025-01-24,,Seminar,background-color: palegreen;
+13,Seminar 4,2025-01-31,,Seminar,background-color: palegreen;
+14,Seminar 5,2025-02-07,,Seminar,background-color: palegreen;
+15,Seminar 6,2025-02-14,,Seminar,background-color: palegreen;
+16,Seminar 7,2025-02-28,,Seminar,background-color: palegreen;
+17,Seminar 8,2025-03-14,,Seminar,background-color: palegreen;
+18,Seminar 9,2025-03-21,,Seminar,background-color: palegreen;
+19,Seminar 10,2025-03-28,,Seminar,background-color: palegreen;
+20,Seminar 11,2025-04-11,,Seminar,background-color: palegreen;
+21,Presentation Day 1,2025-04-01,,Group Project,background-color: #6600ff; color: white;
+22,Presentation Day 2,2025-04-03,,Group Project,background-color: #6600ff; color: white;
+23,Presentation Day 3,2025-04-08,,Group Project,background-color: #6600ff; color: white;
