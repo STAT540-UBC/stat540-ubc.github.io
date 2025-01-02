@@ -136,7 +136,7 @@ sched$readings[6] <- "
 "
 
 # lect 7
-sched$readings[8] <- "[1](http://genomicsclass.github.io/book/pages/interactions_and_contrasts.html)"
+sched$readings[7] <- "[1](http://genomicsclass.github.io/book/pages/interactions_and_contrasts.html)"
 
 # lect 8
 sched$readings[9] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect08-continuous/README.md)"
