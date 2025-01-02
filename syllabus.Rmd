@@ -202,6 +202,7 @@ kable(assn %>% filter(Category == "Individual Assignment", Assignment != "Intro 
     - Written Report & GitHub repository
     - Individual and Group Evaluation 
 - For more details on the project components and how groups are selected see the [assignments page](assignments.html#final-group-project-40)
+- Participation in group projects is assessed via a contribution multiplier - see the [multiplier rubric for details](group_project_rubrics.html#project-contribution-multiplier).
 - For detailed grading rubrics of the final project components, see the [final project rubric page](group_project_rubrics.html) and the [final project presentation rubric](course-admin/ProjectPresentationRubric.pdf)
 
 
