@@ -20,7 +20,7 @@ rawdat$course <- as.factor(rawdat$course)
 rawdat_cm <- rawdat[rawdat$course == "STAT540",]
 
 cdat <- rawdat_cm %>%
-  mutate(ugly_date = ISOdate(2024, match(month, month.name), day),
+  mutate(ugly_date = ISOdate(2025, match(month, month.name), day),
          date = sprintf("%s %s %s",
                         dow, months(ugly_date, abbreviate = TRUE),
                         day),
@@ -99,7 +99,7 @@ dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
 
 
 
-### Class meetings and schedule 
+### Lecture schedule 
 
 **Time** : Tues Thurs 9:00 - 10:30am
 
