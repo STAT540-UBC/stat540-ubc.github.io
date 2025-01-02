@@ -11,9 +11,9 @@ output:
 You will have three individual assignments, six seminar submissions, and one group project: 
 
 * One intro assignment (5%)
-* Seminar participation (20% total; 2% each after dropping the lowest score)
+* Seminar participation (30% total; 3% each after dropping the lowest score)
 * One paper review (5%) 
-* One analysis assignment (30%)
+* One analysis assignment (20%)
 * Final group project (40%) which contains multiple parts. 
 
 <font color="red">**Deadlines are all by 11:59 pm (Pacific time) on the due date. Any submission or modification after the due date will not be graded unless you have requested an extension**</font>. If you anticipate having trouble meeting a deadline and need to request an extension/academic concession please reach out via email.
@@ -44,17 +44,17 @@ This assignment is designed to give you independent practice in the workflow use
 
 The instructions and questions are available [here](https://github.com/STAT540-UBC/intro-assignment/blob/main/intro_assignment.md).
 
-## Seminar participation (20%)
+## Seminar participation (30%)
 
-You will submit short "deliverables" to demonstrate your participation for every seminar. These deliverables give practical experience applying the knowledge that will be helpful on the homework assignment, final project, and (hopefully) your future research. Each of Seminar session is weighted equally, but the lowest score will be dropped (so that the 10 seminars with highest score will each count for 2% of the final grade). Seminar deliverables are due on the Friday following the TA-led session for that seminar. See the [Seminars page](seminars.html) for the submission materials and schedule.
+You will submit short "deliverables" to demonstrate your participation for every seminar. These deliverables give practical experience applying the knowledge that will be helpful on homework, the project, and your future research. Each Seminar session is weighted equally, but the lowest score will be dropped (so that the 10 seminars with highest score will each count for 3% of the final grade). Seminar deliverables are due on the Friday following the TA-led session for that seminar. See the [Seminars page](seminars.html) for the submission materials and schedule.
 
 ## Paper critique (5%)
 
-Each student will review and provide a 500-700 word critique a paper that will be posted on Canvas.
+Each student will review and provide a written critique (max 1000 words) of a paper that will be posted on Canvas.
 
 Please see [**critique rubric**](critique.html) for detailed instructions on this task. 
 
-## Analysis assignment (30%)
+## Analysis assignment (20%)
 
 This assignment will assess your understanding of the seminar and lecture materials. Start early because this assignment will take time to fully work through. Use the issues in the Discussion repo and the seminar time to ask questions. You will find most of the analysis workflow of the assignment in the seminar materials. 
 

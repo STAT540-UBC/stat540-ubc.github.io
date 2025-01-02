@@ -32,8 +32,8 @@ We respectfully recognize that the University of British Columbia Vancouver camp
   * Exploratory data analysis and data quality control
   * Normalization, batch correction
   * Causal inference and confounding effects
-  * Basic statistical inference (“one gene at a time”) – linear models
-  * Large-scale inference (“genome-wide”) – multiple testing
+  * Basic statistical inference ("one gene at a time") – linear models
+  * Large-scale inference ("genome-wide") – multiple testing
   * Analysis of microarray, RNASeq, and epigenetics data
   * Principal Component Analysis and clustering (unsupervised machine learning)
   * Classification and cross validation (supervised machine learning)
@@ -59,11 +59,11 @@ Virtual office hours: By appointment
 
 * [Asfar Lathif](about_asfar.html) (He/Him/His)  
 Email: <asfar.lathif@ubc.ca>  
-Virtual office hours: Tuesday 4-5pm (PST)  
+Virtual office hours: Wed 11a-12p (PST)  
 
-* [Ishika Luthra](about_ishkika.html)  
-Email: <ishika.luthra@ubc.ca>  
-Virtual office hours: Friday 10-11am (PST)
+* [JJ Hum](about_JJ.html)  
+Email: <jj.hum@ubc.ca>  
+Virtual office hours: TBA
 
 ## Schedule  
 
@@ -161,11 +161,11 @@ assn <- assn %>%
 kable(assn %>% filter(Assignment == "Intro Assignment") %>% select(-Category))
 ```
 
-### [Seminar completion (20%)](assignments.html#seminar-completion-20)
+### [Seminar completion (30%)](assignments.html#seminar-completion-30)
 
 - You will submit short "deliverables" for each seminar session
-- Each seminar session is weighted equally, but the lowest score will be dropped (so that the 10 seminars with highest score will each count for 2% of the final grade). 
-- These deliverables give practical experience applying the knowledge that will be helpful on the homework assignment, final project, and (hopefully) your future research.
+- Each seminar session is weighted equally, but the lowest score will be dropped (so that the 10 seminars with highest score will each count for 3% of the final grade). 
+- These deliverables give practical experience applying the knowledge that will be helpful on assignments, the project, and your future research.
 - Each deliverable is due on the Friday following the TA-led session for that seminar
 
 
@@ -181,7 +181,7 @@ See [here](critique.html) for detailed instructions and rubric.
 kable(assn %>% filter(Category == "Paper Critique") %>% select(-Category))
 ```
 
-### [Analysis assignment (30%)](assignments.html#analysis-assignment-30)
+### [Analysis assignment (20%)](assignments.html#analysis-assignment-20)
 
 - Involves detailed analysis of real data using R
 - This assignment will assess your ability to understand and apply the methods learned in class 
