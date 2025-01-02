@@ -225,15 +225,35 @@ If you miss class, we suggest you to:
 
 Not only is academic integrity is essential to the successful functioning of our course, but adopting best practices will benefit you in your research practice. Make sure you understand UBC’s definitions of academic misconduct and its consequences. Policy guidelines can be found [here](http://www.calendar.ubc.ca/Vancouver/index.cfm?tree=3,54,111,958).
 
-What does academic integrity look like in this course? 
+#### What is academic integrity?
+
+The academic enterprise is founded on honesty, civility, and integrity. As members of this enterprise, all students are expected to know, understand, and follow the codes of conduct regarding academic integrity. At the most basic level, this means submitting only original work done by you and acknowledging all sources of information or ideas and attributing them to others as required. This also means you should not cheat, copy, or mislead others about what is your work; nor should you help others to do the same. For example, it is prohibited to: share your past assignments and answers with other students; work with other students on an assignment when an instructor has not expressly given permission; or spread information through word of mouth, social media, websites, or other channels that subverts the fair evaluation of a class exercise, or assessment.
+
+#### What does academic integrity look like in this course? 
 
 * **Do your own work**. All individual work that you submit should be completed by you and submitted by you. Do not receive or share completed coursework with students who take the course in another term.
 
-* **Acknowledge others’ ideas**. Scholars build on the work of others, and give credit accordingly. This refers to both outside sources (e.g. from the literature, or AI tools), and inside sources (e.g from your peers).
+* **Acknowledge others’ ideas**. Scholars build on the work of others, and give credit accordingly. You are expected to acknowledge the use of **any** outside sources (e.g. from the literature, or AI tools) or inside sources (e.g from your peers).
 
 * **Learn to avoid unintentional plagiarism.** Visit the [Learning Commons’ guide to academic integrity](http://learningcommons.ubc.ca/resource-guides/avoiding-plagiarism/) to help you organize your writing as well as understand how to prevent unintentional plagiarism. 
 
 At any time: if you are unsure if a certain type of assistance is authorized, please ask us.  
+
+#### Use of generative artificial intelligence (AI) tools
+
+Tools that use artificial intelligence algorithms trained large dataset of training data to generate content, such as ChatGPT, have become widely accessible (these are often referred to as "generative AI tools"). If you choose to use generative AI tools to complete coursework, *you must disclose your use of them*. This disclosure must be included at the top of the submission file for the assignment in which the generative AI tool was used. The disclosure should include the name of the tool and a brief description of how it was used. 
+
+Further, if you choose to use generative AI tools for coursework, you should be aware of the following:
+
+* Privacy implications: Information you input into some tools, along with some device data such as your IP address, may be sent to servers outside of Canada, which may put your intellectual property and/or personal information at risk. For more information, please refer to [UBC's Privacy Impact Assessment for generative AI tools](https://ai.ctlt.ubc.ca/privacy-impact-assessments-for-generativeai-instructional-use-at-ubc/).
+
+* False or misleading information: Generative AI tools can produce biased, false or misleading content, because of the nature of the training datasets. They are designed to produce the most statistically plausible text result, not necessarily the correct one, and they cannot take responsibility for what they produce. You, on the other hand, must take responsibility for the accuracy and integrity of your written work: therefore, you should not consider the output of a generative AI tool to be reliable unless verified by information in scholarly sources, and the information included in your assignments must be found in and attributed to scholarly sources.
+
+Ultimately, this course is designed to help students practice analytical skills, and investigate a well-reasoned scientific question. Using generative AI tools to produce entire written and coding assignments will stifle independent thinking and undermine development of these valuable skills. If you have questions around the acceptable or unacceptable use of generative AI tools, we encourage you to speak to the instructors.
+
+#### What happens when academic integrity is breached?
+
+Violations of academic integrity (i.e., misconduct) lead to the breakdown of the academic enterprise, and therefore serious consequences arise and harsh sanctions are imposed. For example, incidences of plagiarism or cheating may result in a mark of zero on the assignment and more serious consequences may apply if the matter is referred for consideration for academic discipline. Careful records are kept to monitor and prevent recurrences. Any instance of cheating or taking credit for someone else’s work, whether intentionally or unintentionally, can and often will result in at minimum a grade of zero for the assignment, and these cases will be reported to the Head of the Department of Statistics and Associate Dean Students of the Faculty of Science.
 
 ## Privacy
 
