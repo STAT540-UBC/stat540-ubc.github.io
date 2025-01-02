@@ -241,7 +241,7 @@ At any time: if you are unsure if a certain type of assistance is authorized, pl
 
 #### Use of generative artificial intelligence (AI) tools
 
-Tools that use artificial intelligence algorithms trained large dataset of training data to generate content, such as ChatGPT, have become widely accessible (these are often referred to as "generative AI tools"). If you choose to use generative AI tools to complete coursework, *you must disclose your use of them*. This disclosure must be included at the top of the submission file for the assignment in which the generative AI tool was used. The disclosure should include the name of the tool and a brief description of how it was used. 
+Tools that use artificial intelligence algorithms trained on large datasets to generate content, such as ChatGPT, have become widely accessible (these are often referred to as "generative AI tools"). If you choose to use generative AI tools to complete coursework, *you must disclose your use of them*. This disclosure must be included at the top of the submission file for the assignment in which the generative AI tool was used. The disclosure should include the name of the tool and a brief description of how it was used. 
 
 Further, if you choose to use generative AI tools for coursework, you should be aware of the following:
 
