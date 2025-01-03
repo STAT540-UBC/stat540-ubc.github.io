@@ -8,7 +8,7 @@ output:
     toc_depth: 2
 ---
 
-2023-2024 Winter Term 2 (January 8, 2024 - April 12, 2024) 
+2024-2025 Winter Term 2 (January 7, 2025 - April 8, 2025) 
 
 STAT 540 is a 3 credit course with a mandatory computing seminar 
 
