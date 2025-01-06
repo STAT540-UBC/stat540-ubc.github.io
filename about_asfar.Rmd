@@ -15,6 +15,6 @@ output:
 ## Teaching Assistant
 
 **Pronouns**: He/Him/His  
-**Virtual office hours**: Weds 11 am-12 pm (PST)
+**Virtual office hours**: By appointment
 
 I am PhD student in the Genome Science and Technology department at UBC. I did my undergraduate in Biotechnology in southern India before moving to UBC for my graduate studies at the de Boer lab. My area of interests include high dimensional biology and data science. My thesis project involves understanding how non coding variants in genome affect gene regulation in Cancers. In my free time I enjoy cooking and exploring Vancouver!
