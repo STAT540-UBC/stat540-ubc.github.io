@@ -16,6 +16,6 @@ output:
 
 **Pronouns**: They/Them/Theirs
 
-**Virtual office hours**: TBA
+**Virtual office hours**: By appointment
 
 I am a Masters student in the Genome Science and Technology department at UBC. I completed my undergrad at UBC and BCIT in the Biotechnology program. My thesis project involves scaling up massively parallel reporter assays using density-based cell sorting. Outside of the lab, I like knitting and playing various musical instruments!
