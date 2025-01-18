@@ -12,7 +12,10 @@ To practice your ability to go through a paper, identify the biological problem 
 
 ## Paper in question:
 
-TBA
+"Heterozygous deletion of the autism-associated gene CHD8 impairs synaptic function through widespread changes in gene expression and chromatin compaction".   
+X Shi, C Lu, A Corman, A Nikish, Y Zhou, RJ Platt, I Iossifov, F Zhang, JQ Pan, NE Sanjana    
+_The American Journal of Human Genetics_, 110(10):1750-1768, 2023
+[https://www.cell.com/ajhg/fulltext/S0002-9297(23)00317-8](https://www.cell.com/ajhg/fulltext/S0002-9297(23)00317-8)
 
 ## Deliverables and Rubric:
 
