@@ -150,6 +150,9 @@ sched$readings[11] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lec
 # lect 12
 sched$readings[15] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect12-gsea/README.md)"
 
+# in-class project meetings
+sched$notes[8] <- "[Project proposal meetings](https://canvas.ubc.ca/courses/158233/pages/initial-proposal-feedback-meetings-thurs-jan-30-in-class)"
+
 # print final table
 knitr::kable(sched %>% 
   dplyr::rename(Date=date, "Pre-reading"=readings, Topic=notes, Instructor=instructor),
