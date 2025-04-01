@@ -177,7 +177,7 @@ A one-page individual report as `individual_report.md` is an individual delivera
 #### Peer evaluation (2 pts)
 
 - You will be randomly assigned to provide peer feedback for two (2) oral presentations from other teams.
-- Following the presentations, please review and provide constructive feedback using the 4-component [Reflect Inquire Suggest Elevate (RISE) model of peer feedback](https://www.risemodel.com/s/RISE-Model-Peer-EmilyWray.pdf). Include a statement/question for each of the 4 RISE components. 
+- Following the presentations, please review and provide constructive feedback using the 4-component [Reflect Inquire Suggest Elevate (RISE) model of peer feedback](https://www.risemodel.com/s/RISE-Model-Peer-Feedback.pdf). Include a statement/question for each of the 4 RISE components. 
 - Please copy and paste each of your peer reviews in the Piazza #peer-review channel (so that the teams can receive your feedback), and include links to these messages in this report.
 
 
