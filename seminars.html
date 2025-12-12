@@ -20,8 +20,9 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -455,9 +456,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </style>
 
-  <script src="site_libs/jquery-3.6.1/jquery-3.6.1.min.js"></script>
-  <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet"/>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
   <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
@@ -2448,7 +2449,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
   <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
   <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
@@ -2512,7 +2513,7 @@ PEOPLE
 <a href="about_keegan.html">Keegan Korthauer (Instructor)</a>
 <a href="about_yongjin.html">Yongjin Park (Instructor)</a>
 <a href="about_asfar.html">Asfar Lathif (TA)</a>
-<a href="about_JJ.html">JJ Hum (TA)</a>
+<a href="about_rachel.html">Rachel Schwartz (TA)</a>
 </div>
 </div>
 <a href="faq.html">FAQ</a>
@@ -2562,7 +2563,7 @@ Lead.TA
 <tbody>
 <tr>
 <td style="text-align:left;width: 6em; ">
-Tue Jan 7
+Tue Jan 6
 </td>
 <td style="text-align:left;width: 6em; ">
 <a href="https://github.com/STAT540-UBC/seminar-01">Seminar 1</a>
@@ -2576,7 +2577,7 @@ Asfar
 </tr>
 <tr>
 <td style="text-align:left;width: 6em; ">
-Tue Jan 14
+Tue Jan 13
 </td>
 <td style="text-align:left;width: 6em; ">
 <a href="https://github.com/STAT540-UBC/seminar-02a">Seminar 2a</a>
@@ -2590,7 +2591,7 @@ Asfar
 </tr>
 <tr>
 <td style="text-align:left;width: 6em; ">
-Tue Jan 14
+Tue Jan 13
 </td>
 <td style="text-align:left;width: 6em; ">
 <a href="https://github.com/STAT540-UBC/seminar-02b">Seminar 2b</a>
@@ -2599,12 +2600,12 @@ Tue Jan 14
 R graphics – Intro to ggplot2
 </td>
 <td style="text-align:left;">
-Asfar
+Rachel
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 6em; ">
-Tue Jan 21
+Tue Jan 20
 </td>
 <td style="text-align:left;width: 6em; ">
 <a href="https://github.com/STAT540-UBC/seminar-03">Seminar 3</a>
@@ -2613,12 +2614,12 @@ Tue Jan 21
 Probability and simulations
 </td>
 <td style="text-align:left;">
-JJ
+Rachel
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 6em; ">
-Tue Jan 28
+Tue Jan 27
 </td>
 <td style="text-align:left;width: 6em; ">
 <a href="https://github.com/STAT540-UBC/seminar-04">Seminar 4</a>
@@ -2632,7 +2633,7 @@ Asfar
 </tr>
 <tr>
 <td style="text-align:left;width: 6em; ">
-Tue Feb 4
+Tue Feb 3
 </td>
 <td style="text-align:left;width: 6em; ">
 <a href="https://github.com/STAT540-UBC/seminar-05">Seminar 5</a>
@@ -2646,7 +2647,7 @@ Asfar
 </tr>
 <tr>
 <td style="text-align:left;width: 6em; ">
-Tue Feb 11
+Tue Feb 10
 </td>
 <td style="text-align:left;width: 6em; ">
 <a href="https://github.com/STAT540-UBC/seminar-06">Seminar 6</a>
@@ -2655,12 +2656,12 @@ Tue Feb 11
 RNA-seq: from beginning to end – BAM to count data
 </td>
 <td style="text-align:left;">
-JJ
+Rachel
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 6em; ">
-Tue Feb 18
+Tue Feb 17
 </td>
 <td style="text-align:left;width: 6em; ">
 </td>
@@ -2672,96 +2673,30 @@ No seminar (reading break)
 </tr>
 <tr>
 <td style="text-align:left;width: 6em; ">
-Tue Feb 25
+Tue Feb 24
 </td>
 <td style="text-align:left;width: 6em; ">
 <a href="https://github.com/STAT540-UBC/seminar-07">Seminar 7</a>
 </td>
 <td style="text-align:left;">
-Methylation microarray analysis
+Single-cell RNA-seq: unsupervised learning
 </td>
 <td style="text-align:left;">
-JJ
+Rachel
 </td>
 </tr>
 <tr>
 <td style="text-align:left;width: 6em; ">
-Tue Mar 4
-</td>
-<td style="text-align:left;width: 6em; ">
-</td>
-<td style="text-align:left;">
-No seminar
-</td>
-<td style="text-align:left;">
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-Tue Mar 11
+Tue Mar 3
 </td>
 <td style="text-align:left;width: 6em; ">
 <a href="https://github.com/STAT540-UBC/seminar-08">Seminar 8</a>
-</td>
-<td style="text-align:left;">
-Gene set enrichment analysis
-</td>
-<td style="text-align:left;">
-Asfar
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-Tue Mar 18
-</td>
-<td style="text-align:left;width: 6em; ">
-<a href="https://github.com/STAT540-UBC/seminar-09">Seminar 9</a>
-</td>
-<td style="text-align:left;">
-Unsupervised learning - clustering and dimension reduction
-</td>
-<td style="text-align:left;">
-JJ
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-Tue Mar 25
-</td>
-<td style="text-align:left;width: 6em; ">
-<a href="https://github.com/STAT540-UBC/seminar-10">Seminar 10</a>
 </td>
 <td style="text-align:left;">
 Supervised learning, cross-validation, variable selection
 </td>
 <td style="text-align:left;">
 Asfar
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-Tue Apr 1
-</td>
-<td style="text-align:left;width: 6em; ">
-</td>
-<td style="text-align:left;">
-No seminar
-</td>
-<td style="text-align:left;">
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-Tue Apr 8
-</td>
-<td style="text-align:left;width: 6em; ">
-<a href="https://github.com/STAT540-UBC/seminar-11">Seminar 11</a>
-</td>
-<td style="text-align:left;">
-eQTL analysis
-</td>
-<td style="text-align:left;">
-JJ
 </td>
 </tr>
 </tbody>

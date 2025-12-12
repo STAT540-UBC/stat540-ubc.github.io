@@ -8,7 +8,7 @@ output:
     toc_depth: 2
 ---
 
-2024-2025 Winter Term 2 (January 7, 2025 - April 8, 2025) 
+2025-2026 Winter Term 2 (January 6, 2025 - April 9, 2026) 
 
 STAT 540 is a 3 credit course with a mandatory computing seminar 
 
@@ -47,9 +47,11 @@ For more info on the Teaching team, including brief bios, see the 'People' pages
 
 ### Instructors
 
+<!--
 * [Keegan Korthauer, PhD](about_keegan.html) (She/Her/Hers)  
 Email: <keegan@stat.ubc.ca>  
 Virtual office hours: By appointment
+-->
 
 * [Yongjin Park, PhD](about_yongjin.html) (He/Him/His)  
 Email: <ypp@stat.ubc.ca>  
@@ -61,9 +63,10 @@ Virtual office hours: By appointment
 Email: <asfar.lathif@ubc.ca>  
 Virtual office hours: By appointment  
 
-* [JJ Hum](about_JJ.html) (They/Them/Theirs)  
-Email: <jj.hum@ubc.ca>  
+* [Rachel Schwartz](about_rachel.html) (She/Her/Hers)  
+Email: <raschwar@student.ubc.ca>  
 Virtual office hours: By appointment
+
 
 ## Schedule  
 

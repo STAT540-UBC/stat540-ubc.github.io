@@ -1,6 +1,6 @@
 ---
 title: "Rachel Schwartz"
-image: "images/rachel.jpg"
+image: "images/rachel.png"
 links:
   - label: GitHub
     url: "https://github.com/rachadele"
@@ -15,9 +15,6 @@ output:
 **Pronouns**: She/Her/Hers
 **Office hours**: By Appointment
 
-```
 I am a PhD student in the Department of Bioinformatics at UBC, supervised by Dr. Paul Pavlidis.
 My research focuses on discovering cell-type specific signals of gene expression in psychiatric and neurodevelopmental disorders. 
 In my free time you can find me at the gym, in the mountains or at the beach.
-```
-

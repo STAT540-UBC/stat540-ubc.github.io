@@ -20,7 +20,7 @@ rawdat$course <- as.factor(rawdat$course)
 rawdat_cm <- rawdat[rawdat$course == "STAT540",]
 
 cdat <- rawdat_cm %>%
-  mutate(ugly_date = ISOdate(2025, match(month, month.name), day),
+  mutate(ugly_date = ISOdate(2026, match(month, month.name), day),
          date = sprintf("%s %s %s",
                         dow, months(ugly_date, abbreviate = TRUE),
                         day),
@@ -114,47 +114,47 @@ sched <- dat_cm[["STAT540"]] %>%
 
 # lect 1
 sched$readings[1] <- "[1](https://stat540-ubc.github.io/syllabus.html)"
-
-# lect 3
-sched$readings[3] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect03-eda/README.md)"
-  
-# lect 4
-sched$readings[4] <- "
-[1](http://genomicsclass.github.io/book/pages/populations_and_samples.html), 
-[2](http://genomicsclass.github.io/book/pages/random_variables.html), 
-[3](http://genomicsclass.github.io/book/pages/clt_and_t-distribution.html)
-"
-
-# lect 5
-sched$readings[5] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect05-twoGroup/README.md)"
-
-# lect 6
-sched$readings[6] <- "
-[1](http://genomicsclass.github.io/book/pages/matrix_notation.html), 
-[2](http://genomicsclass.github.io/book/pages/matrix_operations.html), 
-[3](http://genomicsclass.github.io/book/pages/expressing_design_formula.html)
-"
-
-# lect 7
-sched$readings[7] <- "[1](http://genomicsclass.github.io/book/pages/interactions_and_contrasts.html)"
-
-# lect 8
-sched$readings[9] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect08-continuous/README.md)"
-
-# lect 9
-sched$readings[10] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect09-multipleTesting/README.md)"
-
-# lect 10
-sched$readings[11] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect10-RNAseq/README.md)"
-
-# lect 11
-sched$readings[12] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect11-epigenetics/README.md)"
-
-# lect 12
-sched$readings[15] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect12-gsea/README.md)"
-
-# in-class project meetings
-sched$notes[8] <- "[Project proposal meetings](https://canvas.ubc.ca/courses/158233/pages/initial-proposal-feedback-meetings-thurs-jan-30-in-class)"
+# 
+# # lect 3
+# sched$readings[3] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect03-eda/README.md)"
+#   
+# # lect 4
+# sched$readings[4] <- "
+# [1](http://genomicsclass.github.io/book/pages/populations_and_samples.html), 
+# [2](http://genomicsclass.github.io/book/pages/random_variables.html), 
+# [3](http://genomicsclass.github.io/book/pages/clt_and_t-distribution.html)
+# "
+# 
+# # lect 5
+# sched$readings[5] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect05-twoGroup/README.md)"
+# 
+# # lect 6
+# sched$readings[6] <- "
+# [1](http://genomicsclass.github.io/book/pages/matrix_notation.html), 
+# [2](http://genomicsclass.github.io/book/pages/matrix_operations.html), 
+# [3](http://genomicsclass.github.io/book/pages/expressing_design_formula.html)
+# "
+# 
+# # lect 7
+# sched$readings[7] <- "[1](http://genomicsclass.github.io/book/pages/interactions_and_contrasts.html)"
+# 
+# # lect 8
+# sched$readings[9] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect08-continuous/README.md)"
+# 
+# # lect 9
+# sched$readings[10] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect09-multipleTesting/README.md)"
+# 
+# # lect 10
+# sched$readings[11] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect10-RNAseq/README.md)"
+# 
+# # lect 11
+# sched$readings[12] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect11-epigenetics/README.md)"
+# 
+# # lect 12
+# sched$readings[15] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect12-gsea/README.md)"
+# 
+# # in-class project meetings
+# sched$notes[8] <- "[Project proposal meetings](https://canvas.ubc.ca/courses/158233/pages/initial-proposal-feedback-meetings-thurs-jan-30-in-class)"
 
 # print final table
 knitr::kable(sched %>% 

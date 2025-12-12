@@ -16,7 +16,9 @@ output:
  
 ## Instructor
 
-**Pronouns**: He/Him/His  
+**Pronouns**: He/Him/His
 **Virtual office hours**: By appointment
 
-I am an Assistant Professor in the Department of Pathology and Statistics since Fall 2020. My research primarily focuses on developing scalable probabilistic inference methods to elucidate hidden causal mechanisms of human diseases, such as cancer and other common/complex disorders. Since I am a data-driven scientist, I become excited when hidden patterns emerge, and data finally start speaking back to me. I firmly believe in Don Knuth's famous quote, "best practice is inspired by theory," and "best theory is inspired by practice."
+I am a computational biologist. My research focuses on developing scalable probabilistic inference methods to elucidate hidden causal mechanisms of human diseases, such as cancer and other common/complex disorders. For teaching, I am always grateful to my teachers and mentors, from whom I learned bioinformatics, computational modelling, Bayesian statistics, machine learning, and scientific research methods. 
+
+I am a coffee enthusiast. I also enjoy drawing and bird watching. 

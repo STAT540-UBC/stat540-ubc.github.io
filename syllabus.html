@@ -20,8 +20,9 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -32,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -458,9 +459,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </style>
 
-  <script src="site_libs/jquery-3.6.1/jquery-3.6.1.min.js"></script>
-  <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet"/>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
   <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
@@ -2451,7 +2452,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2513,7 +2514,7 @@ PEOPLE
 <a href="about_keegan.html">Keegan Korthauer (Instructor)</a>
 <a href="about_yongjin.html">Yongjin Park (Instructor)</a>
 <a href="about_asfar.html">Asfar Lathif (TA)</a>
-<a href="about_JJ.html">JJ Hum (TA)</a>
+<a href="about_rachel.html">Rachel Schwartz (TA)</a>
 </div>
 </div>
 <a href="faq.html">FAQ</a>
@@ -2559,7 +2560,7 @@ PEOPLE
 </ul>
 </nav>
 </div>
-<p>2024-2025 Winter Term 2 (January 7, 2025 - April 8, 2025)</p>
+<p>2025-2026 Winter Term 2 (January 6, 2025 - April 9, 2026)</p>
 <p>STAT 540 is a 3 credit course with a mandatory computing seminar</p>
 <p>Cross-listed as STAT 540, BIOF 540, GSAT 540</p>
 <h2 id="land-acknowledgement">Land acknowledgement</h2>
@@ -2590,21 +2591,23 @@ PEOPLE
 <h2 id="teaching-team">Teaching Team</h2>
 <p>For more info on the Teaching team, including brief bios, see the ‘People’ pages on this website (linked below). Links for connecting to recurring virtual office hours will be shared via Canvas.</p>
 <h3 id="instructors">Instructors</h3>
+<!--
+* [Keegan Korthauer, PhD](about_keegan.html) (She/Her/Hers)  
+Email: <keegan@stat.ubc.ca>  
+Virtual office hours: By appointment
+-->
 <ul>
-<li><p><a href="about_keegan.html">Keegan Korthauer, PhD</a> (She/Her/Hers)<br />
-Email: <a href="mailto:keegan@stat.ubc.ca" class="email">keegan@stat.ubc.ca</a><br />
-Virtual office hours: By appointment</p></li>
-<li><p><a href="about_yongjin.html">Yongjin Park, PhD</a> (He/Him/His)<br />
+<li><a href="about_yongjin.html">Yongjin Park, PhD</a> (He/Him/His)<br />
 Email: <a href="mailto:ypp@stat.ubc.ca" class="email">ypp@stat.ubc.ca</a><br />
-Virtual office hours: By appointment</p></li>
+Virtual office hours: By appointment</li>
 </ul>
 <h3 id="teaching-assistants">Teaching Assistants</h3>
 <ul>
 <li><p><a href="about_asfar.html">Asfar Lathif</a> (He/Him/His)<br />
 Email: <a href="mailto:asfar.lathif@ubc.ca" class="email">asfar.lathif@ubc.ca</a><br />
 Virtual office hours: By appointment</p></li>
-<li><p><a href="about_JJ.html">JJ Hum</a> (They/Them/Theirs)<br />
-Email: <a href="mailto:jj.hum@ubc.ca" class="email">jj.hum@ubc.ca</a><br />
+<li><p><a href="about_rachel.html">Rachel Schwartz</a> (She/Her/Hers)<br />
+Email: <a href="mailto:raschwar@student.ubc.ca" class="email">raschwar@student.ubc.ca</a><br />
 Virtual office hours: By appointment</p></li>
 </ul>
 <h2 id="schedule">Schedule</h2>
@@ -2687,7 +2690,7 @@ Virtual office hours: By appointment</p></li>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Intro Assignment</td>
-<td style="text-align: left;">Thu 23 January 2025</td>
+<td style="text-align: left;">Fri 16 January 2026</td>
 </tr>
 </tbody>
 </table>
@@ -2710,47 +2713,35 @@ Virtual office hours: By appointment</p></li>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Seminar 1</td>
-<td style="text-align: left;">Fri 10 January 2025</td>
+<td style="text-align: left;">Tue 06 January 2026</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Seminar 2a &amp; 2b</td>
-<td style="text-align: left;">Fri 17 January 2025</td>
+<td style="text-align: left;">Tue 13 January 2026</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Seminar 3</td>
-<td style="text-align: left;">Fri 24 January 2025</td>
+<td style="text-align: left;">Tue 20 January 2026</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Seminar 4</td>
-<td style="text-align: left;">Fri 31 January 2025</td>
+<td style="text-align: left;">Tue 27 January 2026</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Seminar 5</td>
-<td style="text-align: left;">Fri 07 February 2025</td>
+<td style="text-align: left;">Tue 03 February 2026</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Seminar 6</td>
-<td style="text-align: left;">Fri 14 February 2025</td>
+<td style="text-align: left;">Tue 17 February 2026</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Seminar 7</td>
-<td style="text-align: left;">Fri 28 February 2025</td>
+<td style="text-align: left;">Tue 24 February 2026</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Seminar 8</td>
-<td style="text-align: left;">Fri 14 March 2025</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Seminar 9</td>
-<td style="text-align: left;">Fri 21 March 2025</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Seminar 10</td>
-<td style="text-align: left;">Fri 28 March 2025</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Seminar 11</td>
-<td style="text-align: left;">Fri 11 April 2025</td>
+<td style="text-align: left;">Tue 03 March 2026</td>
 </tr>
 </tbody>
 </table>
@@ -2766,10 +2757,6 @@ Virtual office hours: By appointment</p></li>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: left;">Paper Critique</td>
-<td style="text-align: left;">Thu 20 February 2025</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -2788,8 +2775,12 @@ Virtual office hours: By appointment</p></li>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">Paper critique</td>
+<td style="text-align: left;">Fri 30 January 2026</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">Analysis Assignment</td>
-<td style="text-align: left;">Thu 06 March 2025</td>
+<td style="text-align: left;">Sat 28 February 2026</td>
 </tr>
 </tbody>
 </table>
@@ -2821,36 +2812,40 @@ Virtual office hours: By appointment</p></li>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Initial Proposal</td>
-<td style="text-align: left;">Mon 27 January 2025</td>
+<td style="text-align: left;">Project Proposal Lightning Talks</td>
+<td style="text-align: left;">Thu 29 January 2026</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Final Proposal</td>
-<td style="text-align: left;">Tue 11 February 2025</td>
+<td style="text-align: left;">Written Project Proposal</td>
+<td style="text-align: left;">Tue 03 February 2026</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Progress Report</td>
-<td style="text-align: left;">Tue 11 March 2025</td>
+<td style="text-align: left;">Project Progress Report</td>
+<td style="text-align: left;">Sat 21 March 2026</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Final Report</td>
-<td style="text-align: left;">Tue 01 April 2025</td>
+<td style="text-align: left;">Github Repo</td>
+<td style="text-align: left;">Tue 31 March 2026</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Presentation Day 1</td>
-<td style="text-align: left;">Tue 01 April 2025</td>
+<td style="text-align: left;">Tue 31 March 2026</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Presentation Day 2</td>
-<td style="text-align: left;">Thu 03 April 2025</td>
+<td style="text-align: left;">Thu 02 April 2026</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Presentation Day 3</td>
-<td style="text-align: left;">Tue 08 April 2025</td>
+<td style="text-align: left;">Tue 07 April 2026</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Individual &amp; Group Evaluation</td>
-<td style="text-align: left;">Fri 11 April 2025</td>
+<td style="text-align: left;">Presentation Day 4</td>
+<td style="text-align: left;">Thu 09 April 2026</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Individual Report</td>
+<td style="text-align: left;">Fri 10 April 2026</td>
 </tr>
 </tbody>
 </table>
