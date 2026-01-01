@@ -29,11 +29,11 @@ STAT540,break,Tue,February,17,7,NA,Reading break (no class),
 STAT540,break,Thu,February,19,7,NA,Reading break (no class),
 STAT540,lecture-12,Tue,February,24,8,12,Regulatory genomics,Yongjin
 STAT540,lecture-13,Thu,February,26,8,13,Regression and Classification,Yongjin
-STAT540,lecture-14,Tue,March,3,9,14,Clustering and network,Yongjin
-STAT540,lecture-15,Thu,March,5,9,15,Nested differential analysis,Yongjin
-STAT540,lecture-16,Tue,March,10,10,16,Variational autoencoder,Yongjin
-STAT540,lecture-17,Thu,March,12,10,17,Decoding Complex Biological Systems with AI ,Dr. Xin Tang
-STAT540,lecture-18,Tue,March,17,11,18,Molecular pathology by multiomic data integration,Dr. Amrit Singh
+STAT540,lecture-14,Tue,March,3,9,14,Biological networks (cells and proteins),Yongjin
+STAT540,lecture-15,Thu,March,5,9,15,Clustering and differential analysis,Yongjin
+STAT540,lecture-16,Tue,March,10,10,16,Variational autoencoder in single-cell data,Yongjin
+STAT540,lecture-17,Thu,March,12,10,17,Decoding Biological Systems with AI ,Dr. Xin Tang
+STAT540,lecture-18,Tue,March,17,11,18,Multiomic data integration,Dr. Amrit Singh
 STAT540,lecture-19,Thu,March,19,11,19,Research Ethics and Data Security,Yongjin
 STAT540,lecture-20,Tue,March,24,12,20,How to Present Your Research ,Yongjin
 STAT540,Presentations,Tue,March,31,13,NA,Final Project Presentations,
