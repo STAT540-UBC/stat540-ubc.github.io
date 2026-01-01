@@ -10,7 +10,7 @@ output:
   postcards::trestles
 ---
  
-## Instructor
+## Teaching Assistant
 
 **Pronouns**: She/Her/Hers
 **Office hours**: By Appointment

@@ -34,8 +34,6 @@ navbar:
           href: critique.html
     - text: "PEOPLE"
       menu:
-        - text: "Keegan Korthauer (Instructor)"
-          href: about_keegan.html
         - text: "Yongjin Park (Instructor)"
           href: about_yongjin.html
         - text: "Asfar Lathif (TA)"
