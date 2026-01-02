@@ -15,7 +15,7 @@ STAT540-Seminar,seminar-8,Tue,March,3,9,8,"Supervised learning, cross-validation
 ,,dow,month,day,week,,Presentations,instructor
 STAT540,lecture-1,Tue,January,6,1,1,Introduction to high-dimensional biology,Yongjin
 STAT540,lecture-2,Thu,January,8,1,2,Statistics review and matrix algebra primer,Yongjin
-STAT540,lecture-3,Tue,January,13,2,3,Overview of high-dimensional data analysis,Yongjin
+STAT540,lecture-3,Tue,January,13,2,3,Formulating biological questions,Yongjin
 STAT540,lecture-4,Thu,January,15,2,4,Hypothesis testing,Yongjin
 STAT540,lecture-5,Tue,January,20,3,5,RNA-seq data analysis,Yongjin
 STAT540,lecture-6,Thu,January,22,3,6,Statistical inference,Yongjin

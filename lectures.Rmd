@@ -112,11 +112,14 @@ sched <- dat_cm[["STAT540"]] %>%
   select(date, readings, notes, instructor)
 
 
-# lect 1
+## lect 1
 sched$readings[1] <- "[1](https://stat540-ubc.github.io/syllabus.html)"
-# 
+
+## lect 2
+sched$readings[2] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect02-intro-stat-matrix/README.md)"
+
 # # lect 3
-# sched$readings[3] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect03-eda/README.md)"
+# sched$readings[3] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect02-intro-stat-matrix/README.md)"
 #   
 # # lect 4
 # sched$readings[4] <- "
