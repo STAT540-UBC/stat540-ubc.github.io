@@ -11,7 +11,7 @@ output:
 You will have three individual assignments, six seminar submissions, and one group project: 
 
 * One intro assignment (5%)
-* Seminar participation (30% total; 3% each after dropping the lowest score)
+* Seminar participation (30% total; after dropping the lowest score)
 * One paper review (5%) 
 * One analysis assignment (20%)
 * Final group project (40%) which contains multiple parts. 
@@ -29,10 +29,26 @@ suppressPackageStartupMessages(library(tidyverse))
 assn <- read.csv("course-admin/assn.csv")
 assn <- assn %>% 
   select(Category, content, start) %>%
+  filter(Category != "Seminar") %>% 
   rename(Assignment = content, `Due Date` = start) %>%
   mutate(`Due Date` = as.Date(`Due Date`, "%Y-%m-%d")) %>%
   arrange(`Due Date`) %>% 
   mutate(`Due Date` = format(`Due Date`, "%a %b %d"))
+knitr::kable(assn)
+```
+
+Seminars (you have a week to submit your deliverables after each seminar):
+
+```{r, echo=FALSE, warning=FALSE}
+suppressPackageStartupMessages(library(tidyverse))
+assn <- read.csv("course-admin/assn.csv")
+assn <- assn %>% 
+  select(Category, content, start) %>%
+  filter(Category == "Seminar") %>% 
+  rename(Assignment = content, `Date` = start) %>%
+  mutate(`Date` = as.Date(`Date`, "%Y-%m-%d")) %>%
+  arrange(`Date`) %>% 
+  mutate(`Date` = format(`Date`, "%a %b %d"))
 knitr::kable(assn)
 ```
 
@@ -46,7 +62,7 @@ The instructions and questions are available [here](https://github.com/STAT540-U
 
 ## Seminar participation (30%)
 
-You will submit short "deliverables" to demonstrate your participation for every seminar. These deliverables give practical experience applying the knowledge that will be helpful on homework, the project, and your future research. Each Seminar session is weighted equally, but the lowest score will be dropped (so that the 10 seminars with highest score will each count for 3% of the final grade). Seminar deliverables are due on the Friday following the TA-led session for that seminar. See the [Seminars page](seminars.html) for the submission materials and schedule.
+You will submit short "deliverables" to demonstrate your participation for every seminar. These deliverables give practical experience applying the knowledge that will be helpful on homework, the project, and your future research. Each Seminar session is weighted equally, but the lowest score will be dropped. Seminar deliverables are due on the next Tuesday following the TA-led session for that seminar. See the [Seminars page](seminars.html) for the submission materials and schedule.
 
 ## Paper critique (5%)
 
