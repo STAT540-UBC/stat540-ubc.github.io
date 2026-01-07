@@ -62,36 +62,71 @@ if (length(pdf_exists) == 0){
     pdf_exists <- rep(FALSE, length(html_exists))
   }
 }
-           
-# Insert placeholder link to notes 
-#cdat$notes[pdf_exists] <-
- # str_replace(cdat$notes[which(pdf_exists)],
-#              "(lecture-[0-9]+)|(lecture-[1-9]+)", '<a href="LINK">\\1</a>')
+
+## Insert placeholder link to notes 
+##cdat$notes[pdf_exists] <-
+## str_replace(cdat$notes[which(pdf_exists)],
+##              "(lecture-[0-9]+)|(lecture-[1-9]+)", '<a href="LINK">\\1</a>')
 cdat$notes <- gsub("lecture-", "Lecture ", cdat$notes)
 
-cdat$notes[pdf_exists|html_exists] <-
-  str_replace(cdat$notes[which(pdf_exists|html_exists)],
-              "(Lecture [0-9]+)|(Lecture [1-9]+)", '[\\1](LINK)')
+## URL base constants
+HTML_BASE_URL <- "https://stat540-ubc.github.io/lectures/"
+PDF_BASE_URL <- "https://github.com/STAT540-UBC/lectures/raw/main/"
 
+## Helper function to create HTML link
+create_html_link <- function(html_file) {
+    paste0(HTML_BASE_URL, html_file)
+}
 
-for (i in seq_along(html_exists)){
-if (html_exists[i]){
-  # Replace placeholder "LINK" with html file names
-  cdat$notes[i] <- str_replace(cdat$notes[i], "LINK",
-                               paste0("https://stat540-ubc.github.io/lectures/",
-                                      cdat$html[i]))
-  if (pdf_exists[i]){
-  # Append pdf files
-  cdat$notes[i] <- paste0(cdat$notes[i],
-                          paste0("\ [(pdf)](https://github.com/STAT540-UBC/lectures/raw/main/",
-                                 cdat$pdf[i], ")"))
-  }
-}else if (pdf_exists[i]){
-# Replace placeholder "LINK" with pdf file names
-  cdat$notes[i] <- str_replace(cdat$notes[i], "LINK",
-                                        paste0("https://github.com/STAT540-UBC/lectures/raw/main/",
-                                               cdat$pdf[i]))
-}}
+## Helper function to create single PDF URL
+create_pdf_url <- function(pdf_file) {
+    paste0(PDF_BASE_URL, pdf_file)
+}
+
+## Helper function to create PDF markdown links
+create_pdf_links <- function(pdf_files, start_index = 1) {
+    if (length(pdf_files) < start_index) return(NULL)
+
+    indices <- start_index:length(pdf_files)
+    pdf_links <- sapply(indices, function(j) {
+        label <- if (length(pdf_files) == 1) "PDF" else paste0("PDF", j)
+        paste0("[", label, "](", create_pdf_url(pdf_files[j]), ")")
+    })
+    paste(pdf_links, collapse = " ")
+}
+
+## Main function to generate note with links based on available files
+generate_note_with_links <- function(note, html_file, pdf_files, has_html, has_pdf) {
+    if (!has_html && !has_pdf) return(note)
+
+    ## Determine primary URL and additional links
+    if (has_html) {
+        primary_url <- create_html_link(html_file)
+        additional <- if (has_pdf) create_pdf_links(pdf_files) else NULL
+    } else {
+        primary_url <- create_pdf_url(pdf_files[1])
+        additional <- create_pdf_links(pdf_files, start_index = 2)
+    }
+
+    ## Create note with primary link
+    note_with_link <- str_replace(note, "(Lecture [0-9]+)", paste0('[\\1](', primary_url, ')'))
+
+    ## Append additional links if any
+    if (!is.null(additional)) note_with_link <- paste0(note_with_link, " ", additional)
+
+    return(note_with_link)
+}
+
+## Apply function to generate notes with links
+for (i in seq_along(cdat$notes)) {
+    cdat$notes[i] <- generate_note_with_links(
+        cdat$notes[i],
+        cdat$html[i],
+        cdat$pdf[[i]],
+        html_exists[i],
+        pdf_exists[i]
+    )
+}
 
 dat_cm <- cdat %>% split(cdat$course)
 dat_cm <- lapply(dat_cm, 'rownames<-', NULL)
