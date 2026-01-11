@@ -153,9 +153,9 @@ sched$readings[1] <- "[1](https://stat540-ubc.github.io/syllabus.html)"
 ## lect 2
 sched$readings[2] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect02-intro-stat-matrix/README.md)"
 
-# # lect 3
-# sched$readings[3] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect02-intro-stat-matrix/README.md)"
-#   
+# lect 3
+sched$readings[3] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect03-defining-problems/README.md)" 
+  
 # # lect 4
 # sched$readings[4] <- "
 # [1](http://genomicsclass.github.io/book/pages/populations_and_samples.html), 
