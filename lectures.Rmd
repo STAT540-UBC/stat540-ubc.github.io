@@ -169,6 +169,9 @@ sched$readings[4] <- "[1](https://github.com/STAT540-UBC/lectures/tree/main/lect
 # lect RNA
 sched$readings[5] <- "[1](https://github.com/STAT540-UBC/lectures/tree/main/lect05-rna-seq/README.md)"
 
+# lect RNA
+sched$readings[6] <- "[1](https://github.com/STAT540-UBC/lectures/tree/main/lect06-rna-seq-modelling/README.md)"
+
 # # lect 6
 # sched$readings[6] <- "
 # [1](http://genomicsclass.github.io/book/pages/matrix_notation.html), 
