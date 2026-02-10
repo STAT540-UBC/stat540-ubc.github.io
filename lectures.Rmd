@@ -193,9 +193,9 @@ sched$readings[10] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lec
 # lect 10
 sched$readings[11] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect10-gwas/README.md)"
  
-# # lect 11
-# sched$readings[12] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect11-epigenetics/README.md)"
-# 
+# lect 11
+sched$readings[12] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect11-multiple-hypothesis/README.md)"
+ 
 # # lect 12
 # sched$readings[15] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect12-gsea/README.md)"
 # 
