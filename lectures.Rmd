@@ -202,6 +202,9 @@ sched$readings[15] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lec
 # lect 14
 sched$readings[17] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect14-biological-networks/README.md)"
 
+# lect 15
+sched$readings[18] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect15-clustering-differential-analysis/README.md)"
+
 # # in-class project meetings
 # sched$notes[8] <- "[Project proposal meetings](https://canvas.ubc.ca/courses/158233/pages/initial-proposal-feedback-meetings-thurs-jan-30-in-class)"
 
