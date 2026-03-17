@@ -208,6 +208,10 @@ sched$readings[18] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lec
 # lect 16
 sched$readings[19] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect16-vae-single-cell/README.md)"
 
+# lect 19
+sched$readings[22] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect19-genomic-data-security)"
+
+
 # # in-class project meetings
 # sched$notes[8] <- "[Project proposal meetings](https://canvas.ubc.ca/courses/158233/pages/initial-proposal-feedback-meetings-thurs-jan-30-in-class)"
 
