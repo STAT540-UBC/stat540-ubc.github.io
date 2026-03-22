@@ -209,7 +209,10 @@ sched$readings[18] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lec
 sched$readings[19] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect16-vae-single-cell/README.md)"
 
 # lect 19
-sched$readings[22] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect19-genomic-data-security)"
+sched$readings[22] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect19-genomic-data-security/README.md)"
+
+# lect 20
+sched$readings[23] <- "[1](https://github.com/STAT540-UBC/lectures/blob/main/lect20-how-to-present/README.md)"
 
 
 # # in-class project meetings
